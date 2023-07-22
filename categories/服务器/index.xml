@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>服务器 - 分类 - 新手笔记</title>
+        <link>https://xue.woyao.net/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+        <description>服务器 - 分类 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 28 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>Tomcat</title>
+    <link>https://xue.woyao.net/posts/framework/tomcat/</link>
+    <pubDate>Fri, 28 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/tomcat/</guid>
+    <description><![CDATA[问 Tomcat 与 Catalina 的关系 中文乱码 tomcat框架打印的中文不乱码，业务代码输出的乱码 只需要添加红框内的参数，即可解决自行输出的中文乱码问题。 日志文件位]]></description>
+</item>
+</channel>
+</rss>

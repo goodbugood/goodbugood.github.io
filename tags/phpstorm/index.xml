@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>PHPStorm - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/phpstorm/</link>
+        <description>PHPStorm - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 19 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/phpstorm/" rel="self" type="application/rss+xml" /><item>
+    <title>PHPStorm</title>
+    <link>https://xue.woyao.net/posts/tools/phpstorm/</link>
+    <pubDate>Fri, 19 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/phpstorm/</guid>
+    <description><![CDATA[编码格式约定 位置 调整 Code Generation Wrapping and Braces/Array initializer 不要勾选Align key-value pairs，即数组元素对齐。 其他保持默认即可。 常用插件整理 Composer Dump-Autoload IDE Eval Reset PHP Annotations Swagger Git，可以使]]></description>
+</item>
+</channel>
+</rss>

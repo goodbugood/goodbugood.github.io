@@ -1,0 +1,31 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>http - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/http/</link>
+        <description>http - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 04 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/http/" rel="self" type="application/rss+xml" /><item>
+    <title>HTTP 协议</title>
+    <link>https://xue.woyao.net/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http%E5%8D%8F%E8%AE%AE/</link>
+    <pubDate>Tue, 04 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http%E5%8D%8F%E8%AE%AE/</guid>
+    <description><![CDATA[常见状态码 499 Client Closed Request 这种情况通常是，服务端处理时间过长，超出客户端设置的最大等待时间，客户端主动关闭了连接。]]></description>
+</item>
+<item>
+    <title>分页从0开始还是从1开始</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/fenye/</link>
+    <pubDate>Sat, 04 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/fenye/</guid>
+    <description><![CDATA[背景： 有一次跟一个前端同事对接的时候，他传来的第一页 page 竟然是 0。我当时很惊讶，跟他理论了一番，他说公司某位领导告诉他页码从 0 开始传。 我回答他]]></description>
+</item>
+<item>
+    <title>HTTP协议笔记</title>
+    <link>https://xue.woyao.net/posts/http/httpxieyi/</link>
+    <pubDate>Sat, 20 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/http/httpxieyi/</guid>
+    <description><![CDATA[HTTP Headers 我们经常能看到 header 头里的 X-什么什么的头，例如X-PowerBy-PHP，目前这种格式不被推崇。 自定专用消息头可通过&rsquo;X-&r]]></description>
+</item>
+</channel>
+</rss>

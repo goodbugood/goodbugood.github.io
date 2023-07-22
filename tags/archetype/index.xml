@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>archetype - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/archetype/</link>
+        <description>archetype - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 11 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/archetype/" rel="self" type="application/rss+xml" /><item>
+    <title>maven骨架archetype</title>
+    <link>https://xue.woyao.net/posts/framework/createfromarchetype/</link>
+    <pubDate>Thu, 11 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/createfromarchetype/</guid>
+    <description><![CDATA[参考 idea专业版创建maven项目使用archetype在项目结构上的区别 Idea archetype介绍]]></description>
+</item>
+</channel>
+</rss>

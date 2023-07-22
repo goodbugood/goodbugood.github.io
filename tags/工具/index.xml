@@ -1,0 +1,39 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>工具 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E5%B7%A5%E5%85%B7/</link>
+        <description>工具 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E5%B7%A5%E5%85%B7/" rel="self" type="application/rss+xml" /><item>
+    <title>劳动工具</title>
+    <link>https://xue.woyao.net/posts/tools/mytool/</link>
+    <pubDate>Sat, 29 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/mytool/</guid>
+    <description><![CDATA[编辑器 PhpStorm 最强 PHP IDE Idea Sublime 正则操作文本方便 小巧精悍 图文工具 Snipaste https://zh.snipaste.com/ 截图好工具 FastStone Capture https://www.faststone.org/FSCaptureDownload.htm 屏幕取色，截图，滚动截图，录屏压缩比高。 数据库软件 Navicat 数据库操作客户端]]></description>
+</item>
+<item>
+    <title>field injection is not recommended</title>
+    <link>https://xue.woyao.net/posts/2023/field-injection-is-not-recommended/</link>
+    <pubDate>Fri, 17 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/2023/field-injection-is-not-recommended/</guid>
+    <description><![CDATA[idea 报黄线，也不是报错，就是膈应你，告诉你这种做法不推荐。 1 2 3 4 5 6 import javax.servlet.http.HttpServletRequest; public class HttpMountainAop { @Autowired private HttpServletRequest httpServletRequest; } 大概意思是：这种字段注入的方式是不被推荐的。 既然不]]></description>
+</item>
+<item>
+    <title>Sublime</title>
+    <link>https://xue.woyao.net/posts/tools/sublime/</link>
+    <pubDate>Sat, 01 Oct 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/sublime/</guid>
+    <description><![CDATA[常用替换正则 中文排版指北 多个空格替换成一个空格 在中文和英文之间增加空格 1 2 3 4 // 搜索 ([\x{4e00}-\x{9fa5}]{1})([0-9a-zA-Z]{1}) // 替换 $1 $2 1 2 3 4 // 搜索 ([0-9a-zA-Z]{1})([\x{4e00}-\x{9fa5}]{1}) // 替换 $1 $2 去除中文之间的空格]]></description>
+</item>
+<item>
+    <title>茴香豆的茴有几种写法</title>
+    <link>https://xue.woyao.net/posts/framework/huixiangdouxiefa/</link>
+    <pubDate>Wed, 07 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/huixiangdouxiefa/</guid>
+    <description><![CDATA[茴香豆的茴的写法有以下几种，分别是茴，回，囘，囬。 单例有几种实现方法 8种，有一种懒汉单例使用了 DCL。 单例的指令重排。volatile 可以在]]></description>
+</item>
+</channel>
+</rss>

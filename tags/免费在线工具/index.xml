@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>免费在线工具 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/</link>
+        <description>免费在线工具 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E5%85%8D%E8%B4%B9%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/" rel="self" type="application/rss+xml" /><item>
+    <title>分享最好用的100个免费在线工具</title>
+    <link>https://xue.woyao.net/posts/framework/online/</link>
+    <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/online/</guid>
+    <description><![CDATA[数据库 SQLAdvisor 一个连接你的 MySQL 服务器，并对你的 sql 给出优化建议的开源工具。 美团点评SQL优化工具SQLAdvisor开源 Github仓库]]></description>
+</item>
+</channel>
+</rss>

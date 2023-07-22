@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Spring - 分类 - 新手笔记</title>
+        <link>https://xue.woyao.net/categories/spring/</link>
+        <description>Spring - 分类 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/spring/" rel="self" type="application/rss+xml" /><item>
+    <title>Spring常见的3种自动注入方式</title>
+    <link>https://xue.woyao.net/posts/framework/spring/spring%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%B3%A8%E5%85%A5%E6%96%B9%E5%BC%8F/</link>
+    <pubDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/spring/spring%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%B3%A8%E5%85%A5%E6%96%B9%E5%BC%8F/</guid>
+    <description><![CDATA[注解 @Autowired/@Resource 注入 @Autowired 默认按类型查找，当一个类型多个实现时，按名字找。按名字查找时，配合 @Qualifier 注解。 @Resource 默认按名字找，找不到时，按类型找。 1 2 3 4 public class IndexController { @Autowired]]></description>
+</item>
+<item>
+    <title>Bean搭配Configuration和Component</title>
+    <link>https://xue.woyao.net/posts/framework/spring/@bean/</link>
+    <pubDate>Tue, 18 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/spring/@bean/</guid>
+    <description><![CDATA[@Bean搭配@Configuration和@Component 背景： 1 2 3 @org.springframework.stereotype.Component public @interface Configuration { } 我们都知道 @Bean 需要搭配 @Configuration 注解才能使得定义的配置类被扫描]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>依赖解决 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E4%BE%9D%E8%B5%96%E8%A7%A3%E5%86%B3/</link>
+        <description>依赖解决 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E4%BE%9D%E8%B5%96%E8%A7%A3%E5%86%B3/" rel="self" type="application/rss+xml" /><item>
+    <title>Maven</title>
+    <link>https://xue.woyao.net/posts/framework/maven/</link>
+    <pubDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/maven/</guid>
+    <description><![CDATA[继承 子项目不继承父项目的 modules properties 全局属性，只对当前工程生效。 dependencys 1 2 3 4 5 6 &lt;dependency&gt; &lt;groupId&gt;公司名称/公司域名&lt;/group]]></description>
+</item>
+</channel>
+</rss>

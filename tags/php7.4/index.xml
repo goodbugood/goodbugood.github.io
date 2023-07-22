@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>PHP7.4 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/php7.4/</link>
+        <description>PHP7.4 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 20 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/php7.4/" rel="self" type="application/rss+xml" /><item>
+    <title>PHP7新版本新特性</title>
+    <link>https://xue.woyao.net/posts/php/php7%E6%96%B0%E7%89%B9%E6%80%A7/</link>
+    <pubDate>Sat, 20 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/php7%E6%96%B0%E7%89%B9%E6%80%A7/</guid>
+    <description><![CDATA[PHP7.4 null合并运算符与三目运算符的区别 看代码： 1 2 3 4 5 $remark = &#39;&#39;; // A ?: B，empty(A) 是真，则返回 A，否则返回 B self::assertSame(&#39;maria&#39;, $remark ?: &#39;maria&#39;); // A ?? B，A 非 null 则]]></description>
+</item>
+</channel>
+</rss>

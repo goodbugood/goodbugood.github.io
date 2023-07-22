@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>WordPress - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/wordpress/</link>
+        <description>WordPress - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Oct 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/wordpress/" rel="self" type="application/rss+xml" /><item>
+    <title>开源应用Word Press</title>
+    <link>https://xue.woyao.net/posts/opensource/wordpress/</link>
+    <pubDate>Sat, 01 Oct 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/opensource/wordpress/</guid>
+    <description><![CDATA[应用站点 菜鸟教程 奥巴马]]></description>
+</item>
+</channel>
+</rss>

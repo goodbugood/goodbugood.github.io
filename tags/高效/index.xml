@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>高效 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E9%AB%98%E6%95%88/</link>
+        <description>高效 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E9%AB%98%E6%95%88/" rel="self" type="application/rss+xml" /><item>
+    <title>教你高效地使用PHP</title>
+    <link>https://xue.woyao.net/posts/php/%E9%AB%98%E6%95%88%E5%9C%B0%E4%BD%BF%E7%94%A8php/</link>
+    <pubDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/%E9%AB%98%E6%95%88%E5%9C%B0%E4%BD%BF%E7%94%A8php/</guid>
+    <description><![CDATA[字符串初始化尽量使用单引号 单引号不需要检查解析字符串中的变量，效率高于双引号。就类似别人告诉不需要线程安全的场景下，变长字符串让你使用 StringBuilder 而不]]></description>
+</item>
+</channel>
+</rss>

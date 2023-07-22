@@ -1,0 +1,79 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>框架 - 分类 - 新手笔记</title>
+        <link>https://xue.woyao.net/categories/%E6%A1%86%E6%9E%B6/</link>
+        <description>框架 - 分类 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/%E6%A1%86%E6%9E%B6/" rel="self" type="application/rss+xml" /><item>
+    <title>RedisTemplate框架使用</title>
+    <link>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</link>
+    <pubDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</guid>
+    <description><![CDATA[命令使用 查询哈希表 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import org.springframework.data.redis.core.RedisTemplate; @Service @RequiredArgsConstructor public class UserService { private final RedisTemplate&lt;String, String&gt; redisTemplate; public getUserName(int userId) { // hashKey String hashKey = String.format(&#34;user_id_%d&#34;, userId); String fieldName = &#34;name&#34;; Object userName = redisTemplate.opsForHash().get(hashKey, fieldName); return userName.toString(); } }]]></description>
+</item>
+<item>
+    <title>MyBatis使用笔记</title>
+    <link>https://xue.woyao.net/posts/framework/mybatisshouce/</link>
+    <pubDate>Mon, 03 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/mybatisshouce/</guid>
+    <description><![CDATA[安装 普通使用 将 mybatis-x.x.x.jar 文件置于类路径（classpath）中即可。 依赖管理工具 maven 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;org.mybatis&lt;/groupId&gt; &lt;artifactId&gt;mybatis&lt;/artifactId&gt; &lt;version&gt;x.x.x&lt;/version&gt; &lt;/dependency&gt; 第 1 步创建 SqlSessionFactory]]></description>
+</item>
+<item>
+    <title>SpringBoot问题收集</title>
+    <link>https://xue.woyao.net/posts/framework/springbootwenti/</link>
+    <pubDate>Tue, 28 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/springbootwenti/</guid>
+    <description><![CDATA[Controller层问题 Request method &lsquo;GET&rsquo; not supported 使用 postman 发送请求，明明发送的是 POST 请求，却报 Request method 'GET' not supported。而且注解使用的就是 @PostMapp]]></description>
+</item>
+<item>
+    <title>SpringBoot 参数校验</title>
+    <link>https://xue.woyao.net/posts/framework/springbootvalidated/</link>
+    <pubDate>Mon, 27 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/springbootvalidated/</guid>
+    <description><![CDATA[验证注解 @NotNull，@NotEmpty，@NotBlank 三者的区别 注意： @NotBlank 只能用来注解String @NotEmpty 只能注解字符串和集合和数组 @NotNull @NotEmpty @NotBlank]]></description>
+</item>
+<item>
+    <title>hutool 框架使用笔记</title>
+    <link>https://xue.woyao.net/posts/framework/hutoolshouce/</link>
+    <pubDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/hutoolshouce/</guid>
+    <description><![CDATA[json JSONArray转集合 1 2 3 4 String json = &#34;[2, 3, 5]&#34;; JSONArray jsonArray = JSONUtil.parseArray(json); // 转包装类型数组 List&lt;Integer&gt; integerList = jsonArray.toList(Integer.class); JSONArray转包装类型数组Integer[] 方案一，想当]]></description>
+</item>
+<item>
+    <title>MyBatisPlus使用笔记</title>
+    <link>https://xue.woyao.net/posts/framework/mybatisplusshouce/</link>
+    <pubDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/mybatisplusshouce/</guid>
+    <description><![CDATA[注解 表实体注解 表名起别名 注解在实体类上，即此类映射库里的某个表名。 1 2 3 // 表 user_info 映射到实体 User @TableName(value = &#34;user_info&#34;) public class User {} 表字段起别名 1 2 3 4 5 6 7 // 主键字段]]></description>
+</item>
+<item>
+    <title>SpringMVC 获取请求参数的 N 种方式</title>
+    <link>https://xue.woyao.net/posts/2023/springmvchttpservletrequest/</link>
+    <pubDate>Fri, 17 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/2023/springmvchttpservletrequest/</guid>
+    <description><![CDATA[控制器请求方法里注入 HttpServletRequest 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 import org.springframework.web.bind.annotation.GetMapping; import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.RestController; import javax.servlet.http.HttpServletRequest; /** * @author Shali */ @RestController @RequestMapping(&#34;test&#34;) public class TestController { @GetMapping(&#34;hello&#34;) public String hello(HttpServletRequest httpServletRequest) { return httpServletRequest.getQueryString(); } } 利用 Spring 的依赖注入到控制器属]]></description>
+</item>
+<item>
+    <title>Spring</title>
+    <link>https://xue.woyao.net/posts/framework/spring/</link>
+    <pubDate>Tue, 30 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/spring/</guid>
+    <description><![CDATA[在旧的开发模式下，一个组件如果要使用另一个组件，必须先知道如何正确地创建它。于是引入IoC。 IoC又称为依赖注入（DI：Dependency]]></description>
+</item>
+<item>
+    <title>SpringBoot</title>
+    <link>https://xue.woyao.net/posts/framework/springboot/</link>
+    <pubDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/springboot/</guid>
+    <description><![CDATA[SpringBoot 与 Spring 的关系： 依赖安装 配置文件加载优先级 配置文件 加载优先级 application.yml 最低 application.yaml 其次 application.properties 最高 那里能看到的这个配置文件的加载顺序呢？ 1 2 3 4 5 6 7 8 9 10 11 12 13]]></description>
+</item>
+</channel>
+</rss>

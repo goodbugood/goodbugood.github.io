@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>PHP高级 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/php%E9%AB%98%E7%BA%A7/</link>
+        <description>PHP高级 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 17 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/php%E9%AB%98%E7%BA%A7/" rel="self" type="application/rss+xml" /><item>
+    <title>PHP易错点</title>
+    <link>https://xue.woyao.net/posts/php/php%E6%98%93%E9%94%99%E7%82%B9/</link>
+    <pubDate>Sat, 17 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/php%E6%98%93%E9%94%99%E7%82%B9/</guid>
+    <description><![CDATA[PHP 易错点 PHP 内置回调事件 1 2 3 4 5 6 7 8 9 10 11 12 13 14 # 程序结束（包含正常结束和异常结束）时，触发此回调 register_shutdown_function(function () { // 获取上一个错误，如果是正常结束返]]></description>
+</item>
+<item>
+    <title>如何获得方法/函数调用处的文件名和行号</title>
+    <link>https://xue.woyao.net/posts/php/fileandline/</link>
+    <pubDate>Sat, 17 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/fileandline/</guid>
+    <description><![CDATA[如何获取方法调用处的文件名，行号？ 需求 很多时候我们打印日志的时候，需要获取日志被打印的位置，具体来说就是文件名和行号。或者类的完整限定名和行]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>servlet - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/servlet/</link>
+        <description>servlet - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 01 Mar 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/servlet/" rel="self" type="application/rss+xml" /><item>
+    <title>Servlet</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/servlet/</link>
+    <pubDate>Mon, 01 Mar 2021 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/servlet/</guid>
+    <description><![CDATA[Servlet 是 Server Applet 的缩写，译为“服务器端小程序”，是一种使用 Java 语言来开发动态网站的技术。 使用原生 Java 开发动态网站非常麻烦，需要自己解析 HTTP 请求的报头，需要]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Kafka - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/kafka/</link>
+        <description>Kafka - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 15 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/kafka/" rel="self" type="application/rss+xml" /><item>
+    <title>RabbitMQ 笔记</title>
+    <link>https://xue.woyao.net/posts/2022/rabbitmq/</link>
+    <pubDate>Mon, 15 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/2022/rabbitmq/</guid>
+    <description><![CDATA[安装 安装容器 1 docker run -d --name es -p 9200:9200 -p 9300:9300 -e &#34;discovery.type=single-node&#34; -e ES_JAVA_OPTS=&#34;-Xms512m -Xmx512m&#34; elasticsearch:8.3.3 进入容器 1 docker exec -it es /bin/bash 应用场景 消息分发策略 消息流转 简单模式 路由模式 通配符模式 发布订阅模式 工作队模式]]></description>
+</item>
+</channel>
+</rss>

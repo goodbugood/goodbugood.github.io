@@ -1,0 +1,89 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>新手笔记</title>
+        <link>https://xue.woyao.net/</link>
+        <description>免费的在线新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</lastBuildDate>
+            <atom:link href="https://xue.woyao.net/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>不同业务线的错误码统一规划</title>
+    <link>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E9%87%8D%E6%9E%84%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0/%E4%B8%8D%E5%90%8C%E4%B8%9A%E5%8A%A1%E7%BA%BF%E7%9A%84%E9%94%99%E8%AF%AF%E7%A0%81%E7%BB%9F%E4%B8%80/</link>
+    <pubDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E9%87%8D%E6%9E%84%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0/%E4%B8%8D%E5%90%8C%E4%B8%9A%E5%8A%A1%E7%BA%BF%E7%9A%84%E9%94%99%E8%AF%AF%E7%A0%81%E7%BB%9F%E4%B8%80/</guid>
+    <description><![CDATA[分离 我们想实现如下效果： 领导层定义，不同业务线的错误码，也是错误码的前几位 不同业务线的开发，定义自己内部的错误码，也就是错误码后面的 如果领导]]></description>
+</item>
+<item>
+    <title>教你高效地使用PHP</title>
+    <link>https://xue.woyao.net/posts/php/%E9%AB%98%E6%95%88%E5%9C%B0%E4%BD%BF%E7%94%A8php/</link>
+    <pubDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/%E9%AB%98%E6%95%88%E5%9C%B0%E4%BD%BF%E7%94%A8php/</guid>
+    <description><![CDATA[字符串初始化尽量使用单引号 单引号不需要检查解析字符串中的变量，效率高于双引号。就类似别人告诉不需要线程安全的场景下，变长字符串让你使用 StringBuilder 而不]]></description>
+</item>
+<item>
+    <title>Java反射应用</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/java%E5%8F%8D%E5%B0%84/</link>
+    <pubDate>Wed, 12 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/java%E5%8F%8D%E5%B0%84/</guid>
+    <description><![CDATA[反射真是无所不能，不仅能修改类常量，还能修改对象属性的访问权限。 功能 反射有如下功能。 修改类常量，但是不能修改被基本类型类常量 引用类型类常量也]]></description>
+</item>
+<item>
+    <title>RedisTemplate框架使用</title>
+    <link>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</link>
+    <pubDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</guid>
+    <description><![CDATA[命令使用 查询哈希表 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import org.springframework.data.redis.core.RedisTemplate; @Service @RequiredArgsConstructor public class UserService { private final RedisTemplate&lt;String, String&gt; redisTemplate; public getUserName(int userId) { // hashKey String hashKey = String.format(&#34;user_id_%d&#34;, userId); String fieldName = &#34;name&#34;; Object userName = redisTemplate.opsForHash().get(hashKey, fieldName); return userName.toString(); } }]]></description>
+</item>
+<item>
+    <title>Spring常见的3种自动注入方式</title>
+    <link>https://xue.woyao.net/posts/framework/spring/spring%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%B3%A8%E5%85%A5%E6%96%B9%E5%BC%8F/</link>
+    <pubDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/spring/spring%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%B3%A8%E5%85%A5%E6%96%B9%E5%BC%8F/</guid>
+    <description><![CDATA[注解 @Autowired/@Resource 注入 @Autowired 默认按类型查找，当一个类型多个实现时，按名字找。按名字查找时，配合 @Qualifier 注解。 @Resource 默认按名字找，找不到时，按类型找。 1 2 3 4 public class IndexController { @Autowired]]></description>
+</item>
+<item>
+    <title>教训规约</title>
+    <link>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E6%95%99%E8%AE%AD%E8%A7%84%E7%BA%A6/</link>
+    <pubDate>Mon, 10 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E6%95%99%E8%AE%AD%E8%A7%84%E7%BA%A6/</guid>
+    <description><![CDATA[数据库 枚举字段 枚举字段尽量使用能够描述业务，短小精悍的词语，不要为了那点性能使用 tinyint ，否则后面你就要识记那些 1，2，3，4，5 各代表什么业务含]]></description>
+</item>
+<item>
+    <title>统一错误码如何追加具体业务错误描述</title>
+    <link>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E9%87%8D%E6%9E%84%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0/%E7%BB%9F%E4%B8%80%E9%94%99%E8%AF%AF%E7%A0%81%E7%9A%84%E9%94%99%E8%AF%AF%E6%B6%88%E6%81%AF%E8%8E%B7%E5%8F%96/</link>
+    <pubDate>Sat, 08 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E9%87%8D%E6%9E%84%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0/%E7%BB%9F%E4%B8%80%E9%94%99%E8%AF%AF%E7%A0%81%E7%9A%84%E9%94%99%E8%AF%AF%E6%B6%88%E6%81%AF%E8%8E%B7%E5%8F%96/</guid>
+    <description><![CDATA[今天阅读了他人代码，作者应该是想封装一个统一的错误码枚举类。这种需求大家应该都遇到过。 常见封装 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 package com.baidu; import lombok.AllArgsConstructor; import lombok.Getter; @AllArgsConstructor public]]></description>
+</item>
+<item>
+    <title>Hugo使用手册</title>
+    <link>https://xue.woyao.net/posts/%E5%B7%A5%E5%85%B7/hugo/</link>
+    <pubDate>Wed, 05 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/%E5%B7%A5%E5%85%B7/hugo/</guid>
+    <description><![CDATA[常见报错 you need the extended version to build SCSS/SASS 由于你使用了 hugo_0.114.1_windows-amd64，但是他不支持编译 SCSS/SASS，应该下载使用 h]]></description>
+</item>
+<item>
+    <title>HTTP 协议</title>
+    <link>https://xue.woyao.net/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http%E5%8D%8F%E8%AE%AE/</link>
+    <pubDate>Tue, 04 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http%E5%8D%8F%E8%AE%AE/</guid>
+    <description><![CDATA[常见状态码 499 Client Closed Request 这种情况通常是，服务端处理时间过长，超出客户端设置的最大等待时间，客户端主动关闭了连接。]]></description>
+</item>
+<item>
+    <title>Java推荐操作</title>
+    <link>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E4%BC%98%E7%A7%80%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Tue, 27 Jun 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E4%BC%98%E7%A7%80%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[Java推荐操作 判空 不推荐用法 不推荐的原因是，不够语义化。 1 2 3 4 5 6 7 8 9 10 11 12 13 @Test public void npeMap() { HashMap&lt;String, HashMap&lt;String, String&gt;&gt; map = new HashMap&lt;&gt;(2); HashMap&lt;String, String&gt; hashMap = new HashMap&lt;&gt;(1); hashMap.put(&#34;country&#34;, &#34;china&#34;); map.put(&#34;shali&#34;, hashMap); if (null != map.get(&#34;shali&#34;)) { HashMap&lt;String,]]></description>
+</item>
+</channel>
+</rss>

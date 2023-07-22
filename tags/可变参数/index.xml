@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>可变参数 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/</link>
+        <description>可变参数 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E5%8F%AF%E5%8F%98%E5%8F%82%E6%95%B0/" rel="self" type="application/rss+xml" /><item>
+    <title>Java中的数组参数与可变参数的区别</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/shuzuhekebiancan/</link>
+    <pubDate>Sat, 01 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/shuzuhekebiancan/</guid>
+    <description><![CDATA[Java中的数组参数与可变参数的区别 看代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 private int[] func1(int... args) { return args; } private int[] func2(int[] args) { return args; } @Test void func() { int[] args = {1, 2, 3}; assertArrayEquals(args, func1(args)); assertArrayEquals(args, func2(args)); assertArrayEquals(args, func1(1, 2,]]></description>
+</item>
+</channel>
+</rss>

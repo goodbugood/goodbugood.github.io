@@ -1,0 +1,31 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>php - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/php/</link>
+        <description>php - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/php/" rel="self" type="application/rss+xml" /><item>
+    <title>教你高效地使用PHP</title>
+    <link>https://xue.woyao.net/posts/php/%E9%AB%98%E6%95%88%E5%9C%B0%E4%BD%BF%E7%94%A8php/</link>
+    <pubDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/%E9%AB%98%E6%95%88%E5%9C%B0%E4%BD%BF%E7%94%A8php/</guid>
+    <description><![CDATA[字符串初始化尽量使用单引号 单引号不需要检查解析字符串中的变量，效率高于双引号。就类似别人告诉不需要线程安全的场景下，变长字符串让你使用 StringBuilder 而不]]></description>
+</item>
+<item>
+    <title>php工程归档文件phar的打包和运行</title>
+    <link>https://xue.woyao.net/posts/php/phpdephar/</link>
+    <pubDate>Tue, 13 Jun 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/phpdephar/</guid>
+    <description><![CDATA[目录结构 phar归档文件构建脚本 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 &lt;?php // build.php // 打包的文件名 $pharFileName = &#39;hellophar.phar&#39;; // 打包是追加模式，为了保证打包里内容最新，先删]]></description>
+</item>
+<item>
+    <title>PHP输出控制函数</title>
+    <link>https://xue.woyao.net/posts/php/php%E8%BE%93%E5%87%BA%E6%8E%A7%E5%88%B6%E5%87%BD%E6%95%B0/</link>
+    <pubDate>Sat, 27 Nov 2021 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/php%E8%BE%93%E5%87%BA%E6%8E%A7%E5%88%B6%E5%87%BD%E6%95%B0/</guid>
+    <description><![CDATA[输出控制 函数 清空缓冲区 刷出缓冲区内容 返回缓冲区内容 关闭缓冲区 ob_clean 是 否 否 否 ob_end_clean 是 否 否 是 ob_end_flush 否 是 否 是 ob_flush 否 是 否 否 ob_get_clean 是 否 是 是 ob_get_contents 否 否 是 否 ob_get_flush 否 是 是 是 注意: 输出]]></description>
+</item>
+</channel>
+</rss>

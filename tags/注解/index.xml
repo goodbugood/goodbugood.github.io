@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>注解 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E6%B3%A8%E8%A7%A3/</link>
+        <description>注解 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 18 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E6%B3%A8%E8%A7%A3/" rel="self" type="application/rss+xml" /><item>
+    <title>Bean搭配Configuration和Component</title>
+    <link>https://xue.woyao.net/posts/framework/spring/@bean/</link>
+    <pubDate>Tue, 18 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/spring/@bean/</guid>
+    <description><![CDATA[@Bean搭配@Configuration和@Component 背景： 1 2 3 @org.springframework.stereotype.Component public @interface Configuration { } 我们都知道 @Bean 需要搭配 @Configuration 注解才能使得定义的配置类被扫描]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>thinkphp - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/thinkphp/</link>
+        <description>thinkphp - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 09 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/thinkphp/" rel="self" type="application/rss+xml" /><item>
+    <title>ThinkPHP3.2.3手册笔记</title>
+    <link>https://xue.woyao.net/posts/framework/tp3.2biji/</link>
+    <pubDate>Tue, 09 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/tp3.2biji/</guid>
+    <description><![CDATA[ThinkPHP3.2.3手册笔记]]></description>
+</item>
+<item>
+    <title>ThinkPHP3.2的疑惑</title>
+    <link>https://xue.woyao.net/posts/2022/tp3.2deyihuo/</link>
+    <pubDate>Fri, 19 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/2022/tp3.2deyihuo/</guid>
+    <description><![CDATA[没看到关闭 MySQL 连接 在使用 TP3.2 的过程中，一直看到使用 M 方法，查询数据，那 M 方法肯定帮我们连接上了 MySQL，但是没看到他关闭啊。既然没有连接池，那]]></description>
+</item>
+</channel>
+</rss>

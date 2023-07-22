@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>索引 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E7%B4%A2%E5%BC%95/</link>
+        <description>索引 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 20 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E7%B4%A2%E5%BC%95/" rel="self" type="application/rss+xml" /><item>
+    <title>MySQL复习笔记</title>
+    <link>https://xue.woyao.net/posts/database/mysqlfuxibiji/</link>
+    <pubDate>Sat, 20 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/database/mysqlfuxibiji/</guid>
+    <description><![CDATA[常用函数 日期时间 时间戳转格式化日期 1 2 # 输出 1970-01-01 08:00:01 SELECT FROM_UNIXTIME(1) AS t 日期转时间戳 1 2 # 输出 0 SELECT UNIX_TIMESTAMP(&#39;1970-01-01 08:00:00&#39;) AS t ACID 事务的隔离级别 默认隔离级别：可重复读 级别 存在的问]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>规范 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E8%A7%84%E8%8C%83/</link>
+        <description>规范 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E8%A7%84%E8%8C%83/" rel="self" type="application/rss+xml" /><item>
+    <title>Git学习笔记</title>
+    <link>https://xue.woyao.net/posts/2022/gitminglingbeiwanglu/</link>
+    <pubDate>Thu, 18 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/2022/gitminglingbeiwanglu/</guid>
+    <description><![CDATA[commit 规范 标识 描述 feat 新功能feature fix 修补bug docs 开发文档变动 style 代码格式变动，无代码变动，比如格式化了代码 refactor 重构业务，既不是新增功能，也不是]]></description>
+</item>
+<item>
+    <title>编程规约</title>
+    <link>https://xue.woyao.net/posts/yueding/bianchengguiyue/</link>
+    <pubDate>Mon, 15 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/yueding/bianchengguiyue/</guid>
+    <description><![CDATA[约定大于配置，配置大于编码。 关键字顺序 示例 描述 @Override public ==abstract== void service(ServletRequest req, ServletResponse res) throws ServletException, IOException; 抽象方法 private static final long serialVersionUID = 1L; private static final long serialVersionUID = 8294180014912103005L; 类常量，非大写 private static ==final== String METHOD_POST = &ldquo;POST&rdquo;; 类常量，]]></description>
+</item>
+</channel>
+</rss>

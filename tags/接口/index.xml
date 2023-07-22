@@ -1,0 +1,39 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>接口 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E6%8E%A5%E5%8F%A3/</link>
+        <description>接口 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 20 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E6%8E%A5%E5%8F%A3/" rel="self" type="application/rss+xml" /><item>
+    <title>设计模式接口</title>
+    <link>https://xue.woyao.net/posts/designpatterns/interface/</link>
+    <pubDate>Thu, 20 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/designpatterns/interface/</guid>
+    <description><![CDATA[chatgpt 的回答： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 Java中有很多设计模式]]></description>
+</item>
+<item>
+    <title>接口与抽象类的区别与使用场景</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/interfaceandabstractclass/</link>
+    <pubDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/interfaceandabstractclass/</guid>
+    <description><![CDATA[接口与抽象类的区别 Java 中一个类可以实现多个接口 只能继承一个抽象类 接口约束了我们必须具备哪些行为，所以接口是对行为的抽象。 抽象类是类的抽象]]></description>
+</item>
+<item>
+    <title>认识设计模式</title>
+    <link>https://xue.woyao.net/posts/designpatterns/readme/</link>
+    <pubDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/designpatterns/readme/</guid>
+    <description><![CDATA[设计模式的接口和抽象类 如果一个人长时间不使用 23 种设计模式，那么他很容易遗忘设计模式的规则和用法。但是如果我们有一种工具，能够帮助我们拾起设计]]></description>
+</item>
+<item>
+    <title>前后端对接中的问题</title>
+    <link>https://xue.woyao.net/posts/yueding/duijie/</link>
+    <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/yueding/duijie/</guid>
+    <description><![CDATA[约定大于配置，配置大于代码。 0 和空字符串也是有意义的 ==很多前后端在对接搜索接口时，总喜欢将字段传空字符串或者传 0 代表所有类型。这是不合适的]]></description>
+</item>
+</channel>
+</rss>

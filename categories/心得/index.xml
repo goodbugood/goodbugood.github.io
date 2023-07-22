@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>心得 - 分类 - 新手笔记</title>
+        <link>https://xue.woyao.net/categories/%E5%BF%83%E5%BE%97/</link>
+        <description>心得 - 分类 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 17 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/%E5%BF%83%E5%BE%97/" rel="self" type="application/rss+xml" /><item>
+    <title>自我提高</title>
+    <link>https://xue.woyao.net/posts/2022/ruhetigao/</link>
+    <pubDate>Wed, 17 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/2022/ruhetigao/</guid>
+    <description><![CDATA[多阅读别人的代码 多阅读距离你最近的人的代码，比如同事的代码呀。 如何做晋升述职 作者在阿里巴巴已经做了好几年的晋升评委，发现很多同学都缺乏结构化]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Java日期时间 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/java%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4/</link>
+        <description>Java日期时间 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/java%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4/" rel="self" type="application/rss+xml" /><item>
+    <title>Java日期时间</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/time/</link>
+    <pubDate>Fri, 05 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/time/</guid>
+    <description><![CDATA[Java日期时间 JDK1.8之前 格式化时间： 1 2 3 4 5 6 7 8 9 10 11 import cn.hutool.core.date.DatePattern; import java.text.SimpleDateFormat; import java.time.Instant; import java.util.Date; Instant instant = Instant.now(); Date date = Date.from(instant); SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DatePattern.NORM_DATETIME_PATTERN); System.out.println(simpleDateFormat.format(date)); // 2023-05-05 22:02:582023-05-05 22:02:58 JDK1.8之后 格式化]]></description>
+</item>
+</channel>
+</rss>

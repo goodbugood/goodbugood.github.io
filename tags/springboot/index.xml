@@ -1,0 +1,31 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>springboot - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/springboot/</link>
+        <description>springboot - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 28 Mar 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/springboot/" rel="self" type="application/rss+xml" /><item>
+    <title>SpringBoot问题收集</title>
+    <link>https://xue.woyao.net/posts/framework/springbootwenti/</link>
+    <pubDate>Tue, 28 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/springbootwenti/</guid>
+    <description><![CDATA[Controller层问题 Request method &lsquo;GET&rsquo; not supported 使用 postman 发送请求，明明发送的是 POST 请求，却报 Request method 'GET' not supported。而且注解使用的就是 @PostMapp]]></description>
+</item>
+<item>
+    <title>SpringBoot 参数校验</title>
+    <link>https://xue.woyao.net/posts/framework/springbootvalidated/</link>
+    <pubDate>Mon, 27 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/springbootvalidated/</guid>
+    <description><![CDATA[验证注解 @NotNull，@NotEmpty，@NotBlank 三者的区别 注意： @NotBlank 只能用来注解String @NotEmpty 只能注解字符串和集合和数组 @NotNull @NotEmpty @NotBlank]]></description>
+</item>
+<item>
+    <title>SpringBoot</title>
+    <link>https://xue.woyao.net/posts/framework/springboot/</link>
+    <pubDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/springboot/</guid>
+    <description><![CDATA[SpringBoot 与 Spring 的关系： 依赖安装 配置文件加载优先级 配置文件 加载优先级 application.yml 最低 application.yaml 其次 application.properties 最高 那里能看到的这个配置文件的加载顺序呢？ 1 2 3 4 5 6 7 8 9 10 11 12 13]]></description>
+</item>
+</channel>
+</rss>

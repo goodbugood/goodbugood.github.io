@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>lombok - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/lombok/</link>
+        <description>lombok - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 25 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/lombok/" rel="self" type="application/rss+xml" /><item>
+    <title>Lombok</title>
+    <link>https://xue.woyao.net/posts/framework/lombok/</link>
+    <pubDate>Thu, 25 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/lombok/</guid>
+    <description><![CDATA[安装 Maven 1 2 3 4 5 6 7 8 &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;org.projectlombok&lt;/groupId&gt; &lt;artifactId&gt;lombok&lt;/artifactId&gt; &lt;version&gt;1.18.24&lt;/version&gt; &lt;scope&gt;provided&lt;/scope&gt; &lt;/dependency&gt; &lt;/dependencies&gt; 官方文档 描述 https://projectlombok.org/changelog 变更日志 https://projectlombok.org/setup/maven 安装手册 https://projectlombok.org/features/ 使用说明书 下面是一些常用的注解。 var val 等效于使用 final var。 1 2 3 4 val str]]></description>
+</item>
+</channel>
+</rss>

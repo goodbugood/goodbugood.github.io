@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>NullPointerException - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/nullpointerexception/</link>
+        <description>NullPointerException - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/nullpointerexception/" rel="self" type="application/rss+xml" /><item>
+    <title>Java判空的常见操作</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/nullpointerexception/</link>
+    <pubDate>Tue, 11 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/nullpointerexception/</guid>
+    <description><![CDATA[JDK1.8引入的Optional]]></description>
+</item>
+</channel>
+</rss>

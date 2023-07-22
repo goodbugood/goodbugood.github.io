@@ -1,0 +1,63 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>redis - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/redis/</link>
+        <description>redis - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/redis/" rel="self" type="application/rss+xml" /><item>
+    <title>RedisTemplate框架使用</title>
+    <link>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</link>
+    <pubDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</guid>
+    <description><![CDATA[命令使用 查询哈希表 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import org.springframework.data.redis.core.RedisTemplate; @Service @RequiredArgsConstructor public class UserService { private final RedisTemplate&lt;String, String&gt; redisTemplate; public getUserName(int userId) { // hashKey String hashKey = String.format(&#34;user_id_%d&#34;, userId); String fieldName = &#34;name&#34;; Object userName = redisTemplate.opsForHash().get(hashKey, fieldName); return userName.toString(); } }]]></description>
+</item>
+<item>
+    <title>Redis 的使用讨论</title>
+    <link>https://xue.woyao.net/posts/database/redisdescan/</link>
+    <pubDate>Mon, 26 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/database/redisdescan/</guid>
+    <description><![CDATA[keys 命令与 scan 命令的区别 相同点和不同点： 操作 相同点 不同点 scan 时间复杂度O(n) 迭代扫描，消耗内存少 keys 时间复杂度O(n) 消耗内存大 Q&amp;A keys性能低，]]></description>
+</item>
+<item>
+    <title>MySQL优化</title>
+    <link>https://xue.woyao.net/posts/database/youhua/</link>
+    <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/database/youhua/</guid>
+    <description><![CDATA[SQL优化 Using index condition 与 Using index 的区别 using index 代表使用覆盖索引，不用回表。 而 using index condition 表示仅靠索引返回的数据还不够，还需要回表，不过回表前会过滤 where 条件。 索引 指]]></description>
+</item>
+<item>
+    <title>基于Redis有序集合的延时消息队列实现</title>
+    <link>https://xue.woyao.net/posts/database/redisdelaymq/</link>
+    <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/database/redisdelaymq/</guid>
+    <description><![CDATA[要求 由于使用有序集合的 score 充当延时时间，要求所有客户端时钟保持一致 特点 延时队列基于 Redis 的有序集合，底层是 Hash 表，所以查找和删除的时间复杂度是 O(1]]></description>
+</item>
+<item>
+    <title>Redis使用过程中存在的问题</title>
+    <link>https://xue.woyao.net/posts/database/rediscuowu/</link>
+    <pubDate>Fri, 16 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/database/rediscuowu/</guid>
+    <description><![CDATA[Scan使用中存在的问题 1 public function scan(&amp;$iterator, $pattern = null, $count = 0) 游标 $iterator 初始值为 null，当其返回值为 0 时表示整个迭代结束。 $count 是每次迭代遍历字典槽的数量（约等于）]]></description>
+</item>
+<item>
+    <title>Redis的分布式锁</title>
+    <link>https://xue.woyao.net/posts/database/setnx/</link>
+    <pubDate>Wed, 24 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/database/setnx/</guid>
+    <description><![CDATA[1 setnx key value setnx命令的全称是set if not exists，即当指定的 key 不存在时，设置值并返回 1，如果存在什么都不做，并返回 0。 setnx实现分布]]></description>
+</item>
+<item>
+    <title>Redis复习笔记</title>
+    <link>https://xue.woyao.net/posts/database/redisfuxibiji/</link>
+    <pubDate>Mon, 01 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/database/redisfuxibiji/</guid>
+    <description><![CDATA[[TOC] Redis复习笔记 数据类型 数据类型 特点 添加 删除 修改 查询 string（字符串） 二进制安全，可存图片 一个字符串最大能存512MB的内容 set del set get]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,87 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Java基础 - 分类 - 新手笔记</title>
+        <link>https://xue.woyao.net/categories/java%E5%9F%BA%E7%A1%80/</link>
+        <description>Java基础 - 分类 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 12 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/java%E5%9F%BA%E7%A1%80/" rel="self" type="application/rss+xml" /><item>
+    <title>Java反射应用</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/java%E5%8F%8D%E5%B0%84/</link>
+    <pubDate>Wed, 12 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/java%E5%8F%8D%E5%B0%84/</guid>
+    <description><![CDATA[反射真是无所不能，不仅能修改类常量，还能修改对象属性的访问权限。 功能 反射有如下功能。 修改类常量，但是不能修改被基本类型类常量 引用类型类常量也]]></description>
+</item>
+<item>
+    <title>Java中的包</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/package/</link>
+    <pubDate>Fri, 05 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/package/</guid>
+    <description><![CDATA[可见性]]></description>
+</item>
+<item>
+    <title>Java日期时间</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/time/</link>
+    <pubDate>Fri, 05 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/time/</guid>
+    <description><![CDATA[Java日期时间 JDK1.8之前 格式化时间： 1 2 3 4 5 6 7 8 9 10 11 import cn.hutool.core.date.DatePattern; import java.text.SimpleDateFormat; import java.time.Instant; import java.util.Date; Instant instant = Instant.now(); Date date = Date.from(instant); SimpleDateFormat simpleDateFormat = new SimpleDateFormat(DatePattern.NORM_DATETIME_PATTERN); System.out.println(simpleDateFormat.format(date)); // 2023-05-05 22:02:582023-05-05 22:02:58 JDK1.8之后 格式化]]></description>
+</item>
+<item>
+    <title>Web</title>
+    <link>https://xue.woyao.net/posts/framework/web/</link>
+    <pubDate>Fri, 05 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/web/</guid>
+    <description><![CDATA[web 常用功能： 出/入参格式化： paja 转 json 序列化时，定义格式，com.fasterxml.jackson.annotation.@JsonForma]]></description>
+</item>
+<item>
+    <title>类</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/class/</link>
+    <pubDate>Fri, 05 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/class/</guid>
+    <description><![CDATA[内部类 静态内部类 内部类和静态内部类有何区别，什么场景下用什么？ Java 的内部类和静态内部类都是定义在另一个类的内部的类。 区别： 内部类可以访问外部类]]></description>
+</item>
+<item>
+    <title>日志</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/log/</link>
+    <pubDate>Tue, 18 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/log/</guid>
+    <description><![CDATA[常见用法 为什么每个类里都定义一个 logger，而不是单例 下面是 chatgpt 的回答： 1 2 3 4 5 Java中的每个类都可以定义一个logger，这是因为每个]]></description>
+</item>
+<item>
+    <title>Java关键字</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javakeywords/</link>
+    <pubDate>Mon, 17 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javakeywords/</guid>
+    <description><![CDATA[final 修饰变量 final 修饰的变量，只能初始化，不能赋值。（即只能被赋值 1 次。） 1 2 3 4 5 6 // 定义并初始化 final Integer integer = 1; // 第二次和第三次赋值都会报错 // Cannot assign a]]></description>
+</item>
+<item>
+    <title>Java 中的三种 for 循环区别</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javafordequbie/</link>
+    <pubDate>Sat, 15 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javafordequbie/</guid>
+    <description><![CDATA[1. for (int i = 0; i &lt; userList.size(); i++) 2. for (User user : userList) 3. userList.forEach(user -&gt; {}) 总结： 别人总结了： 1w 以内数据用方式 1，for 10w 以内数据用集合的迭代器，forEach]]></description>
+</item>
+<item>
+    <title>Java判空的常见操作</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/nullpointerexception/</link>
+    <pubDate>Tue, 11 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/nullpointerexception/</guid>
+    <description><![CDATA[JDK1.8引入的Optional]]></description>
+</item>
+<item>
+    <title>接口与抽象类的区别与使用场景</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/interfaceandabstractclass/</link>
+    <pubDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/interfaceandabstractclass/</guid>
+    <description><![CDATA[接口与抽象类的区别 Java 中一个类可以实现多个接口 只能继承一个抽象类 接口约束了我们必须具备哪些行为，所以接口是对行为的抽象。 抽象类是类的抽象]]></description>
+</item>
+</channel>
+</rss>

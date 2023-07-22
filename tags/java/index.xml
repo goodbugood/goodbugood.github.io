@@ -1,0 +1,87 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Java - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/java/</link>
+        <description>Java - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 12 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/java/" rel="self" type="application/rss+xml" /><item>
+    <title>Java反射应用</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/java%E5%8F%8D%E5%B0%84/</link>
+    <pubDate>Wed, 12 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/java%E5%8F%8D%E5%B0%84/</guid>
+    <description><![CDATA[反射真是无所不能，不仅能修改类常量，还能修改对象属性的访问权限。 功能 反射有如下功能。 修改类常量，但是不能修改被基本类型类常量 引用类型类常量也]]></description>
+</item>
+<item>
+    <title>Java推荐操作</title>
+    <link>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E4%BC%98%E7%A7%80%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Tue, 27 Jun 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E4%BC%98%E7%A7%80%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[Java推荐操作 判空 不推荐用法 不推荐的原因是，不够语义化。 1 2 3 4 5 6 7 8 9 10 11 12 13 @Test public void npeMap() { HashMap&lt;String, HashMap&lt;String, String&gt;&gt; map = new HashMap&lt;&gt;(2); HashMap&lt;String, String&gt; hashMap = new HashMap&lt;&gt;(1); hashMap.put(&#34;country&#34;, &#34;china&#34;); map.put(&#34;shali&#34;, hashMap); if (null != map.get(&#34;shali&#34;)) { HashMap&lt;String,]]></description>
+</item>
+<item>
+    <title>Bean搭配Configuration和Component</title>
+    <link>https://xue.woyao.net/posts/framework/spring/@bean/</link>
+    <pubDate>Tue, 18 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/spring/@bean/</guid>
+    <description><![CDATA[@Bean搭配@Configuration和@Component 背景： 1 2 3 @org.springframework.stereotype.Component public @interface Configuration { } 我们都知道 @Bean 需要搭配 @Configuration 注解才能使得定义的配置类被扫描]]></description>
+</item>
+<item>
+    <title>日志</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/log/</link>
+    <pubDate>Tue, 18 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/log/</guid>
+    <description><![CDATA[常见用法 为什么每个类里都定义一个 logger，而不是单例 下面是 chatgpt 的回答： 1 2 3 4 5 Java中的每个类都可以定义一个logger，这是因为每个]]></description>
+</item>
+<item>
+    <title>Java关键字</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javakeywords/</link>
+    <pubDate>Mon, 17 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javakeywords/</guid>
+    <description><![CDATA[final 修饰变量 final 修饰的变量，只能初始化，不能赋值。（即只能被赋值 1 次。） 1 2 3 4 5 6 // 定义并初始化 final Integer integer = 1; // 第二次和第三次赋值都会报错 // Cannot assign a]]></description>
+</item>
+<item>
+    <title>认识Map</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/learnmap/</link>
+    <pubDate>Thu, 06 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/learnmap/</guid>
+    <description><![CDATA[认识HashMap]]></description>
+</item>
+<item>
+    <title>Java中有哪些容器</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/container/</link>
+    <pubDate>Wed, 05 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/container/</guid>
+    <description><![CDATA[Collection 和 Map 接口都是容器接口。其实 Map 也是集合。]]></description>
+</item>
+<item>
+    <title>Java中的数组参数与可变参数的区别</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/shuzuhekebiancan/</link>
+    <pubDate>Sat, 01 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/shuzuhekebiancan/</guid>
+    <description><![CDATA[Java中的数组参数与可变参数的区别 看代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 private int[] func1(int... args) { return args; } private int[] func2(int[] args) { return args; } @Test void func() { int[] args = {1, 2, 3}; assertArrayEquals(args, func1(args)); assertArrayEquals(args, func2(args)); assertArrayEquals(args, func1(1, 2,]]></description>
+</item>
+<item>
+    <title>Java之为什么呢</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javawhy/</link>
+    <pubDate>Sat, 01 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javawhy/</guid>
+    <description><![CDATA[使用常量类还是常量接口，为什么呢 比如人类，有性别男女，你认为我们是定义到人类类里，还是性别接口里呢？孰优孰劣？ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15]]></description>
+</item>
+<item>
+    <title>Java数据类型转换</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javashujuleixinzhuanhuan/</link>
+    <pubDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javashujuleixinzhuanhuan/</guid>
+    <description><![CDATA[基本数据类型和包装数据类型互转 基本数据类型转包装数据类型 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 int int1 = 1; // 基本数据类型转包装数据类型：显式转换 Integer integer]]></description>
+</item>
+</channel>
+</rss>

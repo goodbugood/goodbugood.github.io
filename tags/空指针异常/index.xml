@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>空指针异常 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8/</link>
+        <description>空指针异常 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 27 Jun 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8/" rel="self" type="application/rss+xml" /><item>
+    <title>PHP8.0引入nullsafe</title>
+    <link>https://xue.woyao.net/posts/php/php8%E6%96%B0%E7%89%B9%E6%80%A7/</link>
+    <pubDate>Tue, 27 Jun 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/php8%E6%96%B0%E7%89%B9%E6%80%A7/</guid>
+    <description><![CDATA[?? 1 2 3 $name = null; $name = isset($name) ? $name : &#39;&#39;; 等效： 1 2 3 $name = null; $name = $name ?? &#39;&#39;; ?: 1 2 3 $name = &#39; &#39;; $name = empty($name) ? &#39;&#39; : $name; 等效： 1 2 3 $name = &#39; &#39;; $name = $name ?: &#39;&#39;;]]></description>
+</item>
+</channel>
+</rss>

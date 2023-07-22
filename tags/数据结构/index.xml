@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数据结构 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+        <description>数据结构 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 06 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="self" type="application/rss+xml" /><item>
+    <title>为什么说程序=算法&#43;数据结构</title>
+    <link>https://xue.woyao.net/posts/2023/whatisprogram/</link>
+    <pubDate>Thu, 06 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/2023/whatisprogram/</guid>
+    <description><![CDATA[我们很容易理解：程序 = 变量 + 业务]]></description>
+</item>
+</channel>
+</rss>

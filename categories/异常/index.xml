@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>异常 - 分类 - 新手笔记</title>
+        <link>https://xue.woyao.net/categories/%E5%BC%82%E5%B8%B8/</link>
+        <description>异常 - 分类 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/%E5%BC%82%E5%B8%B8/" rel="self" type="application/rss+xml" /><item>
+    <title>送你100个异常</title>
+    <link>https://xue.woyao.net/posts/framework/cuocuocuo/</link>
+    <pubDate>Thu, 01 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/cuocuocuo/</guid>
+    <description><![CDATA[java.lang java.lang.IllegalStateException 状态异常。 Spring org.springframework.beans.factory.NoSuchBeanDefinitionException 当你从 Spring 容器（）中获取 bean 时，如果这个 bean 不存在，他并不会返回 null，而是直接抛未定义 bean 异常。 出现这种问题一般 2 种： Spring 容器里]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,31 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>tool - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/tool/</link>
+        <description>tool - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/tool/" rel="self" type="application/rss+xml" /><item>
+    <title>劳动工具</title>
+    <link>https://xue.woyao.net/posts/tools/mytool/</link>
+    <pubDate>Sat, 29 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/mytool/</guid>
+    <description><![CDATA[编辑器 PhpStorm 最强 PHP IDE Idea Sublime 正则操作文本方便 小巧精悍 图文工具 Snipaste https://zh.snipaste.com/ 截图好工具 FastStone Capture https://www.faststone.org/FSCaptureDownload.htm 屏幕取色，截图，滚动截图，录屏压缩比高。 数据库软件 Navicat 数据库操作客户端]]></description>
+</item>
+<item>
+    <title>Maven</title>
+    <link>https://xue.woyao.net/posts/framework/maven/</link>
+    <pubDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/maven/</guid>
+    <description><![CDATA[继承 子项目不继承父项目的 modules properties 全局属性，只对当前工程生效。 dependencys 1 2 3 4 5 6 &lt;dependency&gt; &lt;groupId&gt;公司名称/公司域名&lt;/group]]></description>
+</item>
+<item>
+    <title>常用框架</title>
+    <link>https://xue.woyao.net/posts/framework/javakuangjia/</link>
+    <pubDate>Mon, 22 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/javakuangjia/</guid>
+    <description><![CDATA[工具类 lombok 基于注解，帮你实现一些魔术方法。]]></description>
+</item>
+</channel>
+</rss>

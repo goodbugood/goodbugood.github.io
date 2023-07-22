@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>docker - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/docker/</link>
+        <description>docker - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 06 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/docker/" rel="self" type="application/rss+xml" /><item>
+    <title>Docker 使用笔记</title>
+    <link>https://xue.woyao.net/posts/2022/docker/</link>
+    <pubDate>Tue, 06 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/2022/docker/</guid>
+    <description><![CDATA[常用命令 几个很常用的命令表 命令 描述 docker images 等同于 docker image ls 查看下载的镜像列表 docker ps -a 已安装的容器列表 docker ps 当前运行的容器列表 操作镜像 搜索镜像 1 docker search redis NAME 镜]]></description>
+</item>
+</channel>
+</rss>

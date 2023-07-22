@@ -1,0 +1,39 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>问 - 分类 - 新手笔记</title>
+        <link>https://xue.woyao.net/categories/%E9%97%AE/</link>
+        <description>问 - 分类 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 06 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/%E9%97%AE/" rel="self" type="application/rss+xml" /><item>
+    <title>为什么说程序=算法&#43;数据结构</title>
+    <link>https://xue.woyao.net/posts/2023/whatisprogram/</link>
+    <pubDate>Thu, 06 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/2023/whatisprogram/</guid>
+    <description><![CDATA[我们很容易理解：程序 = 变量 + 业务]]></description>
+</item>
+<item>
+    <title>Java之为什么呢</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javawhy/</link>
+    <pubDate>Sat, 01 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javawhy/</guid>
+    <description><![CDATA[使用常量类还是常量接口，为什么呢 比如人类，有性别男女，你认为我们是定义到人类类里，还是性别接口里呢？孰优孰劣？ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15]]></description>
+</item>
+<item>
+    <title>分页从0开始还是从1开始</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/fenye/</link>
+    <pubDate>Sat, 04 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/fenye/</guid>
+    <description><![CDATA[背景： 有一次跟一个前端同事对接的时候，他传来的第一页 page 竟然是 0。我当时很惊讶，跟他理论了一番，他说公司某位领导告诉他页码从 0 开始传。 我回答他]]></description>
+</item>
+<item>
+    <title>三问Java</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/sanwenjava/</link>
+    <pubDate>Sun, 28 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/sanwenjava/</guid>
+    <description><![CDATA[其实也不止三问。 java.io.Serializable 为什么实现 interface java.io.Serializable 的类中都定义一个非大写的类常量。 1 private static final long serialVersionUID = 1L; SLF4J的日志工厂 为什么org.slf4j.LoggerF]]></description>
+</item>
+</channel>
+</rss>

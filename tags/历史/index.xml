@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>历史 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E5%8E%86%E5%8F%B2/</link>
+        <description>历史 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 27 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E5%8E%86%E5%8F%B2/" rel="self" type="application/rss+xml" /><item>
+    <title>JavaScript</title>
+    <link>https://xue.woyao.net/posts/javascript/javascripthistory/</link>
+    <pubDate>Tue, 27 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/javascript/javascripthistory/</guid>
+    <description><![CDATA[历史 年份 名称 描述 1997 ECMAScript 1 First Edition. 1998 ECMAScript 2 Editorial changes only. 1999 ECMAScript 3 Added Regular Expressions. Added try/catch. ECMAScript 4 Was never released. 2009 ECMAScript 5 Added &ldquo;strict mode&rdquo;. Added JSON support. 2011 ECMAScript 5.1 Editorial changes. 2015 ECMAScript 6 Added classes and modules. 2016 ECMAScript 7 Added exponential operator (**). Added Array.prototype.includes. 声明 本书中凡是提]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>数据库 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+        <description>数据库 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="self" type="application/rss+xml" /><item>
+    <title>RedisTemplate框架使用</title>
+    <link>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</link>
+    <pubDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</guid>
+    <description><![CDATA[命令使用 查询哈希表 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import org.springframework.data.redis.core.RedisTemplate; @Service @RequiredArgsConstructor public class UserService { private final RedisTemplate&lt;String, String&gt; redisTemplate; public getUserName(int userId) { // hashKey String hashKey = String.format(&#34;user_id_%d&#34;, userId); String fieldName = &#34;name&#34;; Object userName = redisTemplate.opsForHash().get(hashKey, fieldName); return userName.toString(); } }]]></description>
+</item>
+<item>
+    <title>MyBatis使用笔记</title>
+    <link>https://xue.woyao.net/posts/framework/mybatisshouce/</link>
+    <pubDate>Mon, 03 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/mybatisshouce/</guid>
+    <description><![CDATA[安装 普通使用 将 mybatis-x.x.x.jar 文件置于类路径（classpath）中即可。 依赖管理工具 maven 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;org.mybatis&lt;/groupId&gt; &lt;artifactId&gt;mybatis&lt;/artifactId&gt; &lt;version&gt;x.x.x&lt;/version&gt; &lt;/dependency&gt; 第 1 步创建 SqlSessionFactory]]></description>
+</item>
+</channel>
+</rss>

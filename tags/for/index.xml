@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>for - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/for/</link>
+        <description>for - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 15 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/for/" rel="self" type="application/rss+xml" /><item>
+    <title>Java 中的三种 for 循环区别</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javafordequbie/</link>
+    <pubDate>Sat, 15 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javafordequbie/</guid>
+    <description><![CDATA[1. for (int i = 0; i &lt; userList.size(); i++) 2. for (User user : userList) 3. userList.forEach(user -&gt; {}) 总结： 别人总结了： 1w 以内数据用方式 1，for 10w 以内数据用集合的迭代器，forEach]]></description>
+</item>
+</channel>
+</rss>

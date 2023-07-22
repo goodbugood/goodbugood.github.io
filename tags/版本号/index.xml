@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>版本号 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E7%89%88%E6%9C%AC%E5%8F%B7/</link>
+        <description>版本号 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 05 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E7%89%88%E6%9C%AC%E5%8F%B7/" rel="self" type="application/rss+xml" /><item>
+    <title>软件版本号</title>
+    <link>https://xue.woyao.net/posts/tools/banbenhao/</link>
+    <pubDate>Wed, 05 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/banbenhao/</guid>
+    <description><![CDATA[常用版本号语义修饰词 修饰词 含义 alpha 内部版本 beta 测试版 demo 演示版 enhance 增强版 free 自由版 full version 完整版，即正式版 lts 长期维护版本 release 发行版 rc 即将作为正式版发布 standard 标准]]></description>
+</item>
+</channel>
+</rss>

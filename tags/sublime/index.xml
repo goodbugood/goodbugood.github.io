@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>sublime - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/sublime/</link>
+        <description>sublime - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Oct 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/sublime/" rel="self" type="application/rss+xml" /><item>
+    <title>Sublime</title>
+    <link>https://xue.woyao.net/posts/tools/sublime/</link>
+    <pubDate>Sat, 01 Oct 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/sublime/</guid>
+    <description><![CDATA[常用替换正则 中文排版指北 多个空格替换成一个空格 在中文和英文之间增加空格 1 2 3 4 // 搜索 ([\x{4e00}-\x{9fa5}]{1})([0-9a-zA-Z]{1}) // 替换 $1 $2 1 2 3 4 // 搜索 ([0-9a-zA-Z]{1})([\x{4e00}-\x{9fa5}]{1}) // 替换 $1 $2 去除中文之间的空格]]></description>
+</item>
+<item>
+    <title>Sublime Text 3</title>
+    <link>https://xue.woyao.net/posts/tools/ruishijundaosublime/</link>
+    <pubDate>Fri, 19 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/ruishijundaosublime/</guid>
+    <description><![CDATA[常用命令 去除重复行 1 Edit &gt; Premute Lines &gt; Unique 其实还有其他 2 个操作： Reverse：倒序行 Shuffle：打乱行 添加快捷键 添加快捷键，执行先排序，后移除重]]></description>
+</item>
+</channel>
+</rss>

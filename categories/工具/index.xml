@@ -1,0 +1,87 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>工具 - 分类 - 新手笔记</title>
+        <link>https://xue.woyao.net/categories/%E5%B7%A5%E5%85%B7/</link>
+        <description>工具 - 分类 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 05 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/%E5%B7%A5%E5%85%B7/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo使用手册</title>
+    <link>https://xue.woyao.net/posts/%E5%B7%A5%E5%85%B7/hugo/</link>
+    <pubDate>Wed, 05 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/%E5%B7%A5%E5%85%B7/hugo/</guid>
+    <description><![CDATA[常见报错 you need the extended version to build SCSS/SASS 由于你使用了 hugo_0.114.1_windows-amd64，但是他不支持编译 SCSS/SASS，应该下载使用 h]]></description>
+</item>
+<item>
+    <title>劳动工具</title>
+    <link>https://xue.woyao.net/posts/tools/mytool/</link>
+    <pubDate>Sat, 29 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/mytool/</guid>
+    <description><![CDATA[编辑器 PhpStorm 最强 PHP IDE Idea Sublime 正则操作文本方便 小巧精悍 图文工具 Snipaste https://zh.snipaste.com/ 截图好工具 FastStone Capture https://www.faststone.org/FSCaptureDownload.htm 屏幕取色，截图，滚动截图，录屏压缩比高。 数据库软件 Navicat 数据库操作客户端]]></description>
+</item>
+<item>
+    <title>微软远程桌面客户端使用笔记</title>
+    <link>https://xue.woyao.net/posts/tools/microsoftremotedesk/</link>
+    <pubDate>Wed, 05 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/microsoftremotedesk/</guid>
+    <description><![CDATA[iPadOS上使用 如何使用左右键 触摸 单指单按就是左键，单指长按跟双指触摸一样，相当于鼠标右键。 参考 iPad Remote Desktop right click]]></description>
+</item>
+<item>
+    <title>idea 控制台中文乱码</title>
+    <link>https://xue.woyao.net/posts/tools/ideaconsoleluanma/</link>
+    <pubDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/ideaconsoleluanma/</guid>
+    <description><![CDATA[现象 idea 的 Spring Boot 项目，使用了外置的 tomcat web 容器，跑起来就乱码了，网络上找了很多方案都未能解决。 1 24-Mar-2023 09:00:44.032 淇℃伅 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.鏈嶅姟鍣ㄧ増鏈�: Apache Tomcat/8.5.64 解]]></description>
+</item>
+<item>
+    <title>Nginx</title>
+    <link>https://xue.woyao.net/posts/tools/nginx/</link>
+    <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/nginx/</guid>
+    <description><![CDATA[常见问题 nginx 用 root 用户启动,仍然遇到 403 1 /usr/sbin/sestatus -v 解决办法,关闭 1 setenforce 0]]></description>
+</item>
+<item>
+    <title>分享最好用的100个免费在线工具</title>
+    <link>https://xue.woyao.net/posts/framework/online/</link>
+    <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/online/</guid>
+    <description><![CDATA[数据库 SQLAdvisor 一个连接你的 MySQL 服务器，并对你的 sql 给出优化建议的开源工具。 美团点评SQL优化工具SQLAdvisor开源 Github仓库]]></description>
+</item>
+<item>
+    <title>官方在线手册</title>
+    <link>https://xue.woyao.net/posts/tools/manual/</link>
+    <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/manual/</guid>
+    <description><![CDATA[JSON JSON官方在线手册 JavaScript IBM 官方手册 微软 MSDN 官方手册 火狐社区]]></description>
+</item>
+<item>
+    <title>Git使用命令手册大全</title>
+    <link>https://xue.woyao.net/posts/tools/git/</link>
+    <pubDate>Fri, 16 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/git/</guid>
+    <description><![CDATA[命令手册 分支操作 查看分支 1 2 3 4 5 6 7 8 查看本地分支 git branch 查看远程分支 git branch -r 查看所有分支，包含本地和远程 git branch -a 切换分支 1 git checkout branchName 创建并切换分支 1]]></description>
+</item>
+<item>
+    <title>100个实用的开发者在线工具</title>
+    <link>https://xue.woyao.net/posts/tools/100onlinegongju/</link>
+    <pubDate>Thu, 15 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/100onlinegongju/</guid>
+    <description><![CDATA[网络工具 HTTP Echo服务器 方便 HTTP 协议调试，服务器返回请求的数据。 Getman HttpBin HttpBinGo 图片在线识别 图片转文字 - 图片转Excel表格 - PDF转Word - 白描网页]]></description>
+</item>
+<item>
+    <title>茴香豆的茴有几种写法</title>
+    <link>https://xue.woyao.net/posts/framework/huixiangdouxiefa/</link>
+    <pubDate>Wed, 07 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/huixiangdouxiefa/</guid>
+    <description><![CDATA[茴香豆的茴的写法有以下几种，分别是茴，回，囘，囬。 单例有几种实现方法 8种，有一种懒汉单例使用了 DCL。 单例的指令重排。volatile 可以在]]></description>
+</item>
+</channel>
+</rss>

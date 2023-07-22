@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>策略 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E7%AD%96%E7%95%A5/</link>
+        <description>策略 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E7%AD%96%E7%95%A5/" rel="self" type="application/rss+xml" /><item>
+    <title>策略模式</title>
+    <link>https://xue.woyao.net/posts/designpatterns/celue/</link>
+    <pubDate>Mon, 22 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/designpatterns/celue/</guid>
+    <description><![CDATA[概念 strategy 定义 策略模式：指的是定义一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化。 ==策略模式仅]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,39 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>JavaScript - 分类 - 新手笔记</title>
+        <link>https://xue.woyao.net/categories/javascript/</link>
+        <description>JavaScript - 分类 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 02 Mar 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/javascript/" rel="self" type="application/rss+xml" /><item>
+    <title>第一章</title>
+    <link>https://xue.woyao.net/posts/javascript/jsvariable/</link>
+    <pubDate>Fri, 02 Mar 2018 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/javascript/jsvariable/</guid>
+    <description><![CDATA[javascript 三大类变量类型 3种基本数据类型 字符串(String) 数字(Number) 布尔(Boolean) 2种复合数据类型 对象(Object) 数组(A]]></description>
+</item>
+<item>
+    <title>JavaScript</title>
+    <link>https://xue.woyao.net/posts/javascript/javascripthistory/</link>
+    <pubDate>Tue, 27 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/javascript/javascripthistory/</guid>
+    <description><![CDATA[历史 年份 名称 描述 1997 ECMAScript 1 First Edition. 1998 ECMAScript 2 Editorial changes only. 1999 ECMAScript 3 Added Regular Expressions. Added try/catch. ECMAScript 4 Was never released. 2009 ECMAScript 5 Added &ldquo;strict mode&rdquo;. Added JSON support. 2011 ECMAScript 5.1 Editorial changes. 2015 ECMAScript 6 Added classes and modules. 2016 ECMAScript 7 Added exponential operator (**). Added Array.prototype.includes. 声明 本书中凡是提]]></description>
+</item>
+<item>
+    <title>JavaScript var 作用域</title>
+    <link>https://xue.woyao.net/posts/javascript/basic/</link>
+    <pubDate>Tue, 27 Feb 2018 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/javascript/basic/</guid>
+    <description><![CDATA[作用域提升 var 声明变量，会将变量提升到全局作用域或函数作用域的头部。 暂时性死区 ES6明确规定，如果区块中存在let和const命令，这个区块对]]></description>
+</item>
+<item>
+    <title>方法</title>
+    <link>https://xue.woyao.net/posts/javascript/jsfunction/</link>
+    <pubDate>Sat, 30 Dec 2017 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/javascript/jsfunction/</guid>
+    <description><![CDATA[判断某个方法是否存在 1). 方法一 1 2 3 if (typeof myMethod !== &#39;undefined&#39; &amp;&amp; myMethod instanceof Function) { console.log(myMethod, &#39;是方法&#39;) } 2). 方法二 1 2 3 if (对象名.方法名) { } 3). 方法三 1 2 3 4]]></description>
+</item>
+</channel>
+</rss>

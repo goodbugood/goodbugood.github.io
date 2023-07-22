@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SSO - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/sso/</link>
+        <description>SSO - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 20 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/sso/" rel="self" type="application/rss+xml" /><item>
+    <title>身份认证</title>
+    <link>https://xue.woyao.net/posts/2022/fangwenrenzhen/</link>
+    <pubDate>Sat, 20 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/2022/fangwenrenzhen/</guid>
+    <description><![CDATA[Session和Cookie cookie/session 是我们最初接触的认证。 他的步骤如下： 用户用浏览器提交用户名和密码给服务器 服务器鉴定此用户为合法用户，和身份后，]]></description>
+</item>
+</channel>
+</rss>

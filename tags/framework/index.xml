@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>framework - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/framework/</link>
+        <description>framework - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/framework/" rel="self" type="application/rss+xml" /><item>
+    <title>hutool 框架使用笔记</title>
+    <link>https://xue.woyao.net/posts/framework/hutoolshouce/</link>
+    <pubDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/hutoolshouce/</guid>
+    <description><![CDATA[json JSONArray转集合 1 2 3 4 String json = &#34;[2, 3, 5]&#34;; JSONArray jsonArray = JSONUtil.parseArray(json); // 转包装类型数组 List&lt;Integer&gt; integerList = jsonArray.toList(Integer.class); JSONArray转包装类型数组Integer[] 方案一，想当]]></description>
+</item>
+<item>
+    <title>流行的100个常用Java工具库</title>
+    <link>https://xue.woyao.net/posts/framework/top100tools/</link>
+    <pubDate>Tue, 06 Sep 2022 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/top100tools/</guid>
+    <description><![CDATA[日期时间 字符串数组处理 集合框架 Apache 的 commons-collections4 1 2 3 4 5 6 &lt;!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 --&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.commons&lt;/groupId&gt; &lt;artifactId&gt;commons-collections4&lt;/artifactId&gt; &lt;version&gt;4.4&lt;/version&gt; &lt;/dependency&gt; 工具列表 工具 功能描述 使用方法 LRUMap，最近最少使用 Map 这个 Map 固定大小 容量不]]></description>
+</item>
+</channel>
+</rss>

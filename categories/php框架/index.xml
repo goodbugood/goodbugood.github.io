@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>PHP框架 - 分类 - 新手笔记</title>
+        <link>https://xue.woyao.net/categories/php%E6%A1%86%E6%9E%B6/</link>
+        <description>PHP框架 - 分类 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 09 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/php%E6%A1%86%E6%9E%B6/" rel="self" type="application/rss+xml" /><item>
+    <title>ThinkPHP3.2.3手册笔记</title>
+    <link>https://xue.woyao.net/posts/framework/tp3.2biji/</link>
+    <pubDate>Tue, 09 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/tp3.2biji/</guid>
+    <description><![CDATA[ThinkPHP3.2.3手册笔记]]></description>
+</item>
+</channel>
+</rss>

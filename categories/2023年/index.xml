@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>2023年 - 分类 - 新手笔记</title>
+        <link>https://xue.woyao.net/categories/2023%E5%B9%B4/</link>
+        <description>2023年 - 分类 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/2023%E5%B9%B4/" rel="self" type="application/rss+xml" /><item>
+    <title>T470p的黑苹果之路</title>
+    <link>https://xue.woyao.net/posts/2023/t470phackinto/</link>
+    <pubDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/2023/t470phackinto/</guid>
+    <description><![CDATA[10.15.1 md5 值： certutil -hashfile &ldquo;macOS Catalina 10.15.1(19B88) Installer for Clover 5098 and WEPE.dmg&rdquo; md5 MD5 的 macOS Catalina 10.15.1(19B88) Installer for Clover 5098 and WEPE.dmg 哈希: 6bd732d83e66543bec3f2ac78dc3a613 CertUtil: -hashfile 命令成功完成。 参考 https://github.com/lohcve/EFI_T470P_CLOVER https://gitee.com/pratise/T470P-EFI/ https://blog.daliansky.net/macOS-Catalina-10.15.1-19B88-Release-version-with-Clover-5098-original-image-Double-EFI-Version.html https://mirrors.dtops.co/ISO/MacOS/10.15/]]></description>
+</item>
+</channel>
+</rss>

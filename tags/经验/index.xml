@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>经验 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E7%BB%8F%E9%AA%8C/</link>
+        <description>经验 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 10 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E7%BB%8F%E9%AA%8C/" rel="self" type="application/rss+xml" /><item>
+    <title>教训规约</title>
+    <link>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E6%95%99%E8%AE%AD%E8%A7%84%E7%BA%A6/</link>
+    <pubDate>Mon, 10 Jul 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E6%95%99%E8%AE%AD%E8%A7%84%E7%BA%A6/</guid>
+    <description><![CDATA[数据库 枚举字段 枚举字段尽量使用能够描述业务，短小精悍的词语，不要为了那点性能使用 tinyint ，否则后面你就要识记那些 1，2，3，4，5 各代表什么业务含]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>web - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/web/</link>
+        <description>web - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 05 May 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/web/" rel="self" type="application/rss+xml" /><item>
+    <title>Web</title>
+    <link>https://xue.woyao.net/posts/framework/web/</link>
+    <pubDate>Fri, 05 May 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/web/</guid>
+    <description><![CDATA[web 常用功能： 出/入参格式化： paja 转 json 序列化时，定义格式，com.fasterxml.jackson.annotation.@JsonForma]]></description>
+</item>
+</channel>
+</rss>

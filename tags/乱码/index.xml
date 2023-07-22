@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>乱码 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E4%B9%B1%E7%A0%81/</link>
+        <description>乱码 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E4%B9%B1%E7%A0%81/" rel="self" type="application/rss+xml" /><item>
+    <title>idea 控制台中文乱码</title>
+    <link>https://xue.woyao.net/posts/tools/ideaconsoleluanma/</link>
+    <pubDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/tools/ideaconsoleluanma/</guid>
+    <description><![CDATA[现象 idea 的 Spring Boot 项目，使用了外置的 tomcat web 容器，跑起来就乱码了，网络上找了很多方案都未能解决。 1 24-Mar-2023 09:00:44.032 淇℃伅 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.鏈嶅姟鍣ㄧ増鏈�: Apache Tomcat/8.5.64 解]]></description>
+</item>
+</channel>
+</rss>
