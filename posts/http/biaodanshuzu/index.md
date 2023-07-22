@@ -20,7 +20,7 @@ HTML 表单发送数组数据：
 </form>
 ```
 
-![image-20220819104546817](./images/image-20220819104546817.png)
+![image-20220819104546817](/images/image-20220819104546817.png)
 
 ### PHP 接收到的数据
 
@@ -95,7 +95,7 @@ array(1) {
 
 需要强调的是，根本没有什么数组，HTTP 协议传输的就是字符串。上面的数据在 HTTP 报文中，其实传递的是这样的字符串。
 
-![image-20220819110139914](./images/image-20220819110139914.png)
+![image-20220819110139914](/images/image-20220819110139914.png)
 
 ```text
 user%5B0%5D%5Bname%5D=xiaoming&user%5B0%5D%5Bage%5D=20&user%5B1%5D%5Bname%5D=lihua&user%5B1%5D%5Bage%5D=22&user%5B2%5D%5Bname%5D=wanggang&user%5B2%5D%5Bage%5D=19
@@ -103,7 +103,7 @@ user%5B0%5D%5Bname%5D=xiaoming&user%5B0%5D%5Bage%5D=20&user%5B1%5D%5Bname%5D=lih
 
 上面的数据还不够明显，因为请求参数被==urlencode==了，我解码下。
 
-![image-20220819105341428](./images/image-20220819105341428.png)
+![image-20220819105341428](/images/image-20220819105341428.png)
 
 ```text
 user[0][name]=xiaoming&user[0][age]=20&user[1][name]=lihua&user[1][age]=22&user[2][name]=wanggang&user[2][age]=19

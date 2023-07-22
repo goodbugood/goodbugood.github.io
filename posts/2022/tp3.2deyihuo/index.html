@@ -132,20 +132,20 @@
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="./images/image-20220819184304663.png"
-        data-srcset="./images/image-20220819184304663.png, ./images/image-20220819184304663.png 1.5x, ./images/image-20220819184304663.png 2x"
+        data-src="/images/image-20220819184304663.png"
+        data-srcset="/images/image-20220819184304663.png, /images/image-20220819184304663.png 1.5x, /images/image-20220819184304663.png 2x"
         data-sizes="auto"
-        alt="./images/image-20220819184304663.png"
+        alt="/images/image-20220819184304663.png"
         title="image-20220819184304663" /></p>
 <p>我想这些客户端异常关闭肯定不是框架造成的，成熟的框架肯定会自动关闭，关闭连接可能放在析构方法<code>__destruct()</code>中了。</p>
 <p>果不其然，在<code>\Think\Db\Driver::_destruct()</code>中，关闭了<code>PDO</code>连接。</p>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="./images/image-20220819184604616.png"
-        data-srcset="./images/image-20220819184604616.png, ./images/image-20220819184604616.png 1.5x, ./images/image-20220819184604616.png 2x"
+        data-src="/images/image-20220819184604616.png"
+        data-srcset="/images/image-20220819184604616.png, /images/image-20220819184604616.png 1.5x, /images/image-20220819184604616.png 2x"
         data-sizes="auto"
-        alt="./images/image-20220819184604616.png"
+        alt="/images/image-20220819184604616.png"
         title="image-20220819184604616" /></p>
 <p>代码的意思，就是给 PDO 赋 null 值，就能被关闭。是的。</p>
 <h3 id="给-pdo-连接关闭的两种方式">给 PDO 连接关闭的两种方式</h3>
@@ -154,10 +154,10 @@
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="./images/image-20220819185253928.png"
-        data-srcset="./images/image-20220819185253928.png, ./images/image-20220819185253928.png 1.5x, ./images/image-20220819185253928.png 2x"
+        data-src="/images/image-20220819185253928.png"
+        data-srcset="/images/image-20220819185253928.png, /images/image-20220819185253928.png 1.5x, /images/image-20220819185253928.png 2x"
         data-sizes="auto"
-        alt="./images/image-20220819185253928.png"
+        alt="/images/image-20220819185253928.png"
         title="image-20220819185253928" /></p>
 <p>==注意==：给 PDO 赋值 null 后，并不是脚本执行完，连接才关闭，而是赋值 null 后，立即关闭。我真实测试过。也<strong>发现当变量被赋值 null 后，内存就会被回收了</strong>。</p>
 </div><div class="post-footer" id="post-footer">

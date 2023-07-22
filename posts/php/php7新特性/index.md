@@ -17,7 +17,7 @@ self::assertSame('', $remark ?? 'maria');
 
 其实 null 合并运算符的出现就是为了解决三目运算符的。
 
-![image-20220820142446882](./images/image-20220820142446882.png)
+![image-20220820142446882](/images/image-20220820142446882.png)
 
 #### isset与is_null的区别
 

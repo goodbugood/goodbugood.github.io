@@ -19,7 +19,7 @@ cookie/session 是我们最初接触的认证。
 
 ## SSO单点登录
 
-![img](./images/webp-166092727020512.webp)
+![img](/images/webp-166092727020512.webp)
 
 ### 迷惑的地方
 

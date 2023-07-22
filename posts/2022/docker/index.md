@@ -19,7 +19,7 @@
 docker search redis
 ```
 
-![image-20220906143448944](./images/image-20220906143448944.png)
+![image-20220906143448944](/images/image-20220906143448944.png)
 
 - NAME 镜像的名字
 - STARS 就是这个镜像获得的小星星数

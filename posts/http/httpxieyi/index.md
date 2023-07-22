@@ -43,7 +43,7 @@ Allow: OPTIONS, GET, HEAD, POST
 
 不知道`encoding`和`charset`两者区别是什么，还是HTTP协议都兼容。
 
-![image-20220820105358699](./images/image-20220820105358699.png)
+![image-20220820105358699](/images/image-20220820105358699.png)
 
 ## 响应状态码
 

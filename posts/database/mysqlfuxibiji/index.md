@@ -99,11 +99,11 @@ char 是定长，varchar 是变长。定长的好处是固定长度，很容易�
 
 主键查询
 
-![image-20220824141406856](./images/image-20220824141406856.png)
+![image-20220824141406856](/images/image-20220824141406856.png)
 
 使用 like 查询主键就变成了 all。
 
-![image-20220824141809894](./images/image-20220824141809894.png)
+![image-20220824141809894](/images/image-20220824141809894.png)
 
 唯一性索引 unique key，如果使用 like 查询就是 range，使用 = 查询就是 const，可见性能差距还是挺大的。
 
@@ -165,11 +165,11 @@ binlog 日志有三种格式，分别为 STATMENT 、 ROW 和 MIXED。
 
 ## 主从复制延时
 
-![img](./images/v2-50d5bebf7585b6e36ebc248d186790d7_720w.jpg)
+![img](/images/v2-50d5bebf7585b6e36ebc248d186790d7_720w.jpg)
 
 三个线程：
 
-![img](./images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3lyeDQyMDkwOQ==,size_16,color_FFFFFF,t_70.png)
+![img](/images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3lyeDQyMDkwOQ==,size_16,color_FFFFFF,t_70.png)
 
 ### 延时原理
 

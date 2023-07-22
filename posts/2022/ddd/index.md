@@ -38,7 +38,7 @@
 
 错，DDD 分层后，上层可以跨层调用下层。是不是有点晕了，这其实也是为了灵活和变通。
 
-![img](./images/584866-20211011144310357-948628155.jpg)
+![img](/images/584866-20211011144310357-948628155.jpg)
 
 举个例子：
 
@@ -46,8 +46,8 @@
 
 灵活高效，特事特办。
 
-![image.png](./images/format,png.png)
+![image.png](/images/format,png.png)
 
 分层
 
-![在这里插入图片描述](./images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpZ25pZmljYW50ZnJhbms=,size_16,color_FFFFFF,t_70.png)
+![在这里插入图片描述](/images/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NpZ25pZmljYW50ZnJhbms=,size_16,color_FFFFFF,t_70.png)

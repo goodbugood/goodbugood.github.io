@@ -40,11 +40,11 @@ self::assertNull($var1);
 
 PHP 手册
 
-![image-20220819180019574](./images/image-20220819180019574.png)
+![image-20220819180019574](/images/image-20220819180019574.png)
 
 引用定位
 
-![image-20220819180323709](./images/image-20220819180323709.png)
+![image-20220819180323709](/images/image-20220819180323709.png)
 
 ### 地址值
 

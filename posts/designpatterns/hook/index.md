@@ -15,7 +15,7 @@
 - 插件将自己注册到特定场景的钩子中
 - 微内核框架执行注册到钩子中的插件
 
-![image.png](./images/171118bacfe93c51tplv-t2oaga2asx-zoom-in-crop-mark3024000.webp)
+![image.png](/images/171118bacfe93c51tplv-t2oaga2asx-zoom-in-crop-mark3024000.webp)
 
 框架在执行的过程中，在不同的业务场景，注册特定场景的钩子。而插件为了达到不同业务场景的定制，只需要将插件挂载到 specify 场景的钩子上。当框架执行到 specify 场景时，就会拽出挂载到此场景钩子下的插件，进而执行插件中的业务代码。
 

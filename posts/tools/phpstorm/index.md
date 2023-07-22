@@ -5,7 +5,7 @@
 
 | 位置                                  | 调整                                                         |
 | ------------------------------------- | ------------------------------------------------------------ |
-| Code Generation                       | ![image-20220823142223251](./images/image-20220823142223251.png) |
+| Code Generation                       | ![image-20220823142223251](/images/image-20220823142223251.png) |
 | Wrapping and Braces/Array initializer | 不要勾选`Align key-value pairs`，即数组元素对齐。            |
 
 其他保持默认即可。
@@ -25,7 +25,7 @@
 
 点开配置
 
-![image-20220818120916983](./images/image-20220818120916983.png)
+![image-20220818120916983](/images/image-20220818120916983.png)
 
 配置 Composer 安装的扩展
 
@@ -37,15 +37,15 @@ composer.phar global require "squizlabs/php_codesniffer=*"
 
 > C:\Users\Shali\AppData\Roaming\Composer\vendor\bin
 
-![image-20220818144314961](./images/image-20220818144314961.png)
+![image-20220818144314961](/images/image-20220818144314961.png)
 
 配置工具的路径：
 
-![image-20220818121533844](./images/image-20220818121533844.png)
+![image-20220818121533844](/images/image-20220818121533844.png)
 
 ### 配置测试框架
 
-![image-20220818121657473](./images/image-20220818121657473.png)
+![image-20220818121657473](/images/image-20220818121657473.png)
 
 ## 常用快捷键
 
@@ -92,5 +92,5 @@ composer.phar global require "squizlabs/php_codesniffer=*"
 
 File -> Settings -> Version Control -> 点击右侧弹出窗口的 + 添加工程映射。
 
-![image-20220920114022125](./images/image-20220920114022125.png)
+![image-20220920114022125](/images/image-20220920114022125.png)
 

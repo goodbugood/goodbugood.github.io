@@ -3,7 +3,7 @@
 
 SpringBoot 与 Spring 的关系：
 
-![img](./images/1620.jpeg)
+![img](/images/1620.jpeg)
 
 ## 依赖安装
 

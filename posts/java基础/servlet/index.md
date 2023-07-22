@@ -30,7 +30,7 @@ JSP 是第 2 代 Java Web 开发技术，因为 Servlet 将 HTML 代码以字符
 
 ## Servlet框架调用
 
-![Servlet 处理HTTP请求](./images/1103524464-0.png)
+![Servlet 处理HTTP请求](/images/1103524464-0.png)
 
 ## 转发与重定向的区别
 
@@ -40,11 +40,11 @@ JSP 是第 2 代 Java Web 开发技术，因为 Servlet 将 HTML 代码以字符
 
 二者虽然都能使用页面发生跳转，但是原理不同：
 
-![image-20220828160923102](./images/image-20220828160923102.png)
+![image-20220828160923102](/images/image-20220828160923102.png)
 
 ## Session
 
-![Session 工作原理图](./images/150219A04-0.jpg)
+![Session 工作原理图](/images/150219A04-0.jpg)
 
 Servlet 容器为每一个浏览器创建一个 Session：
 

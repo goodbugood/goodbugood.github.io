@@ -12,7 +12,7 @@ public class HttpMountainAop {
 }
 ```
 
-![image-20230317085532212](./images/image-20230317085532212.png)
+![image-20230317085532212](/images/image-20230317085532212.png)
 
 > 大概意思是：这种字段注入的方式是不被推荐的。
 

@@ -115,7 +115,7 @@ private static final Logger logger = LoggerFactory.getLogger(Xxx.class);
 
 ### 日志级别
 
-![img](./images/1620.png)
+![img](/images/1620.png)
 
 ### 日志格式
 

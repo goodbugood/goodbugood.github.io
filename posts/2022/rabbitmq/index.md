@@ -21,7 +21,7 @@ docker exec -it es /bin/bash
 
 消息流转
 
-![img](./images/webp-16609259621499.webp)
+![img](/images/webp-16609259621499.webp)
 
 - 简单模式
 - 路由模式
