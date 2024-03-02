@@ -3,7 +3,15 @@
         <title>php - 标签 - 新手笔记</title>
         <link>https://xue.woyao.net/tags/php/</link>
         <description>php - 标签 - 新手笔记</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/php/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 25 Aug 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/php/" rel="self" type="application/rss+xml" /><item>
+    <title>php 数据库查询字段全是小写</title>
+    <link>https://xue.woyao.net/posts/php/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%87%BA%E7%9A%84%E5%AD%97%E6%AE%B5%E5%9D%87%E5%B0%8F%E5%86%99/</link>
+    <pubDate>Fri, 25 Aug 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%87%BA%E7%9A%84%E5%AD%97%E6%AE%B5%E5%9D%87%E5%B0%8F%E5%86%99/</guid>
+    <description><![CDATA[TP3.2 框架查询数据库 查询数据，返回的字段全是小写，指定的小驼峰别名也被转成了小写。 因为 \Think\Db\Driver 默认写死的字段全小写。 修改配置 1 2 3 4 // config.php &#34;DB_PARAMS&#34; =&gt; [ \PDO::ATTR_CASE =&gt; \PDO::CASE_NATURAL, ],]]></description>
+</item>
+<item>
     <title>教你高效地使用PHP</title>
     <link>https://xue.woyao.net/posts/php/%E9%AB%98%E6%95%88%E5%9C%B0%E4%BD%BF%E7%94%A8php/</link>
     <pubDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</pubDate>

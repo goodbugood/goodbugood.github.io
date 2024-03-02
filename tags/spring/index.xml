@@ -13,34 +13,34 @@
 </item>
 <item>
     <title>SpringBoot问题收集</title>
-    <link>https://xue.woyao.net/posts/framework/springbootwenti/</link>
+    <link>https://xue.woyao.net/posts/framework/spring/springboot%E9%97%AE%E9%A2%98%E9%9B%86/</link>
     <pubDate>Tue, 28 Mar 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/springbootwenti/</guid>
+    <guid>https://xue.woyao.net/posts/framework/spring/springboot%E9%97%AE%E9%A2%98%E9%9B%86/</guid>
     <description><![CDATA[Controller层问题 Request method &lsquo;GET&rsquo; not supported 使用 postman 发送请求，明明发送的是 POST 请求，却报 Request method 'GET' not supported。而且注解使用的就是 @PostMapp]]></description>
 </item>
 <item>
     <title>SpringBoot 参数校验</title>
-    <link>https://xue.woyao.net/posts/framework/springbootvalidated/</link>
+    <link>https://xue.woyao.net/posts/framework/spring/springbootvalidated/</link>
     <pubDate>Mon, 27 Mar 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/springbootvalidated/</guid>
+    <guid>https://xue.woyao.net/posts/framework/spring/springbootvalidated/</guid>
     <description><![CDATA[验证注解 @NotNull，@NotEmpty，@NotBlank 三者的区别 注意： @NotBlank 只能用来注解String @NotEmpty 只能注解字符串和集合和数组 @NotNull @NotEmpty @NotBlank]]></description>
 </item>
 <item>
     <title>Spring</title>
-    <link>https://xue.woyao.net/posts/framework/spring/</link>
+    <link>https://xue.woyao.net/posts/framework/spring/spring/</link>
     <pubDate>Tue, 30 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/spring/</guid>
+    <guid>https://xue.woyao.net/posts/framework/spring/spring/</guid>
     <description><![CDATA[在旧的开发模式下，一个组件如果要使用另一个组件，必须先知道如何正确地创建它。于是引入IoC。 IoC又称为依赖注入（DI：Dependency]]></description>
 </item>
 <item>
     <title>SpringBoot</title>
-    <link>https://xue.woyao.net/posts/framework/springboot/</link>
+    <link>https://xue.woyao.net/posts/framework/spring/springboot/</link>
     <pubDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/springboot/</guid>
+    <guid>https://xue.woyao.net/posts/framework/spring/springboot/</guid>
     <description><![CDATA[SpringBoot 与 Spring 的关系： 依赖安装 配置文件加载优先级 配置文件 加载优先级 application.yml 最低 application.yaml 其次 application.properties 最高 那里能看到的这个配置文件的加载顺序呢？ 1 2 3 4 5 6 7 8 9 10 11 12 13]]></description>
 </item>
 </channel>

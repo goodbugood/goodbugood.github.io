@@ -5,10 +5,10 @@
         <description>基础 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 07 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E5%9F%BA%E7%A1%80/" rel="self" type="application/rss+xml" /><item>
     <title>高大上的技术</title>
-    <link>https://xue.woyao.net/posts/yueding/gaodashang/</link>
+    <link>https://xue.woyao.net/posts/yueding/%E9%AB%98%E5%A4%A7%E4%B8%8A%E7%9A%84%E6%8A%80%E6%9C%AF/</link>
     <pubDate>Wed, 07 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/yueding/gaodashang/</guid>
+    <guid>https://xue.woyao.net/posts/yueding/%E9%AB%98%E5%A4%A7%E4%B8%8A%E7%9A%84%E6%8A%80%E6%9C%AF/</guid>
     <description><![CDATA[Double Checked Locking，双重检测锁，DCL 我们知道加锁的代价是昂贵的，因为加锁了才能检查，那为何不在加锁前检查一次呢，如果存在，都不需要走到带锁]]></description>
 </item>
 </channel>

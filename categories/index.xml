@@ -3,7 +3,31 @@
         <title>Categories - 分类 - 新手笔记</title>
         <link>https://xue.woyao.net/categories/</link>
         <description>Categories - 分类 - 新手笔记</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 01 Mar 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Spring</title>
+    <link>https://xue.woyao.net/categories/spring/</link>
+    <pubDate>Fri, 01 Mar 2024 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/categories/spring/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>搭建开发环境</title>
+    <link>https://xue.woyao.net/categories/%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+    <pubDate>Sat, 26 Aug 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/categories/%E6%90%AD%E5%BB%BA%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>TP</title>
+    <link>https://xue.woyao.net/categories/tp/</link>
+    <pubDate>Fri, 25 Aug 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/categories/tp/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>PHP提高</title>
     <link>https://xue.woyao.net/categories/php%E6%8F%90%E9%AB%98/</link>
     <pubDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</pubDate>
@@ -25,14 +49,6 @@
     <pubDate>Wed, 12 Jul 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
     <guid>https://xue.woyao.net/categories/java%E5%9F%BA%E7%A1%80/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Spring</title>
-    <link>https://xue.woyao.net/categories/spring/</link>
-    <pubDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</pubDate>
-    <author>沙里</author>
-    <guid>https://xue.woyao.net/categories/spring/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -65,22 +81,6 @@
     <pubDate>Tue, 04 Jul 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
     <guid>https://xue.woyao.net/categories/http-%E5%8D%8F%E8%AE%AE/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Java</title>
-    <link>https://xue.woyao.net/categories/java/</link>
-    <pubDate>Tue, 27 Jun 2023 00:00:00 &#43;0000</pubDate>
-    <author>沙里</author>
-    <guid>https://xue.woyao.net/categories/java/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>PHP</title>
-    <link>https://xue.woyao.net/categories/php/</link>
-    <pubDate>Tue, 27 Jun 2023 00:00:00 &#43;0000</pubDate>
-    <author>沙里</author>
-    <guid>https://xue.woyao.net/categories/php/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

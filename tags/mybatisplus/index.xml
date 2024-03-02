@@ -5,10 +5,10 @@
         <description>MyBatisPlus - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/mybatisplus/" rel="self" type="application/rss+xml" /><item>
     <title>MyBatisPlus使用笔记</title>
-    <link>https://xue.woyao.net/posts/framework/mybatisplusshouce/</link>
+    <link>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/mybatisplus%E6%89%8B%E5%86%8C/</link>
     <pubDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/mybatisplusshouce/</guid>
+    <guid>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/mybatisplus%E6%89%8B%E5%86%8C/</guid>
     <description><![CDATA[注解 表实体注解 表名起别名 注解在实体类上，即此类映射库里的某个表名。 1 2 3 // 表 user_info 映射到实体 User @TableName(value = &#34;user_info&#34;) public class User {} 表字段起别名 1 2 3 4 5 6 7 // 主键字段]]></description>
 </item>
 </channel>

@@ -5,11 +5,11 @@
         <description>工具 - 分类 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 05 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/%E5%B7%A5%E5%85%B7/" rel="self" type="application/rss+xml" /><item>
     <title>Hugo使用手册</title>
-    <link>https://xue.woyao.net/posts/%E5%B7%A5%E5%85%B7/hugo/</link>
+    <link>https://xue.woyao.net/posts/%E5%B7%A5%E5%85%B7/hugo%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</link>
     <pubDate>Wed, 05 Jul 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/%E5%B7%A5%E5%85%B7/hugo/</guid>
-    <description><![CDATA[常见报错 you need the extended version to build SCSS/SASS 由于你使用了 hugo_0.114.1_windows-amd64，但是他不支持编译 SCSS/SASS，应该下载使用 h]]></description>
+    <guid>https://xue.woyao.net/posts/%E5%B7%A5%E5%85%B7/hugo%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</guid>
+    <description><![CDATA[编译博客 1 hugo 执行上述命令即可，重新生成文章。 常见报错 you need the extended version to build SCSS/SASS 由于你使用了 hugo_0.114.1_windows-amd64，但是他]]></description>
 </item>
 <item>
     <title>劳动工具</title>
@@ -45,10 +45,10 @@
 </item>
 <item>
     <title>分享最好用的100个免费在线工具</title>
-    <link>https://xue.woyao.net/posts/framework/online/</link>
+    <link>https://xue.woyao.net/posts/framework/100%E4%B8%AA%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/</link>
     <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/online/</guid>
+    <guid>https://xue.woyao.net/posts/framework/100%E4%B8%AA%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/</guid>
     <description><![CDATA[数据库 SQLAdvisor 一个连接你的 MySQL 服务器，并对你的 sql 给出优化建议的开源工具。 美团点评SQL优化工具SQLAdvisor开源 Github仓库]]></description>
 </item>
 <item>
@@ -77,10 +77,10 @@
 </item>
 <item>
     <title>茴香豆的茴有几种写法</title>
-    <link>https://xue.woyao.net/posts/framework/huixiangdouxiefa/</link>
+    <link>https://xue.woyao.net/posts/framework/%E8%8C%B4%E9%A6%99%E8%B1%86%E7%9A%84%E8%8C%B4%E6%9C%89%E5%87%A0%E7%A7%8D%E5%86%99%E6%B3%95/</link>
     <pubDate>Wed, 07 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/huixiangdouxiefa/</guid>
+    <guid>https://xue.woyao.net/posts/framework/%E8%8C%B4%E9%A6%99%E8%B1%86%E7%9A%84%E8%8C%B4%E6%9C%89%E5%87%A0%E7%A7%8D%E5%86%99%E6%B3%95/</guid>
     <description><![CDATA[茴香豆的茴的写法有以下几种，分别是茴，回，囘，囬。 单例有几种实现方法 8种，有一种懒汉单例使用了 DCL。 单例的指令重排。volatile 可以在]]></description>
 </item>
 </channel>

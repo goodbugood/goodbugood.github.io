@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <title>RedisTemplate框架使用 - 新手笔记</title><meta name="Description" content="免费的在线新手笔记"><meta property="og:title" content="RedisTemplate框架使用" />
-<meta property="og:description" content="命令使用 查询哈希表 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import org.springframework.data.redis.core.RedisTemplate; @Service @RequiredArgsConstructor public class UserService { private final RedisTemplate&lt;String, String&gt; redisTemplate; public getUserName(int userId) { // hashKey String hashKey = String.format(&#34;user_id_%d&#34;, userId); String fieldName = &#34;name&#34;; Object userName = redisTemplate.opsForHash().get(hashKey, fieldName); return userName.toString(); } }" />
+<meta property="og:description" content="历史 RedisTemplate 是 spring-data-redis 对 redis 的封装。 Jedis 是 Redis 官方开发的客户端 spring-data-redis 对 Jedis 进行了高度封装，对外提供 RedisTemplate 类。 SpringBoot 整合 RedisTemplate 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt; &lt;version&gt;2.5.9&lt;/version&gt; &lt;/dependency&gt; RedisTemplate 整合 lettuce 1 2 3 4 5 6 7 8 9 10 11 12" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" /><meta property="og:image" content="https://xue.woyao.net/logo.png"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-07-11T00:00:00+00:00" />
@@ -14,7 +14,7 @@
 <meta name="twitter:image" content="https://xue.woyao.net/logo.png"/>
 
 <meta name="twitter:title" content="RedisTemplate框架使用"/>
-<meta name="twitter:description" content="命令使用 查询哈希表 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import org.springframework.data.redis.core.RedisTemplate; @Service @RequiredArgsConstructor public class UserService { private final RedisTemplate&lt;String, String&gt; redisTemplate; public getUserName(int userId) { // hashKey String hashKey = String.format(&#34;user_id_%d&#34;, userId); String fieldName = &#34;name&#34;; Object userName = redisTemplate.opsForHash().get(hashKey, fieldName); return userName.toString(); } }"/>
+<meta name="twitter:description" content="历史 RedisTemplate 是 spring-data-redis 对 redis 的封装。 Jedis 是 Redis 官方开发的客户端 spring-data-redis 对 Jedis 进行了高度封装，对外提供 RedisTemplate 类。 SpringBoot 整合 RedisTemplate 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt; &lt;version&gt;2.5.9&lt;/version&gt; &lt;/dependency&gt; RedisTemplate 整合 lettuce 1 2 3 4 5 6 7 8 9 10 11 12"/>
 <meta name="application-name" content="LoveIt">
 <meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xue.woyao.net\/posts\/framework\/%E6%95%B0%E6%8D%AE%E5%BA%93\/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C\/"
-        },"image": ["https:\/\/xue.woyao.net\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "redis, 数据库","wordcount":  61 ,
+        },"image": ["https:\/\/xue.woyao.net\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "redis, 数据库","wordcount":  201 ,
         "url": "https:\/\/xue.woyao.net\/posts\/framework\/%E6%95%B0%E6%8D%AE%E5%BA%93\/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C\/","datePublished": "2023-07-11T00:00:00+00:00","dateModified": "2023-07-11T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/xue.woyao.net\/images\/avatar.png"},"author": {
@@ -109,7 +109,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">RedisTemplate框架使用</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>沙里</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%A1%86%E6%9E%B6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>框架</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-07-11">2023-07-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 61 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-07-11">2023-07-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 201 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/" class="leancloud_visitors" data-flag-title="RedisTemplate框架使用">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -120,6 +120,15 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
+    <li><a href="#历史">历史</a>
+      <ul>
+        <li><a href="#springboot-整合-redistemplate">SpringBoot 整合 RedisTemplate</a>
+          <ul>
+            <li><a href="#redistemplate-整合-lettuce">RedisTemplate 整合 lettuce</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
     <li><a href="#命令使用">命令使用</a>
       <ul>
         <li><a href="#查询哈希表">查询哈希表</a></li>
@@ -127,7 +136,67 @@
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="命令使用">命令使用</h2>
+            </div><div class="content" id="content"><h2 id="历史">历史</h2>
+<blockquote>
+<p>RedisTemplate 是 spring-data-redis 对 redis 的封装。</p>
+</blockquote>
+<ol>
+<li>Jedis 是 Redis 官方开发的客户端</li>
+<li>spring-data-redis 对 Jedis 进行了高度封装，对外提供 RedisTemplate 类。</li>
+</ol>
+<h3 id="springboot-整合-redistemplate">SpringBoot 整合 RedisTemplate</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-data-redis<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;version&gt;</span>2.5.9<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="redistemplate-整合-lettuce">RedisTemplate 整合 lettuce</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl">// spring-boot-starter-data-redis-2.5.9.pom
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;groupId&gt;</span>org.springframework.data<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;artifactId&gt;</span>spring-data-redis<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;version&gt;</span>2.5.8<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;scope&gt;</span>compile<span class="nt">&lt;/scope&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;dependency&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;groupId&gt;</span>io.lettuce<span class="nt">&lt;/groupId&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;artifactId&gt;</span>lettuce-core<span class="nt">&lt;/artifactId&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;version&gt;</span>6.1.6.RELEASE<span class="nt">&lt;/version&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;scope&gt;</span>compile<span class="nt">&lt;/scope&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/dependency&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="命令使用">命令使用</h2>
 <h3 id="查询哈希表">查询哈希表</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -165,7 +234,8 @@
 </span></span><span class="line"><span class="cl"><span class="o">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></div><div class="post-footer" id="post-footer">
+</div><p>注意 <code>HV get(H key, java.lang.Object hashKey)</code> 很容易使用错误，第一个参数 key 是 Redis 的 key 的名字。而 hashKey 是哈希表中的字段的名字。用反了就拿不到数据了。</p>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
@@ -182,7 +252,7 @@
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/redis/">redis</a>,&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/redis/">Redis</a>,&nbsp;<a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
@@ -196,7 +266,7 @@
             </noscript></div></article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.114.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">1998 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">沙里</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">1998 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">沙里</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

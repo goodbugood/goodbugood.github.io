@@ -3,7 +3,7 @@
 
 ## commit 规范
 
-![img](./images/webp.webp)
+![img](../../../static/images/webp.webp)
 
 | 标识     | 描述                                       |
 | -------- | ------------------------------------------ |

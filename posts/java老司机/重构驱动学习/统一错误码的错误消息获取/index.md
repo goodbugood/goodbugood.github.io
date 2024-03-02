@@ -164,3 +164,40 @@ public class ErrorCode {
 
 这个粘连错误消息的问题，可能需要解决。
 
+### 勘误
+
+> 如果你仔细看，上述代码其实存在问题。枚举类型是单例，多次调用 `append` 方法，会一直追加描述，后面的描述会很长。
+>
+> —— 2024年3月1日
+
+如下改造才是正确的。
+
+```java
+enum ErrorCode3 {
+    OK("0", "ok"),
+    FAIL_PARAM("110", "参数缺失");
+
+    ErrorCode2(String code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    @Getter
+    private final String code;
+    private final String msg;
+    
+    public String getMsg() {
+        return msg;
+    }
+    
+    public String getMsg(String appendMsg) {
+        return StrUtil.format("{}：{}", msg, appendMsg);
+    }
+    
+    public String getMsg(String format, Object... appendMsg) {
+        return StrUtil.format("{}：{}", msg, appendMsg);
+    }
+}
+```
+
+

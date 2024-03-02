@@ -5,11 +5,11 @@
         <description>抽象类 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" rel="self" type="application/rss+xml" /><item>
     <title>接口与抽象类的区别与使用场景</title>
-    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/interfaceandabstractclass/</link>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
     <pubDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/interfaceandabstractclass/</guid>
-    <description><![CDATA[接口与抽象类的区别 Java 中一个类可以实现多个接口 只能继承一个抽象类 接口约束了我们必须具备哪些行为，所以接口是对行为的抽象。 抽象类是类的抽象]]></description>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/%E6%8E%A5%E5%8F%A3%E4%B8%8E%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+    <description><![CDATA[接口与抽象类的区别 Java 中一个类可以实现多个接口 只能继承一个抽象类 接口约束了我们必须具备哪些行为，所以接口是对行为的抽象。 抽象类是类的抽象 接口中]]></description>
 </item>
 </channel>
 </rss>

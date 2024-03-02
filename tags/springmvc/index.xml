@@ -13,10 +13,10 @@
 </item>
 <item>
     <title>SpringBoot</title>
-    <link>https://xue.woyao.net/posts/framework/springboot/</link>
+    <link>https://xue.woyao.net/posts/framework/spring/springboot/</link>
     <pubDate>Fri, 26 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/springboot/</guid>
+    <guid>https://xue.woyao.net/posts/framework/spring/springboot/</guid>
     <description><![CDATA[SpringBoot 与 Spring 的关系： 依赖安装 配置文件加载优先级 配置文件 加载优先级 application.yml 最低 application.yaml 其次 application.properties 最高 那里能看到的这个配置文件的加载顺序呢？ 1 2 3 4 5 6 7 8 9 10 11 12 13]]></description>
 </item>
 </channel>

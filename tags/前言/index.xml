@@ -5,10 +5,10 @@
         <description>前言 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E5%89%8D%E8%A8%80/" rel="self" type="application/rss+xml" /><item>
     <title>前言</title>
-    <link>https://xue.woyao.net/posts/designpatterns/qianyan/</link>
+    <link>https://xue.woyao.net/posts/designpatterns/%E5%89%8D%E8%A8%80/</link>
     <pubDate>Tue, 23 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/designpatterns/qianyan/</guid>
+    <guid>https://xue.woyao.net/posts/designpatterns/%E5%89%8D%E8%A8%80/</guid>
     <description><![CDATA[聊聊设计模式 分类 模式 创建型 简单工厂，工厂方法，抽象工厂 建造者，原型 结构型 适配器，装饰者，代理，外观，享元 行为型 策略 特点 单例singleton]]></description>
 </item>
 </channel>

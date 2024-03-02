@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>plugin - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/plugin/</link>
+        <description>plugin - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 01 Mar 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/plugin/" rel="self" type="application/rss+xml" /><item>
+    <title>Spring 的钩子</title>
+    <link>https://xue.woyao.net/posts/framework/spring/spring%E7%9A%84%E9%92%A9%E5%AD%90/</link>
+    <pubDate>Fri, 01 Mar 2024 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/spring/spring%E7%9A%84%E9%92%A9%E5%AD%90/</guid>
+    <description><![CDATA[Spring 的钩子 Spring 有很多钩子，供我们扩展 Spring 的功能。 Bean factory implementations should support the standard bean lifecycle interfaces as far as possible. The full set of initialization methods and their standard order is: BeanNameAware&rsquo;s setBeanName BeanClassLoaderAware&rsquo;s setBeanClassLoader BeanFactoryAware&rsquo;s setBeanFactory EnvironmentAware&rsquo;s setEnvironment EmbeddedValueResolverAware&rsquo;s setEmbeddedValueResolver ResourceLoaderAware&rsquo;s setResourceLoader (only applicable when running in an application context) ApplicationEventPublisherAware&rsquo;s setApplicationEventPublisher (only applicable]]></description>
+</item>
+</channel>
+</rss>

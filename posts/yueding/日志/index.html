@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>日志 - 新手笔记</title><meta name="Description" content="免费的在线新手笔记"><meta property="og:title" content="日志" />
+<meta property="og:description" content="约定大于配置，配置大于编码。 日志是系统运行的“照妖镜”，通过它能够实时反映系统的运行状态。 日志的打印也需要设计 如果日志的打印不设计，就会出现" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xue.woyao.net/posts/yueding/%E6%97%A5%E5%BF%97/" /><meta property="og:image" content="https://xue.woyao.net/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-03-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-03-01T00:00:00+00:00" /><meta property="og:site_name" content="新手笔记" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://xue.woyao.net/logo.png"/>
+
+<meta name="twitter:title" content="日志"/>
+<meta name="twitter:description" content="约定大于配置，配置大于编码。 日志是系统运行的“照妖镜”，通过它能够实时反映系统的运行状态。 日志的打印也需要设计 如果日志的打印不设计，就会出现"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xue.woyao.net/posts/yueding/%E6%97%A5%E5%BF%97/" /><link rel="prev" href="https://xue.woyao.net/posts/javascript/jsvariable/" /><link rel="next" href="https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/servlet/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "日志",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xue.woyao.net\/posts\/yueding\/%E6%97%A5%E5%BF%97\/"
+        },"image": ["https:\/\/xue.woyao.net\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "日志, log, Java","wordcount":  1705 ,
+        "url": "https:\/\/xue.woyao.net\/posts\/yueding\/%E6%97%A5%E5%BF%97\/","datePublished": "2021-03-01T00:00:00+00:00","dateModified": "2021-03-01T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/xue.woyao.net\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "沙里"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="新手笔记"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>新手笔记</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/yueding/%E6%97%A5%E5%BF%97/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="新手笔记"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>新手笔记</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/yueding/%E6%97%A5%E5%BF%97/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">日志</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>沙里</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java%E5%9F%BA%E7%A1%80/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java基础</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-03-01">2021-03-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1705 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/yueding/%E6%97%A5%E5%BF%97/" class="leancloud_visitors" data-flag-title="日志">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#日志的打印也需要设计">日志的打印也需要设计</a></li>
+    <li><a href="#when">When</a>
+      <ul>
+        <li><a href="#httprpc接口调用时">HTTP/RPC接口调用时</a></li>
+        <li><a href="#程序抛出exception时不向上抛就打印异常堆栈">程序抛出Exception时，不向上抛就打印异常堆栈</a></li>
+        <li><a href="#不太可能进入的条件分支要打印条件值">不太可能进入的条件分支，要打印条件值</a></li>
+        <li><a href="#关键执行步骤和中间态">关键执行步骤和中间态</a></li>
+        <li><a href="#函数的入口和出口处">函数的入口和出口处</a></li>
+      </ul>
+    </li>
+    <li><a href="#where">Where</a>
+      <ul>
+        <li><a href="#对接外部的接口的封装必须打上下行日志防扯皮">对接外部的接口的封装，必须打上下行日志，防扯皮</a></li>
+        <li><a href="#程序重要状态信息变化要记录方便还原现场">程序重要状态信息变化要记录，方便还原现场</a></li>
+        <li><a href="#系统出入口重要方法出入口">系统出入口，重要方法出入口</a></li>
+        <li><a href="#任何发生异常的地方">任何发生异常的地方</a></li>
+        <li><a href="#很少可能走到的-else-分支">很少可能走到的 else 分支</a></li>
+        <li><a href="#耗时的任务执行要记录进度">耗时的任务执行要记录进度</a></li>
+      </ul>
+    </li>
+    <li><a href="#what">What</a></li>
+    <li><a href="#how">How</a>
+      <ul>
+        <li><a href="#不使用具体的日志框架而是使用抽象的日志框架">不使用具体的日志框架而是使用抽象的日志框架</a></li>
+        <li><a href="#系统程序错误是error级别用户参数错误是warning级别">系统程序错误是Error级别，用户参数错误是Warning级别</a></li>
+        <li><a href="#日志级别">日志级别</a></li>
+        <li><a href="#日志格式">日志格式</a></li>
+      </ul>
+    </li>
+    <li><a href="#疑问">疑问</a></li>
+    <li><a href="#优雅的日志处理需求">优雅的日志处理需求</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><blockquote>
+<p>约定大于配置，配置大于编码。</p>
+<p>日志是系统运行的“照妖镜”，通过它能够实时反映系统的运行状态。</p>
+</blockquote>
+<h2 id="日志的打印也需要设计">日志的打印也需要设计</h2>
+<p>如果日志的打印不设计，就会出现以下问题：</p>
+<ul>
+<li>开发者各自为政，日志怎么打全凭个人喜好，无统一的规范</li>
+<li>打了一些毫无意义的日志，徒增日志文件大小</li>
+<li>阅读日志的人不知日志中打印参数的含义，还要结合日志打印的位置→业务代码→参数位置→参数注释，来学习了解</li>
+</ul>
+<h2 id="when">When</h2>
+<p>什么时候打日志，当你需要日志才能定位生产环境的问题，而不是看代码猜测的时候，就是你需要打日志的时候。</p>
+<h3 id="httprpc接口调用时">HTTP/RPC接口调用时</h3>
+<p>接口调用无论是调用成功还是调用失败，均要打印请求和成功/失败响应日志。</p>
+<h3 id="程序抛出exception时不向上抛就打印异常堆栈">程序抛出Exception时，不向上抛就打印异常堆栈</h3>
+<p>注意，不能记录异常日志后，继续向上抛异常。</p>
+<p>但是接口调用除外，因为我们可能需要打印错误的响应报文后，再往上抛接口异常。</p>
+<h3 id="不太可能进入的条件分支要打印条件值">不太可能进入的条件分支，要打印条件值</h3>
+<p>例如年龄小于 0 的分支。</p>
+<h3 id="关键执行步骤和中间态">关键执行步骤和中间态</h3>
+<p>例如，优惠的计算和分发，每次达到的条件，和计算出的优惠。都要打日志，便于后续跟踪优惠的计算。</p>
+<h3 id="函数的入口和出口处">函数的入口和出口处</h3>
+<h2 id="where">Where</h2>
+<p>什么地方打日志</p>
+<ul>
+<li>容易发生扯皮地方</li>
+</ul>
+<p>例如，调别人接口的地方，一定要<code>MUST</code>打日志，哪怕你现在对接，运行正常，谁能保证永远不出问题，一旦到时候出问题了，谁有日志，谁就有主导权，以日志服人。</p>
+<p>看到有的文章说，接口日志对接调试的时候打，上线了就不需要打了。你能保证你对接完上线后，不改代码，你能保证别人不改吗？如果哪天报错了，你说别人的问题，别人让你提供现场日志，你说你没有？多么无力。</p>
+<ul>
+<li>程序加载的地方</li>
+</ul>
+<p>毕竟加载的程序，只会走一次，只需要打一次，就能方便后面定位错误，不信你看 SpringBoot 启动时就打了 INFO 类型的启动日志。</p>
+<p>这里加载一次，指的是常驻内存的应用。</p>
+<h3 id="对接外部的接口的封装必须打上下行日志防扯皮">对接外部的接口的封装，必须打上下行日志，防扯皮</h3>
+<h3 id="程序重要状态信息变化要记录方便还原现场">程序重要状态信息变化要记录，方便还原现场</h3>
+<h3 id="系统出入口重要方法出入口">系统出入口，重要方法出入口</h3>
+<p>记录输入和输出，方便定位。</p>
+<h3 id="任何发生异常的地方">任何发生异常的地方</h3>
+<p>任何异常都应该被记录。</p>
+<h3 id="很少可能走到的-else-分支">很少可能走到的 else 分支</h3>
+<p>此 else 分支要记录。</p>
+<h3 id="耗时的任务执行要记录进度">耗时的任务执行要记录进度</h3>
+<h2 id="what">What</h2>
+<ul>
+<li>打文件名和行号</li>
+</ul>
+<p>为啥要打文件名和行号？通过错误描述不能定位吗？</p>
+<p>有时候我们的项目中会有很多的 copy 代码，甚至错误日志都 copy，别人 copy 了你的错误日志描述，到时候打出来了，算你的，没有文件名和行号，你要跟他扯皮吗。</p>
+<ul>
+<li>打出问题的时间，最好精确到毫秒</li>
+</ul>
+<p>并发性的问题，用秒做单位的时间，有时候真不好排错。</p>
+<ul>
+<li>异常问题，打印异常堆栈</li>
+<li>打上下文内容，如果不打上下文，就相当于报警说这家超市里有小偷，打了上下文就相当于报警说工号 007 的那位员工是小偷。上下文内容能帮你快速，准确地定位错误。</li>
+</ul>
+<h2 id="how">How</h2>
+<p>怎样打日志？</p>
+<h3 id="不使用具体的日志框架而是使用抽象的日志框架">不使用具体的日志框架而是使用抽象的日志框架</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">org.slf4j.Logger</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">org.slf4j.LoggerFactory</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">LoggerFactory</span><span class="o">.</span><span class="na">getLogger</span><span class="o">(</span><span class="n">Xxx</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>即不使用<code>logback</code>，而使用<code>slf4j</code>。</p>
+<h3 id="系统程序错误是error级别用户参数错误是warning级别">系统程序错误是Error级别，用户参数错误是Warning级别</h3>
+<p>高效地打日志</p>
+<ul>
+<li>对于 debug 日志级别日志，必须判断 debug 级别后才能打印日志</li>
+<li>使用格式化的占位符打日志，而不是字符串拼接日志，占位符的效率远远高于拼接字符串</li>
+<li>异常时不能打印完日志，再向上抛异常，向上的异常捕获者又打印了异常日志。应该交给异常的最终捕获处理者来打日志。</li>
+<li>不要在循环中打印日志，最好的办法是在循环中统计单个日志，循环外打印统计的日志。跟不要在循环中执行 sql 一个道理。</li>
+<li>禁止线上环境开启 debug 日志级别，因为除了你写了少部分的 debug 级别日志，可以你用的依赖库，框架可能写了大量的 debug 日志，这样会塞爆你的服务器的。</li>
+<li>不要使用错误的日志级别，你在 info 日志文件中的打的 error 日志，同事在 error 日志文件中死活找不到。</li>
+<li>不要使用 <code>e.printStackTrace()</code>，因为他的实现是打印日志到控制台，日志文件里是不会记录的</li>
+</ul>
+<h3 id="日志级别">日志级别</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/1620.png"
+        data-srcset="/images/1620.png, /images/1620.png 1.5x, /images/1620.png 2x"
+        data-sizes="auto"
+        alt="/images/1620.png"
+        title="img" /></p>
+<h3 id="日志格式">日志格式</h3>
+<ul>
+<li>参数使用 {} 占位符，而不是字符串拼接，因为这样只有日志真正打印的时候，才会处理参数，降低了日志系统的负载</li>
+<li>使用 [] 分隔参数，提高日志的可读性</li>
+<li>每一个请求最好有一个 requestId，记入日志，同时记录线程名称</li>
+</ul>
+<h2 id="疑问">疑问</h2>
+<p>说打印日志时，不要直接 json 化对象，那么 LOG.error(&ldquo;xxx&rdquo;, exception) 中又传递对象，需要确认 error 的实现。</p>
+<h2 id="优雅的日志处理需求">优雅的日志处理需求</h2>
+<ul>
+<li>能自动将异常错误,转换成对前端友好的错误输出，并记录调用栈和出错</li>
+<li>能准确定位前端的错误提示对应的异常错误日志，以及请求参数</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-03-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/yueding/%E6%97%A5%E5%BF%97/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xue.woyao.net/posts/yueding/%E6%97%A5%E5%BF%97/" data-title="日志" data-hashtags="日志,log,Java"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xue.woyao.net/posts/yueding/%E6%97%A5%E5%BF%97/" data-hashtag="日志"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://xue.woyao.net/posts/yueding/%E6%97%A5%E5%BF%97/" data-title="日志"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xue.woyao.net/posts/yueding/%E6%97%A5%E5%BF%97/" data-title="日志"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xue.woyao.net/posts/yueding/%E6%97%A5%E5%BF%97/" data-title="日志" data-ralateuid="xxxx"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/%E6%97%A5%E5%BF%97/">日志</a>,&nbsp;<a href="/tags/log/">log</a>,&nbsp;<a href="/tags/java/">Java</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/javascript/jsvariable/" class="prev" rel="prev" title="第一章"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>第一章</a>
+            <a href="/posts/java%E5%9F%BA%E7%A1%80/servlet/" class="next" rel="next" title="Servlet">Servlet<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.114.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">1998 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">沙里</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

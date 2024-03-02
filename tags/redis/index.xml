@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>redis - 标签 - 新手笔记</title>
+        <title>Redis - 标签 - 新手笔记</title>
         <link>https://xue.woyao.net/tags/redis/</link>
-        <description>redis - 标签 - 新手笔记</description>
+        <description>Redis - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/redis/" rel="self" type="application/rss+xml" /><item>
     <title>RedisTemplate框架使用</title>
     <link>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</link>
     <pubDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
     <guid>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</guid>
-    <description><![CDATA[命令使用 查询哈希表 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import org.springframework.data.redis.core.RedisTemplate; @Service @RequiredArgsConstructor public class UserService { private final RedisTemplate&lt;String, String&gt; redisTemplate; public getUserName(int userId) { // hashKey String hashKey = String.format(&#34;user_id_%d&#34;, userId); String fieldName = &#34;name&#34;; Object userName = redisTemplate.opsForHash().get(hashKey, fieldName); return userName.toString(); } }]]></description>
+    <description><![CDATA[历史 RedisTemplate 是 spring-data-redis 对 redis 的封装。 Jedis 是 Redis 官方开发的客户端 spring-data-redis 对 Jedis 进行了高度封装，对外提供 RedisTemplate 类。 SpringBoot 整合 RedisTemplate 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt; &lt;version&gt;2.5.9&lt;/version&gt; &lt;/dependency&gt; RedisTemplate 整合 lettuce 1 2 3 4 5 6 7 8 9 10 11 12]]></description>
 </item>
 <item>
     <title>Redis 的使用讨论</title>
@@ -29,18 +29,18 @@
 </item>
 <item>
     <title>基于Redis有序集合的延时消息队列实现</title>
-    <link>https://xue.woyao.net/posts/database/redisdelaymq/</link>
+    <link>https://xue.woyao.net/posts/database/redis-delay-message-queue/</link>
     <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/redisdelaymq/</guid>
+    <guid>https://xue.woyao.net/posts/database/redis-delay-message-queue/</guid>
     <description><![CDATA[要求 由于使用有序集合的 score 充当延时时间，要求所有客户端时钟保持一致 特点 延时队列基于 Redis 的有序集合，底层是 Hash 表，所以查找和删除的时间复杂度是 O(1]]></description>
 </item>
 <item>
     <title>Redis使用过程中存在的问题</title>
-    <link>https://xue.woyao.net/posts/database/rediscuowu/</link>
+    <link>https://xue.woyao.net/posts/database/rediswenti/</link>
     <pubDate>Fri, 16 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/rediscuowu/</guid>
+    <guid>https://xue.woyao.net/posts/database/rediswenti/</guid>
     <description><![CDATA[Scan使用中存在的问题 1 public function scan(&amp;$iterator, $pattern = null, $count = 0) 游标 $iterator 初始值为 null，当其返回值为 0 时表示整个迭代结束。 $count 是每次迭代遍历字典槽的数量（约等于）]]></description>
 </item>
 <item>

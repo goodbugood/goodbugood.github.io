@@ -141,4 +141,23 @@ public Set<String> getNumbers() {
 }
 ```
 
+## 返回空集合
+
+方法返回值定义返回集合的，如果没有结果，推荐返回空集合，而不是 NULL。
+
+即使返回空集合也有讲究，因为不推荐 new 一个空集合返回。而是使用内置的集合工具方法。
+
+```java
+// 返回空 Set
+java.util.Collections#emptySet
+    
+java.util.Collections#emptyList
+    
+java.util.Collections#emptyMap
+    
+java.util.Collections#emptySortedMap
+    
+java.util.Collections#emptyNavigableMap
+```
+
 

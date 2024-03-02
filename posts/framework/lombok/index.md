@@ -1,4 +1,4 @@
-# Lombok
+# Lombok使用手册
 
 
 ## 安装
@@ -83,7 +83,7 @@ public class Tony {
 
 为类属性生成构造方法。主要为以下属性生成构造方法。
 
-1. 被 `@NonNull` 注解的属性
+1. 被 `@lombok.NonNull` 注解的属性
 2. 被 `final` 修饰的常量属性
 
 ### 用处

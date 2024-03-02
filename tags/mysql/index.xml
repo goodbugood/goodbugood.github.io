@@ -3,7 +3,15 @@
         <title>mysql - 标签 - 新手笔记</title>
         <link>https://xue.woyao.net/tags/mysql/</link>
         <description>mysql - 标签 - 新手笔记</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 13 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/mysql/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 25 Aug 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/mysql/" rel="self" type="application/rss+xml" /><item>
+    <title>php 数据库查询字段全是小写</title>
+    <link>https://xue.woyao.net/posts/php/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%87%BA%E7%9A%84%E5%AD%97%E6%AE%B5%E5%9D%87%E5%B0%8F%E5%86%99/</link>
+    <pubDate>Fri, 25 Aug 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%87%BA%E7%9A%84%E5%AD%97%E6%AE%B5%E5%9D%87%E5%B0%8F%E5%86%99/</guid>
+    <description><![CDATA[TP3.2 框架查询数据库 查询数据，返回的字段全是小写，指定的小驼峰别名也被转成了小写。 因为 \Think\Db\Driver 默认写死的字段全小写。 修改配置 1 2 3 4 // config.php &#34;DB_PARAMS&#34; =&gt; [ \PDO::ATTR_CASE =&gt; \PDO::CASE_NATURAL, ],]]></description>
+</item>
+<item>
     <title>100条 sql</title>
     <link>https://xue.woyao.net/posts/database/100tiaosql/</link>
     <pubDate>Thu, 13 Apr 2023 00:00:00 &#43;0000</pubDate>
@@ -21,10 +29,10 @@
 </item>
 <item>
     <title>MySQL复习笔记</title>
-    <link>https://xue.woyao.net/posts/database/mysqlfuxibiji/</link>
+    <link>https://xue.woyao.net/posts/database/mysqlfuxi/</link>
     <pubDate>Sat, 20 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/mysqlfuxibiji/</guid>
+    <guid>https://xue.woyao.net/posts/database/mysqlfuxi/</guid>
     <description><![CDATA[常用函数 日期时间 时间戳转格式化日期 1 2 # 输出 1970-01-01 08:00:01 SELECT FROM_UNIXTIME(1) AS t 日期转时间戳 1 2 # 输出 0 SELECT UNIX_TIMESTAMP(&#39;1970-01-01 08:00:00&#39;) AS t ACID 事务的隔离级别 默认隔离级别：可重复读 级别 存在的问]]></description>
 </item>
 <item>

@@ -3,7 +3,39 @@
         <title>所有文章 - 新手笔记</title>
         <link>https://xue.woyao.net/posts/</link>
         <description>所有文章 | 新手笔记</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 01 Mar 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Spring 的钩子</title>
+    <link>https://xue.woyao.net/posts/framework/spring/spring%E7%9A%84%E9%92%A9%E5%AD%90/</link>
+    <pubDate>Fri, 01 Mar 2024 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/framework/spring/spring%E7%9A%84%E9%92%A9%E5%AD%90/</guid>
+    <description><![CDATA[Spring 的钩子 Spring 有很多钩子，供我们扩展 Spring 的功能。 Bean factory implementations should support the standard bean lifecycle interfaces as far as possible. The full set of initialization methods and their standard order is: BeanNameAware&rsquo;s setBeanName BeanClassLoaderAware&rsquo;s setBeanClassLoader BeanFactoryAware&rsquo;s setBeanFactory EnvironmentAware&rsquo;s setEnvironment EmbeddedValueResolverAware&rsquo;s setEmbeddedValueResolver ResourceLoaderAware&rsquo;s setResourceLoader (only applicable when running in an application context) ApplicationEventPublisherAware&rsquo;s setApplicationEventPublisher (only applicable]]></description>
+</item>
+<item>
+    <title>Java对象的常用判断</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/%E5%B8%B8%E7%94%A8%E5%88%A4%E6%96%AD/</link>
+    <pubDate>Sat, 21 Oct 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/%E5%B8%B8%E7%94%A8%E5%88%A4%E6%96%AD/</guid>
+    <description><![CDATA[cn.hutool.core.util.ObjectUtil#isNull 与 java.util.Objects#isNull 的区别 参考 ObjectUtil 中 isNull() 和 isNotNull() 第二个条件判断的意义]]></description>
+</item>
+<item>
+    <title>ArduinoIDE搭建ESP8266开发环境</title>
+    <link>https://xue.woyao.net/posts/%E5%B5%8C%E5%85%A5%E5%BC%8F/esp8266/arduinoide%E6%90%AD%E5%BB%BAesp8266%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+    <pubDate>Sat, 26 Aug 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/%E5%B5%8C%E5%85%A5%E5%BC%8F/esp8266/arduinoide%E6%90%AD%E5%BB%BAesp8266%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+    <description><![CDATA[配置开发板库 添加 esp8266 库：https://arduino.esp8266.com/stable/package_esp8266com_index]]></description>
+</item>
+<item>
+    <title>php 数据库查询字段全是小写</title>
+    <link>https://xue.woyao.net/posts/php/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%87%BA%E7%9A%84%E5%AD%97%E6%AE%B5%E5%9D%87%E5%B0%8F%E5%86%99/</link>
+    <pubDate>Fri, 25 Aug 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/php/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9F%A5%E8%AF%A2%E5%87%BA%E7%9A%84%E5%AD%97%E6%AE%B5%E5%9D%87%E5%B0%8F%E5%86%99/</guid>
+    <description><![CDATA[TP3.2 框架查询数据库 查询数据，返回的字段全是小写，指定的小驼峰别名也被转成了小写。 因为 \Think\Db\Driver 默认写死的字段全小写。 修改配置 1 2 3 4 // config.php &#34;DB_PARAMS&#34; =&gt; [ \PDO::ATTR_CASE =&gt; \PDO::CASE_NATURAL, ],]]></description>
+</item>
+<item>
     <title>不同业务线的错误码统一规划</title>
     <link>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E9%87%8D%E6%9E%84%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0/%E4%B8%8D%E5%90%8C%E4%B8%9A%E5%8A%A1%E7%BA%BF%E7%9A%84%E9%94%99%E8%AF%AF%E7%A0%81%E7%BB%9F%E4%B8%80/</link>
     <pubDate>Sat, 15 Jul 2023 00:00:00 &#43;0000</pubDate>
@@ -33,7 +65,7 @@
     <pubDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
     <guid>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</guid>
-    <description><![CDATA[命令使用 查询哈希表 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 import org.springframework.data.redis.core.RedisTemplate; @Service @RequiredArgsConstructor public class UserService { private final RedisTemplate&lt;String, String&gt; redisTemplate; public getUserName(int userId) { // hashKey String hashKey = String.format(&#34;user_id_%d&#34;, userId); String fieldName = &#34;name&#34;; Object userName = redisTemplate.opsForHash().get(hashKey, fieldName); return userName.toString(); } }]]></description>
+    <description><![CDATA[历史 RedisTemplate 是 spring-data-redis 对 redis 的封装。 Jedis 是 Redis 官方开发的客户端 spring-data-redis 对 Jedis 进行了高度封装，对外提供 RedisTemplate 类。 SpringBoot 整合 RedisTemplate 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt; &lt;version&gt;2.5.9&lt;/version&gt; &lt;/dependency&gt; RedisTemplate 整合 lettuce 1 2 3 4 5 6 7 8 9 10 11 12]]></description>
 </item>
 <item>
     <title>Spring常见的3种自动注入方式</title>
@@ -50,38 +82,6 @@
     <author>沙里</author>
     <guid>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E6%95%99%E8%AE%AD%E8%A7%84%E7%BA%A6/</guid>
     <description><![CDATA[数据库 枚举字段 枚举字段尽量使用能够描述业务，短小精悍的词语，不要为了那点性能使用 tinyint ，否则后面你就要识记那些 1，2，3，4，5 各代表什么业务含]]></description>
-</item>
-<item>
-    <title>统一错误码如何追加具体业务错误描述</title>
-    <link>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E9%87%8D%E6%9E%84%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0/%E7%BB%9F%E4%B8%80%E9%94%99%E8%AF%AF%E7%A0%81%E7%9A%84%E9%94%99%E8%AF%AF%E6%B6%88%E6%81%AF%E8%8E%B7%E5%8F%96/</link>
-    <pubDate>Sat, 08 Jul 2023 00:00:00 &#43;0000</pubDate>
-    <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E9%87%8D%E6%9E%84%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0/%E7%BB%9F%E4%B8%80%E9%94%99%E8%AF%AF%E7%A0%81%E7%9A%84%E9%94%99%E8%AF%AF%E6%B6%88%E6%81%AF%E8%8E%B7%E5%8F%96/</guid>
-    <description><![CDATA[今天阅读了他人代码，作者应该是想封装一个统一的错误码枚举类。这种需求大家应该都遇到过。 常见封装 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 package com.baidu; import lombok.AllArgsConstructor; import lombok.Getter; @AllArgsConstructor public]]></description>
-</item>
-<item>
-    <title>Hugo使用手册</title>
-    <link>https://xue.woyao.net/posts/%E5%B7%A5%E5%85%B7/hugo/</link>
-    <pubDate>Wed, 05 Jul 2023 00:00:00 &#43;0000</pubDate>
-    <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/%E5%B7%A5%E5%85%B7/hugo/</guid>
-    <description><![CDATA[常见报错 you need the extended version to build SCSS/SASS 由于你使用了 hugo_0.114.1_windows-amd64，但是他不支持编译 SCSS/SASS，应该下载使用 h]]></description>
-</item>
-<item>
-    <title>HTTP 协议</title>
-    <link>https://xue.woyao.net/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http%E5%8D%8F%E8%AE%AE/</link>
-    <pubDate>Tue, 04 Jul 2023 00:00:00 &#43;0000</pubDate>
-    <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http%E5%8D%8F%E8%AE%AE/</guid>
-    <description><![CDATA[常见状态码 499 Client Closed Request 这种情况通常是，服务端处理时间过长，超出客户端设置的最大等待时间，客户端主动关闭了连接。]]></description>
-</item>
-<item>
-    <title>Java推荐操作</title>
-    <link>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E4%BC%98%E7%A7%80%E6%93%8D%E4%BD%9C/</link>
-    <pubDate>Tue, 27 Jun 2023 00:00:00 &#43;0000</pubDate>
-    <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E4%BC%98%E7%A7%80%E6%93%8D%E4%BD%9C/</guid>
-    <description><![CDATA[Java推荐操作 判空 不推荐用法 不推荐的原因是，不够语义化。 1 2 3 4 5 6 7 8 9 10 11 12 13 @Test public void npeMap() { HashMap&lt;String, HashMap&lt;String, String&gt;&gt; map = new HashMap&lt;&gt;(2); HashMap&lt;String, String&gt; hashMap = new HashMap&lt;&gt;(1); hashMap.put(&#34;country&#34;, &#34;china&#34;); map.put(&#34;shali&#34;, hashMap); if (null != map.get(&#34;shali&#34;)) { HashMap&lt;String,]]></description>
 </item>
 </channel>
 </rss>

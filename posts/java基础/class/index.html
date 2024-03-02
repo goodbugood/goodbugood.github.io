@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/xue.woyao.net\/posts\/java%E5%9F%BA%E7%A1%80\/class\/"
-        },"image": ["https:\/\/xue.woyao.net\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "类, 多态","wordcount":  391 ,
+        },"image": ["https:\/\/xue.woyao.net\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "类, 多态","wordcount":  529 ,
         "url": "https:\/\/xue.woyao.net\/posts\/java%E5%9F%BA%E7%A1%80\/class\/","datePublished": "2023-05-05T00:00:00+00:00","dateModified": "2023-05-05T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "https:\/\/xue.woyao.net\/images\/avatar.png"},"author": {
@@ -109,8 +109,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">类</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>沙里</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java%E5%9F%BA%E7%A1%80/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java基础</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-05">2023-05-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 391 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/posts/java%E5%9F%BA%E7%A1%80/class/" class="leancloud_visitors" data-flag-title="类">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-05-05">2023-05-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 529 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/posts/java%E5%9F%BA%E7%A1%80/class/" class="leancloud_visitors" data-flag-title="类">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
@@ -137,10 +137,11 @@
 <p>Java 的内部类和静态内部类都是定义在另一个类的内部的类。</p>
 <p>区别：</p>
 <ul>
-<li>内部类可以访问外部类的成员变量和方法（包括私有成员），而静态内部类不能访问外部类的非静态成员变量和方法，只能访问静态成员变量和方法。</li>
+<li>内部类可以访问外部类的成员变量和方法（包括私有成员），而<code>静态内部类不能访问外部类的非静态成员变量和方法</code>，<code>只能访问静态成员变量和方法</code>。</li>
 <li>内部类的实例依赖于外部类的实例，而静态内部类的实例不依赖于外部类的实例。</li>
 <li>内部类不能定义静态成员，而静态内部类可以定义静态成员。</li>
 <li>内部类可以访问外部类的 private 构造方法，而静态内部类不能。</li>
+<li>静态内部类不会持有外部类实例的引用，因此在内存占用方面比非静态内部类更加轻量级。</li>
 </ul>
 <p>场景：</p>
 <ul>
@@ -149,6 +150,7 @@
 <li>如果内部类对象需要访问其外部类对象，或者需要访问非静态的外部类的成员，就应该使用内部类。</li>
 <li>如果不需要访问外部类的实例，那么就可以使用静态内部类，这样可以减少内存的使用。同时使用静态内部类可以避免内存泄漏问题。</li>
 </ul>
+<p>总结：如果内部类不需要访问外部类的实例变量或方法，或者不需要与外部类实例有任何关联，那么将其定义为静态内部类会更加合适。否则，如果内部类需要与外部类实例进行交互，那么就需要将其定义为非静态内部类。</p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
@@ -180,7 +182,7 @@
             </noscript></div></article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.114.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">1998 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">沙里</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">1998 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">沙里</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
 

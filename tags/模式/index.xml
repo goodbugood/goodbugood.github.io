@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>模式 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E6%A8%A1%E5%BC%8F/</link>
+        <description>模式 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 07 Feb 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E6%A8%A1%E5%BC%8F/" rel="self" type="application/rss+xml" /><item>
+    <title>四十二章经</title>
+    <link>https://xue.woyao.net/posts/designpatterns/sishierzhangjing/</link>
+    <pubDate>Tue, 07 Feb 2023 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/designpatterns/sishierzhangjing/</guid>
+    <description><![CDATA[编码 数据库 建表 类型字段表，推荐使用名字枚举，而不是使用整型，虽然整型效率高，但是真的不适合观看和记忆 接口对接 日志 跟三方或二方接口交互时，一定]]></description>
+</item>
+</channel>
+</rss>

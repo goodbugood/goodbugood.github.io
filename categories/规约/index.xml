@@ -13,10 +13,10 @@
 </item>
 <item>
     <title>编程规约</title>
-    <link>https://xue.woyao.net/posts/yueding/bianchengguiyue/</link>
+    <link>https://xue.woyao.net/posts/yueding/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/</link>
     <pubDate>Mon, 15 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/yueding/bianchengguiyue/</guid>
+    <guid>https://xue.woyao.net/posts/yueding/%E7%BC%96%E7%A8%8B%E8%A7%84%E7%BA%A6/</guid>
     <description><![CDATA[约定大于配置，配置大于编码。 关键字顺序 示例 描述 @Override public ==abstract== void service(ServletRequest req, ServletResponse res) throws ServletException, IOException; 抽象方法 private static final long serialVersionUID = 1L; private static final long serialVersionUID = 8294180014912103005L; 类常量，非大写 private static ==final== String METHOD_POST = &ldquo;POST&rdquo;; 类常量，]]></description>
 </item>
 </channel>

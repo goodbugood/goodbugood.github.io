@@ -13,10 +13,10 @@
 </item>
 <item>
     <title>流行的100个常用Java工具库</title>
-    <link>https://xue.woyao.net/posts/framework/top100tools/</link>
+    <link>https://xue.woyao.net/posts/framework/100%E4%B8%AAjava%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%BA%93/</link>
     <pubDate>Tue, 06 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/top100tools/</guid>
+    <guid>https://xue.woyao.net/posts/framework/100%E4%B8%AAjava%E9%A1%B9%E7%9B%AE%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E5%BA%93/</guid>
     <description><![CDATA[日期时间 字符串数组处理 集合框架 Apache 的 commons-collections4 1 2 3 4 5 6 &lt;!-- https://mvnrepository.com/artifact/org.apache.commons/commons-collections4 --&gt; &lt;dependency&gt; &lt;groupId&gt;org.apache.commons&lt;/groupId&gt; &lt;artifactId&gt;commons-collections4&lt;/artifactId&gt; &lt;version&gt;4.4&lt;/version&gt; &lt;/dependency&gt; 工具列表 工具 功能描述 使用方法 LRUMap，最近最少使用 Map 这个 Map 固定大小 容量不]]></description>
 </item>
 <item>
@@ -28,7 +28,7 @@
     <description><![CDATA[疑问 assertSame与assertEquals的区别 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 /** * 公 */ class]]></description>
 </item>
 <item>
-    <title>Lombok</title>
+    <title>Lombok使用手册</title>
     <link>https://xue.woyao.net/posts/framework/lombok/</link>
     <pubDate>Thu, 25 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>

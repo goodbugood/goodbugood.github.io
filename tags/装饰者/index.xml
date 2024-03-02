@@ -5,10 +5,10 @@
         <description>装饰者 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E8%A3%85%E9%A5%B0%E8%80%85/" rel="self" type="application/rss+xml" /><item>
     <title>装饰者模式</title>
-    <link>https://xue.woyao.net/posts/designpatterns/zhuangshizhe/</link>
+    <link>https://xue.woyao.net/posts/designpatterns/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
     <pubDate>Tue, 23 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/designpatterns/zhuangshizhe/</guid>
+    <guid>https://xue.woyao.net/posts/designpatterns/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
     <description><![CDATA[前言 特点就是：一个接口，若干实现类，且每一个类的构造方法参数就是这个接口。他们互相构造，互相叠加。 代码展示 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]]></description>
 </item>
 </channel>

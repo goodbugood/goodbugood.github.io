@@ -21,26 +21,26 @@
 </item>
 <item>
     <title>基于Redis有序集合的延时消息队列实现</title>
-    <link>https://xue.woyao.net/posts/database/redisdelaymq/</link>
+    <link>https://xue.woyao.net/posts/database/redis-delay-message-queue/</link>
     <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/redisdelaymq/</guid>
+    <guid>https://xue.woyao.net/posts/database/redis-delay-message-queue/</guid>
     <description><![CDATA[要求 由于使用有序集合的 score 充当延时时间，要求所有客户端时钟保持一致 特点 延时队列基于 Redis 的有序集合，底层是 Hash 表，所以查找和删除的时间复杂度是 O(1]]></description>
 </item>
 <item>
     <title>Redis使用过程中存在的问题</title>
-    <link>https://xue.woyao.net/posts/database/rediscuowu/</link>
+    <link>https://xue.woyao.net/posts/database/rediswenti/</link>
     <pubDate>Fri, 16 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/rediscuowu/</guid>
+    <guid>https://xue.woyao.net/posts/database/rediswenti/</guid>
     <description><![CDATA[Scan使用中存在的问题 1 public function scan(&amp;$iterator, $pattern = null, $count = 0) 游标 $iterator 初始值为 null，当其返回值为 0 时表示整个迭代结束。 $count 是每次迭代遍历字典槽的数量（约等于）]]></description>
 </item>
 <item>
     <title>MySQL复习笔记</title>
-    <link>https://xue.woyao.net/posts/database/mysqlfuxibiji/</link>
+    <link>https://xue.woyao.net/posts/database/mysqlfuxi/</link>
     <pubDate>Sat, 20 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/mysqlfuxibiji/</guid>
+    <guid>https://xue.woyao.net/posts/database/mysqlfuxi/</guid>
     <description><![CDATA[常用函数 日期时间 时间戳转格式化日期 1 2 # 输出 1970-01-01 08:00:01 SELECT FROM_UNIXTIME(1) AS t 日期转时间戳 1 2 # 输出 0 SELECT UNIX_TIMESTAMP(&#39;1970-01-01 08:00:00&#39;) AS t ACID 事务的隔离级别 默认隔离级别：可重复读 级别 存在的问]]></description>
 </item>
 </channel>
