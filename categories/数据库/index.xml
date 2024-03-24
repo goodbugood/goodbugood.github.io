@@ -5,18 +5,18 @@
         <description>数据库 - 分类 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Oct 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="self" type="application/rss+xml" /><item>
     <title>SQL一百问</title>
-    <link>https://xue.woyao.net/posts/database/sqlde100wen/</link>
+    <link>https://xue.woyao.net/posts/database/sqlwenti100/</link>
     <pubDate>Sat, 01 Oct 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/sqlde100wen/</guid>
+    <guid>https://xue.woyao.net/posts/database/sqlwenti100/</guid>
     <description><![CDATA[语句 BETWEEN字句有顺序区别吗 1 2 3 4 5 # 语句 1 select id form t1 between &#39;2022-10-01&#39; and &#39;2022-10-07&#39;; # 语句 2 select id form t1 between &#39;2022-10-07&#39; and &#39;2022-10-01&#39;; 语句 1 与语句 2 有区别吗？ 有，语句 2 只会返回 nul]]></description>
 </item>
 <item>
-    <title>Redis 的使用讨论</title>
-    <link>https://xue.woyao.net/posts/database/redisdescan/</link>
+    <title>Redis Scan 命令使用讨论</title>
+    <link>https://xue.woyao.net/posts/database/redis-scan-command-use/</link>
     <pubDate>Mon, 26 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/redisdescan/</guid>
+    <guid>https://xue.woyao.net/posts/database/redis-scan-command-use/</guid>
     <description><![CDATA[keys 命令与 scan 命令的区别 相同点和不同点： 操作 相同点 不同点 scan 时间复杂度O(n) 迭代扫描，消耗内存少 keys 时间复杂度O(n) 消耗内存大 Q&amp;A keys性能低，]]></description>
 </item>
 <item>

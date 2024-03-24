@@ -12,19 +12,19 @@
     <description><![CDATA[历史 RedisTemplate 是 spring-data-redis 对 redis 的封装。 Jedis 是 Redis 官方开发的客户端 spring-data-redis 对 Jedis 进行了高度封装，对外提供 RedisTemplate 类。 SpringBoot 整合 RedisTemplate 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt; &lt;version&gt;2.5.9&lt;/version&gt; &lt;/dependency&gt; RedisTemplate 整合 lettuce 1 2 3 4 5 6 7 8 9 10 11 12]]></description>
 </item>
 <item>
-    <title>Redis 的使用讨论</title>
-    <link>https://xue.woyao.net/posts/database/redisdescan/</link>
+    <title>Redis Scan 命令使用讨论</title>
+    <link>https://xue.woyao.net/posts/database/redis-scan-command-use/</link>
     <pubDate>Mon, 26 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/redisdescan/</guid>
+    <guid>https://xue.woyao.net/posts/database/redis-scan-command-use/</guid>
     <description><![CDATA[keys 命令与 scan 命令的区别 相同点和不同点： 操作 相同点 不同点 scan 时间复杂度O(n) 迭代扫描，消耗内存少 keys 时间复杂度O(n) 消耗内存大 Q&amp;A keys性能低，]]></description>
 </item>
 <item>
     <title>MySQL优化</title>
-    <link>https://xue.woyao.net/posts/database/youhua/</link>
+    <link>https://xue.woyao.net/posts/database/mysqlyouhua/</link>
     <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/youhua/</guid>
+    <guid>https://xue.woyao.net/posts/database/mysqlyouhua/</guid>
     <description><![CDATA[SQL优化 Using index condition 与 Using index 的区别 using index 代表使用覆盖索引，不用回表。 而 using index condition 表示仅靠索引返回的数据还不够，还需要回表，不过回表前会过滤 where 条件。 索引 指]]></description>
 </item>
 <item>
@@ -45,16 +45,16 @@
 </item>
 <item>
     <title>Redis的分布式锁</title>
-    <link>https://xue.woyao.net/posts/database/setnx/</link>
+    <link>https://xue.woyao.net/posts/database/redislock/</link>
     <pubDate>Wed, 24 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/setnx/</guid>
+    <guid>https://xue.woyao.net/posts/database/redislock/</guid>
     <description><![CDATA[1 setnx key value setnx命令的全称是set if not exists，即当指定的 key 不存在时，设置值并返回 1，如果存在什么都不做，并返回 0。 setnx实现分布]]></description>
 </item>
 <item>
     <title>Redis复习笔记</title>
     <link>https://xue.woyao.net/posts/database/redisfuxibiji/</link>
-    <pubDate>Mon, 01 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
     <guid>https://xue.woyao.net/posts/database/redisfuxibiji/</guid>
     <description><![CDATA[[TOC] Redis复习笔记 数据类型 数据类型 特点 添加 删除 修改 查询 string（字符串） 二进制安全，可存图片 一个字符串最大能存512MB的内容 set del set get]]></description>

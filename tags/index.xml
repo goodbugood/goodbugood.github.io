@@ -3,7 +3,23 @@
         <title>Tags - 标签 - 新手笔记</title>
         <link>https://xue.woyao.net/tags/</link>
         <description>Tags - 标签 - 新手笔记</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 01 Mar 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 02 Mar 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>模式</title>
+    <link>https://xue.woyao.net/tags/%E6%A8%A1%E5%BC%8F/</link>
+    <pubDate>Sat, 02 Mar 2024 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/tags/%E6%A8%A1%E5%BC%8F/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>状态</title>
+    <link>https://xue.woyao.net/tags/%E7%8A%B6%E6%80%81/</link>
+    <pubDate>Sat, 02 Mar 2024 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/tags/%E7%8A%B6%E6%80%81/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>hook</title>
     <link>https://xue.woyao.net/tags/hook/</link>
     <pubDate>Fri, 01 Mar 2024 00:00:00 &#43;0000</pubDate>
@@ -65,22 +81,6 @@
     <pubDate>Fri, 25 Aug 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
     <guid>https://xue.woyao.net/tags/pdo/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>php</title>
-    <link>https://xue.woyao.net/tags/php/</link>
-    <pubDate>Fri, 25 Aug 2023 00:00:00 &#43;0000</pubDate>
-    <author>沙里</author>
-    <guid>https://xue.woyao.net/tags/php/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>thinkphp</title>
-    <link>https://xue.woyao.net/tags/thinkphp/</link>
-    <pubDate>Fri, 25 Aug 2023 00:00:00 &#43;0000</pubDate>
-    <author>沙里</author>
-    <guid>https://xue.woyao.net/tags/thinkphp/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

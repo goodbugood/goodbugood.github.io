@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>状态 - 标签 - 新手笔记</title>
+        <link>https://xue.woyao.net/tags/%E7%8A%B6%E6%80%81/</link>
+        <description>状态 - 标签 - 新手笔记</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 02 Mar 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E7%8A%B6%E6%80%81/" rel="self" type="application/rss+xml" /><item>
+    <title>状态模式建模与实现</title>
+    <link>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/design-pattern-state/</link>
+    <pubDate>Sat, 02 Mar 2024 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/design-pattern-state/</guid>
+    <description><![CDATA[简述 名称：状态模式 关键字：State 状态模式是一种行为型设计模式，它允许一个对象在其内部状态改变时改变其行为，看起来就像是改变了对象的类。 一]]></description>
+</item>
+</channel>
+</rss>

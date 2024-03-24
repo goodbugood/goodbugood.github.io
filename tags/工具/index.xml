@@ -5,11 +5,11 @@
         <description>工具 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E5%B7%A5%E5%85%B7/" rel="self" type="application/rss+xml" /><item>
     <title>劳动工具</title>
-    <link>https://xue.woyao.net/posts/tools/mytool/</link>
+    <link>https://xue.woyao.net/posts/tools/%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/</link>
     <pubDate>Sat, 29 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/tools/mytool/</guid>
-    <description><![CDATA[编辑器 PhpStorm 最强 PHP IDE Idea Sublime 正则操作文本方便 小巧精悍 图文工具 Snipaste https://zh.snipaste.com/ 截图好工具 FastStone Capture https://www.faststone.org/FSCaptureDownload.htm 屏幕取色，截图，滚动截图，录屏压缩比高。 数据库软件 Navicat 数据库操作客户端]]></description>
+    <guid>https://xue.woyao.net/posts/tools/%E6%88%91%E7%9A%84%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/</guid>
+    <description><![CDATA[编辑器 PhpStorm 最强 PHP IDE Idea Sublime 正则操作文本方便 小巧精悍 图文工具 Snipaste https://zh.snipaste.com/ 截图好工具 PixPin PixPin 截图/贴图/长截图/文字识别/标注 | PixPin 截图/贴图/长截图/文字识别/标]]></description>
 </item>
 <item>
     <title>field injection is not recommended</title>

@@ -5,10 +5,10 @@
         <description>测试驱动学习 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E6%B5%8B%E8%AF%95%E9%A9%B1%E5%8A%A8%E5%AD%A6%E4%B9%A0/" rel="self" type="application/rss+xml" /><item>
     <title>测试驱动学习</title>
-    <link>https://xue.woyao.net/posts/designpatterns/tdl/</link>
+    <link>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/tdl/</link>
     <pubDate>Tue, 23 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/designpatterns/tdl/</guid>
+    <guid>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/tdl/</guid>
     <description><![CDATA[Test Driver Learn，测试驱动学习。]]></description>
 </item>
 </channel>

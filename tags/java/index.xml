@@ -37,18 +37,18 @@
 </item>
 <item>
     <title>Java关键字</title>
-    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javakeywords/</link>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/java-keywords/</link>
     <pubDate>Mon, 17 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/javakeywords/</guid>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/java-keywords/</guid>
     <description><![CDATA[final 修饰变量 final 修饰的变量，只能初始化，不能赋值。（即只能被赋值 1 次。） 1 2 3 4 5 6 // 定义并初始化 final Integer integer = 1; // 第二次和第三次赋值都会报错 // Cannot assign a]]></description>
 </item>
 <item>
     <title>认识Map</title>
-    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/learnmap/</link>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/learn-java-map/</link>
     <pubDate>Thu, 06 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/learnmap/</guid>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/learn-java-map/</guid>
     <description><![CDATA[认识HashMap]]></description>
 </item>
 <item>
@@ -61,10 +61,10 @@
 </item>
 <item>
     <title>Java中的数组参数与可变参数的区别</title>
-    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/shuzuhekebiancan/</link>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/array-args/</link>
     <pubDate>Sat, 01 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/shuzuhekebiancan/</guid>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/array-args/</guid>
     <description><![CDATA[Java中的数组参数与可变参数的区别 看代码： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 private int[] func1(int... args) { return args; } private int[] func2(int[] args) { return args; } @Test void func() { int[] args = {1, 2, 3}; assertArrayEquals(args, func1(args)); assertArrayEquals(args, func2(args)); assertArrayEquals(args, func1(1, 2,]]></description>
 </item>
 <item>

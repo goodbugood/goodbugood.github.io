@@ -5,50 +5,50 @@
         <description>设计模式 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="self" type="application/rss+xml" /><item>
     <title>认识设计模式</title>
-    <link>https://xue.woyao.net/posts/designpatterns/readme/</link>
+    <link>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/shejimoshi/</link>
     <pubDate>Sat, 08 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/designpatterns/readme/</guid>
+    <guid>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/shejimoshi/</guid>
     <description><![CDATA[设计模式的接口和抽象类 如果一个人长时间不使用 23 种设计模式，那么他很容易遗忘设计模式的规则和用法。但是如果我们有一种工具，能够帮助我们拾起设计]]></description>
 </item>
 <item>
     <title>前言</title>
-    <link>https://xue.woyao.net/posts/designpatterns/%E5%89%8D%E8%A8%80/</link>
+    <link>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%89%8D%E8%A8%80/</link>
     <pubDate>Tue, 23 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/designpatterns/%E5%89%8D%E8%A8%80/</guid>
+    <guid>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%89%8D%E8%A8%80/</guid>
     <description><![CDATA[聊聊设计模式 分类 模式 创建型 简单工厂，工厂方法，抽象工厂 建造者，原型 结构型 适配器，装饰者，代理，外观，享元 行为型 策略 特点 单例singleton]]></description>
 </item>
 <item>
     <title>装饰者模式</title>
-    <link>https://xue.woyao.net/posts/designpatterns/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
+    <link>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/</link>
     <pubDate>Tue, 23 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/designpatterns/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
+    <guid>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/</guid>
     <description><![CDATA[前言 特点就是：一个接口，若干实现类，且每一个类的构造方法参数就是这个接口。他们互相构造，互相叠加。 代码展示 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17]]></description>
 </item>
 <item>
     <title>几种工厂模式</title>
-    <link>https://xue.woyao.net/posts/designpatterns/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
+    <link>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
     <pubDate>Mon, 22 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/designpatterns/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
+    <guid>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
     <description><![CDATA[简单工厂 工厂方法 抽象工厂 建造者 原型]]></description>
 </item>
 <item>
     <title>模板模式</title>
-    <link>https://xue.woyao.net/posts/designpatterns/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/</link>
+    <link>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/</link>
     <pubDate>Mon, 22 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/designpatterns/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/</guid>
+    <guid>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/</guid>
     <description><![CDATA[父类设计一个算法需要哪几步，子类则实现这些步骤。 大咖秀 javax.servlet.http.HttpServlet 抽象类 javax.servlet.http.HttpServlet 在其方法service()定义了处理 get 请求，post 请求。而我们只需要继承 HttpServlet]]></description>
 </item>
 <item>
     <title>策略模式</title>
-    <link>https://xue.woyao.net/posts/designpatterns/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</link>
+    <link>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</link>
     <pubDate>Mon, 22 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/designpatterns/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</guid>
+    <guid>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/</guid>
     <description><![CDATA[概念 strategy 定义 策略模式：指的是定义一系列算法，将每一个算法封装起来，并让它们可以相互替换。策略模式让算法独立于使用它的客户而变化。 ==策略模式仅]]></description>
 </item>
 </channel>

@@ -5,10 +5,10 @@
         <description>传值 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 19 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E4%BC%A0%E5%80%BC/" rel="self" type="application/rss+xml" /><item>
     <title>地址，指针与引用</title>
-    <link>https://xue.woyao.net/posts/2022/zhizhendizhiyinyong/</link>
+    <link>https://xue.woyao.net/posts/2022/address-point-reference/</link>
     <pubDate>Fri, 19 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/2022/zhizhendizhiyinyong/</guid>
+    <guid>https://xue.woyao.net/posts/2022/address-point-reference/</guid>
     <description><![CDATA[区别 概念 说明 指针 变量在内存中的地址，C，C++ 在使用，再高级点的语言，抛弃了，因为管理内存地址很麻烦。 传值 传值很简单，就是将其他变量的值拷贝]]></description>
 </item>
 </channel>

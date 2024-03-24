@@ -5,10 +5,10 @@
         <description>http - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 04 Jul 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/http/" rel="self" type="application/rss+xml" /><item>
     <title>HTTP 协议</title>
-    <link>https://xue.woyao.net/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http%E5%8D%8F%E8%AE%AE/</link>
+    <link>https://xue.woyao.net/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http-protocol/</link>
     <pubDate>Tue, 04 Jul 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http%E5%8D%8F%E8%AE%AE/</guid>
+    <guid>https://xue.woyao.net/posts/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/http-protocol/</guid>
     <description><![CDATA[常见状态码 499 Client Closed Request 这种情况通常是，服务端处理时间过长，超出客户端设置的最大等待时间，客户端主动关闭了连接。]]></description>
 </item>
 <item>
@@ -21,10 +21,10 @@
 </item>
 <item>
     <title>HTTP协议笔记</title>
-    <link>https://xue.woyao.net/posts/http/httpxieyi/</link>
+    <link>https://xue.woyao.net/posts/http/http-protocol/</link>
     <pubDate>Sat, 20 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/http/httpxieyi/</guid>
+    <guid>https://xue.woyao.net/posts/http/http-protocol/</guid>
     <description><![CDATA[HTTP Headers 我们经常能看到 header 头里的 X-什么什么的头，例如X-PowerBy-PHP，目前这种格式不被推崇。 自定专用消息头可通过&rsquo;X-&r]]></description>
 </item>
 </channel>

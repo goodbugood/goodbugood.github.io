@@ -5,10 +5,10 @@
         <description>NPE - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/npe/" rel="self" type="application/rss+xml" /><item>
     <title>Java判空的常见操作</title>
-    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/nullpointerexception/</link>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/null-pointer-exception/</link>
     <pubDate>Tue, 11 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/nullpointerexception/</guid>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/null-pointer-exception/</guid>
     <description><![CDATA[JDK1.8引入的Optional]]></description>
 </item>
 </channel>

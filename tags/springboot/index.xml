@@ -13,10 +13,10 @@
 </item>
 <item>
     <title>SpringBoot 参数校验</title>
-    <link>https://xue.woyao.net/posts/framework/spring/springbootvalidated/</link>
+    <link>https://xue.woyao.net/posts/framework/spring/springboot%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81%E5%99%A8/</link>
     <pubDate>Mon, 27 Mar 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/spring/springbootvalidated/</guid>
+    <guid>https://xue.woyao.net/posts/framework/spring/springboot%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81%E5%99%A8/</guid>
     <description><![CDATA[验证注解 @NotNull，@NotEmpty，@NotBlank 三者的区别 注意： @NotBlank 只能用来注解String @NotEmpty 只能注解字符串和集合和数组 @NotNull @NotEmpty @NotBlank]]></description>
 </item>
 <item>

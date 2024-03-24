@@ -13,10 +13,10 @@
 </item>
 <item>
     <title>idea 控制台中文乱码</title>
-    <link>https://xue.woyao.net/posts/tools/ideaconsoleluanma/</link>
+    <link>https://xue.woyao.net/posts/tools/idea%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B9%B1%E7%A0%81/</link>
     <pubDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/tools/ideaconsoleluanma/</guid>
+    <guid>https://xue.woyao.net/posts/tools/idea%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B9%B1%E7%A0%81/</guid>
     <description><![CDATA[现象 idea 的 Spring Boot 项目，使用了外置的 tomcat web 容器，跑起来就乱码了，网络上找了很多方案都未能解决。 1 24-Mar-2023 09:00:44.032 淇℃伅 [main] org.apache.catalina.startup.VersionLoggerListener.log Server.鏈嶅姟鍣ㄧ増鏈�: Apache Tomcat/8.5.64 解]]></description>
 </item>
 <item>

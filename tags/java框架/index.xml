@@ -5,10 +5,10 @@
         <description>Java框架 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 17 Mar 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/java%E6%A1%86%E6%9E%B6/" rel="self" type="application/rss+xml" /><item>
     <title>SpringMVC 获取请求参数的 N 种方式</title>
-    <link>https://xue.woyao.net/posts/2023/springmvchttpservletrequest/</link>
+    <link>https://xue.woyao.net/posts/2023/get-spring-request-parameter/</link>
     <pubDate>Fri, 17 Mar 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/2023/springmvchttpservletrequest/</guid>
+    <guid>https://xue.woyao.net/posts/2023/get-spring-request-parameter/</guid>
     <description><![CDATA[控制器请求方法里注入 HttpServletRequest 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 import org.springframework.web.bind.annotation.GetMapping; import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.RestController; import javax.servlet.http.HttpServletRequest; /** * @author Shali */ @RestController @RequestMapping(&#34;test&#34;) public class TestController { @GetMapping(&#34;hello&#34;) public String hello(HttpServletRequest httpServletRequest) { return httpServletRequest.getQueryString(); } } 利用 Spring 的依赖注入到控制器属]]></description>
 </item>
 </channel>

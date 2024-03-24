@@ -5,10 +5,10 @@
         <description>MySQL - 分类 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 13 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/mysql/" rel="self" type="application/rss+xml" /><item>
     <title>100条 sql</title>
-    <link>https://xue.woyao.net/posts/database/100tiaosql/</link>
+    <link>https://xue.woyao.net/posts/database/100sql/</link>
     <pubDate>Thu, 13 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/100tiaosql/</guid>
+    <guid>https://xue.woyao.net/posts/database/100sql/</guid>
     <description><![CDATA[数据背景： 大家都在本地创建此背景 sql： 一对一携带一对多数据合并 背景： 查询出班级里的所有学生，多个学生的身份信息用逗号分割 学号 姓名 身份 1 张三]]></description>
 </item>
 </channel>

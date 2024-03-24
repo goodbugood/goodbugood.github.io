@@ -5,10 +5,10 @@
         <description>ESP32 - 分类 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 21 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/categories/esp32/" rel="self" type="application/rss+xml" /><item>
     <title>ESP32入门之点灯</title>
-    <link>https://xue.woyao.net/posts/esp32/20220821blinker/</link>
+    <link>https://xue.woyao.net/posts/esp32/esp32blink/</link>
     <pubDate>Sun, 21 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/esp32/20220821blinker/</guid>
+    <guid>https://xue.woyao.net/posts/esp32/esp32blink/</guid>
     <description><![CDATA[学习一门编程语言，第一个教程是输出hello world。而学习单片机，第一个教程通常是点灯。 利用延时函数闪灯 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16]]></description>
 </item>
 </channel>

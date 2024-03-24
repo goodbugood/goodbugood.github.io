@@ -5,10 +5,10 @@
         <description>模板模式 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Aug 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/" rel="self" type="application/rss+xml" /><item>
     <title>模板模式</title>
-    <link>https://xue.woyao.net/posts/designpatterns/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/</link>
+    <link>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/</link>
     <pubDate>Mon, 22 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/designpatterns/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/</guid>
+    <guid>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%A8%A1%E5%BC%8F/</guid>
     <description><![CDATA[父类设计一个算法需要哪几步，子类则实现这些步骤。 大咖秀 javax.servlet.http.HttpServlet 抽象类 javax.servlet.http.HttpServlet 在其方法service()定义了处理 get 请求，post 请求。而我们只需要继承 HttpServlet]]></description>
 </item>
 </channel>

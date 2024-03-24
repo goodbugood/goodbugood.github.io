@@ -29,18 +29,18 @@
 </item>
 <item>
     <title>SpringBoot 参数校验</title>
-    <link>https://xue.woyao.net/posts/framework/spring/springbootvalidated/</link>
+    <link>https://xue.woyao.net/posts/framework/spring/springboot%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81%E5%99%A8/</link>
     <pubDate>Mon, 27 Mar 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/spring/springbootvalidated/</guid>
+    <guid>https://xue.woyao.net/posts/framework/spring/springboot%E5%8F%82%E6%95%B0%E9%AA%8C%E8%AF%81%E5%99%A8/</guid>
     <description><![CDATA[验证注解 @NotNull，@NotEmpty，@NotBlank 三者的区别 注意： @NotBlank 只能用来注解String @NotEmpty 只能注解字符串和集合和数组 @NotNull @NotEmpty @NotBlank]]></description>
 </item>
 <item>
     <title>hutool 框架使用笔记</title>
-    <link>https://xue.woyao.net/posts/framework/hutoolshouce/</link>
+    <link>https://xue.woyao.net/posts/framework/hutool-notes/</link>
     <pubDate>Fri, 24 Mar 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/hutoolshouce/</guid>
+    <guid>https://xue.woyao.net/posts/framework/hutool-notes/</guid>
     <description><![CDATA[json JSONArray转集合 1 2 3 4 String json = &#34;[2, 3, 5]&#34;; JSONArray jsonArray = JSONUtil.parseArray(json); // 转包装类型数组 List&lt;Integer&gt; integerList = jsonArray.toList(Integer.class); JSONArray转包装类型数组Integer[] 方案一，想当]]></description>
 </item>
 <item>
@@ -53,10 +53,10 @@
 </item>
 <item>
     <title>SpringMVC 获取请求参数的 N 种方式</title>
-    <link>https://xue.woyao.net/posts/2023/springmvchttpservletrequest/</link>
+    <link>https://xue.woyao.net/posts/2023/get-spring-request-parameter/</link>
     <pubDate>Fri, 17 Mar 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/2023/springmvchttpservletrequest/</guid>
+    <guid>https://xue.woyao.net/posts/2023/get-spring-request-parameter/</guid>
     <description><![CDATA[控制器请求方法里注入 HttpServletRequest 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 import org.springframework.web.bind.annotation.GetMapping; import org.springframework.web.bind.annotation.RequestMapping; import org.springframework.web.bind.annotation.RestController; import javax.servlet.http.HttpServletRequest; /** * @author Shali */ @RestController @RequestMapping(&#34;test&#34;) public class TestController { @GetMapping(&#34;hello&#34;) public String hello(HttpServletRequest httpServletRequest) { return httpServletRequest.getQueryString(); } } 利用 Spring 的依赖注入到控制器属]]></description>
 </item>
 <item>

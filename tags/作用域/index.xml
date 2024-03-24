@@ -5,10 +5,10 @@
         <description>作用域 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 27 Feb 2018 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E4%BD%9C%E7%94%A8%E5%9F%9F/" rel="self" type="application/rss+xml" /><item>
     <title>JavaScript var 作用域</title>
-    <link>https://xue.woyao.net/posts/javascript/basic/</link>
+    <link>https://xue.woyao.net/posts/javascript/javascript-basic/</link>
     <pubDate>Tue, 27 Feb 2018 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/javascript/basic/</guid>
+    <guid>https://xue.woyao.net/posts/javascript/javascript-basic/</guid>
     <description><![CDATA[作用域提升 var 声明变量，会将变量提升到全局作用域或函数作用域的头部。 暂时性死区 ES6明确规定，如果区块中存在let和const命令，这个区块对]]></description>
 </item>
 </channel>

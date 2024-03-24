@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>hutool 框架使用笔记 - 新手笔记</title><meta name="Description" content="免费的在线新手笔记"><meta property="og:title" content="hutool 框架使用笔记" />
+<meta property="og:description" content="json JSONArray转集合 1 2 3 4 String json = &#34;[2, 3, 5]&#34;; JSONArray jsonArray = JSONUtil.parseArray(json); // 转包装类型数组 List&lt;Integer&gt; integerList = jsonArray.toList(Integer.class); JSONArray转包装类型数组Integer[] 方案一，想当" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xue.woyao.net/posts/framework/hutool-notes/" /><meta property="og:image" content="https://xue.woyao.net/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-03-24T00:00:00+00:00" /><meta property="og:site_name" content="新手笔记" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://xue.woyao.net/logo.png"/>
+
+<meta name="twitter:title" content="hutool 框架使用笔记"/>
+<meta name="twitter:description" content="json JSONArray转集合 1 2 3 4 String json = &#34;[2, 3, 5]&#34;; JSONArray jsonArray = JSONUtil.parseArray(json); // 转包装类型数组 List&lt;Integer&gt; integerList = jsonArray.toList(Integer.class); JSONArray转包装类型数组Integer[] 方案一，想当"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xue.woyao.net/posts/framework/hutool-notes/" /><link rel="prev" href="https://xue.woyao.net/posts/tools/idea%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B9%B1%E7%A0%81/" /><link rel="next" href="https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/list%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "hutool 框架使用笔记",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xue.woyao.net\/posts\/framework\/hutool-notes\/"
+        },"image": ["https:\/\/xue.woyao.net\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "framework, hutool","wordcount":  605 ,
+        "url": "https:\/\/xue.woyao.net\/posts\/framework\/hutool-notes\/","datePublished": "2023-03-24T00:00:00+00:00","dateModified": "2023-03-24T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/xue.woyao.net\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "沙里"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="新手笔记"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>新手笔记</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/framework/hutool-notes/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="新手笔记"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>新手笔记</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/framework/hutool-notes/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">hutool 框架使用笔记</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>沙里</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%A1%86%E6%9E%B6/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>框架</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-03-24">2023-03-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 605 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#json">json</a>
+      <ul>
+        <li><a href="#jsonarray转集合">JSONArray转集合</a></li>
+        <li><a href="#jsonarray转包装类型数组integer">JSONArray转包装类型数组Integer[]</a></li>
+        <li><a href="#jsonarray转基本类型数组">JSONArray转基本类型数组</a></li>
+      </ul>
+    </li>
+    <li><a href="#日期">日期</a>
+      <ul>
+        <li><a href="#常用时间格式枚举">常用时间格式枚举</a>
+          <ul>
+            <li><a href="#2023-03-31-185100">2023-03-31 18:51:00</a></li>
+            <li><a href="#2023-03-31">2023-03-31</a></li>
+            <li><a href="#185100">18:51:00</a></li>
+            <li><a href="#fri-mar-31-190939-cst-2023">Fri Mar 31 19:09:39 CST 2023</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="json">json</h2>
+<h3 id="jsonarray转集合">JSONArray转集合</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span> <span class="n">json</span> <span class="o">=</span> <span class="s">&#34;[2, 3, 5]&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">JSONArray</span> <span class="n">jsonArray</span> <span class="o">=</span> <span class="n">JSONUtil</span><span class="o">.</span><span class="na">parseArray</span><span class="o">(</span><span class="n">json</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 转包装类型数组
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">integerList</span> <span class="o">=</span> <span class="n">jsonArray</span><span class="o">.</span><span class="na">toList</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="jsonarray转包装类型数组integer">JSONArray转包装类型数组Integer[]</h3>
+<ul>
+<li>方案一，想当然地强转，报错</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// Object[] objects = jsonArray.toArray();
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Integer</span><span class="o">[]</span> <span class="n">integers</span> <span class="o">=</span> <span class="o">(</span><span class="n">Integer</span><span class="o">[])</span> <span class="n">jsonArray</span><span class="o">.</span><span class="na">toArray</span><span class="o">();</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>报错：java.lang.ClassCastException: [Ljava.lang.Object; cannot be cast to [Ljava.lang.Integer;</p>
+</blockquote>
+<p>正确的方法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Object</span><span class="o">[]</span> <span class="n">objects</span> <span class="o">=</span> <span class="n">jsonArray</span><span class="o">.</span><span class="na">toArray</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">Integer</span><span class="o">[]</span> <span class="n">integers</span> <span class="o">=</span> <span class="n">Arrays</span><span class="o">.</span><span class="na">copyOf</span><span class="o">(</span><span class="n">objects</span><span class="o">,</span> <span class="n">objects</span><span class="o">.</span><span class="na">length</span><span class="o">,</span> <span class="n">Integer</span><span class="o">[].</span><span class="na">class</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>方案二</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>方案三：最笨的办法，使用逗号分割 json 串数组</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span> <span class="n">json</span> <span class="o">=</span> <span class="s">&#34;[2, 3, 5]&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span><span class="o">[]</span> <span class="n">ints</span> <span class="o">=</span> <span class="o">{</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">};</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 去除 json 数组字符串两侧的 [，]
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">String</span> <span class="n">substring</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">1</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">substring1</span> <span class="o">=</span> <span class="n">substring</span><span class="o">.</span><span class="na">substring</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="n">substring</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 使用逗号分割字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">String</span><span class="o">[]</span> <span class="n">strings</span> <span class="o">=</span> <span class="n">substring1</span><span class="o">.</span><span class="na">split</span><span class="o">(</span><span class="s">&#34;, &#34;</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span><span class="o">[]</span> <span class="n">ints3</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">strings</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">strings</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ints3</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="na">parseInt</span><span class="o">(</span><span class="n">strings</span><span class="o">[</span><span class="n">i</span><span class="o">]);</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">assertArrayEquals</span><span class="o">(</span><span class="n">ints</span><span class="o">,</span> <span class="n">ints3</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="jsonarray转基本类型数组">JSONArray转基本类型数组</h3>
+<ul>
+<li>方案一</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// JSONArray 转基本类型数组
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">String</span> <span class="n">json</span> <span class="o">=</span> <span class="s">&#34;[2, 3, 5]&#34;</span><span class="o">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">JSONArray</span> <span class="n">jsonArray</span> <span class="o">=</span> <span class="n">JSONUtil</span><span class="o">.</span><span class="na">parseArray</span><span class="o">(</span><span class="n">json</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 先转包装类型数组
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">integerList</span> <span class="o">=</span> <span class="n">jsonArray</span><span class="o">.</span><span class="na">toList</span><span class="o">(</span><span class="n">Integer</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 然后集合转转数组
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kt">int</span><span class="o">[]</span> <span class="n">ints1</span> <span class="o">=</span> <span class="n">integerList</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">mapToInt</span><span class="o">(</span><span class="n">Integer</span><span class="o">::</span><span class="n">intValue</span><span class="o">).</span><span class="na">toArray</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span><span class="o">[]</span> <span class="n">ints</span> <span class="o">=</span> <span class="o">{</span><span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">,</span> <span class="mi">5</span><span class="o">};</span>
+</span></span><span class="line"><span class="cl"><span class="n">assertArrayEquals</span><span class="o">(</span><span class="n">ints</span><span class="o">,</span> <span class="n">ints1</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>方案二</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 方法二：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">Object</span><span class="o">[]</span> <span class="n">objects</span> <span class="o">=</span> <span class="n">jsonArray</span><span class="o">.</span><span class="na">toArray</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span><span class="o">[]</span> <span class="n">ints2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">objects</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">objects</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ints2</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">objects</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">assertArrayEquals</span><span class="o">(</span><span class="n">ints</span><span class="o">,</span> <span class="n">ints2</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="日期">日期</h2>
+<h3 id="常用时间格式枚举">常用时间格式枚举</h3>
+<h4 id="2023-03-31-185100">2023-03-31 18:51:00</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 获取当前时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">String</span> <span class="n">now</span> <span class="o">=</span> <span class="n">DateUtil</span><span class="o">.</span><span class="na">now</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">DateTime</span> <span class="n">date</span> <span class="o">=</span> <span class="n">DateUtil</span><span class="o">.</span><span class="na">date</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">Date</span> <span class="n">date1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 获取当前时间对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">String</span> <span class="n">now2</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// 格式化：public static final String NORM_DATETIME_PATTERN = &#34;yyyy-MM-dd HH:mm:ss&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">String</span> <span class="n">now3</span> <span class="o">=</span> <span class="n">DateUtil</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">date1</span><span class="o">,</span> <span class="n">DatePattern</span><span class="o">.</span><span class="na">NORM_DATETIME_PATTERN</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">now4</span> <span class="o">=</span> <span class="n">DateUtil</span><span class="o">.</span><span class="na">formatDateTime</span><span class="o">(</span><span class="n">date1</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2023-03-31">2023-03-31</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// public static final String NORM_DATE_PATTERN = &#34;yyyy-MM-dd&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">DateTime</span> <span class="n">date</span> <span class="o">=</span> <span class="n">DateUtil</span><span class="o">.</span><span class="na">date</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">Date</span> <span class="n">date1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">day</span> <span class="o">=</span> <span class="n">DateUtil</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">date</span><span class="o">,</span> <span class="n">DatePattern</span><span class="o">.</span><span class="na">NORM_DATE_FORMAT</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">day1</span> <span class="o">=</span> <span class="n">DateUtil</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">date1</span><span class="o">,</span> <span class="n">DatePattern</span><span class="o">.</span><span class="na">NORM_DATE_FORMAT</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">day2</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">DatePattern</span><span class="o">.</span><span class="na">NORM_DATE_PATTERN</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">assertEquals</span><span class="o">(</span><span class="n">day</span><span class="o">,</span> <span class="n">day1</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">assertEquals</span><span class="o">(</span><span class="n">day1</span><span class="o">,</span> <span class="n">day2</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="185100">18:51:00</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// public static final String NORM_TIME_PATTERN = &#34;HH:mm:ss&#34;;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">DateTime</span> <span class="n">date</span> <span class="o">=</span> <span class="n">DateUtil</span><span class="o">.</span><span class="na">date</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">Date</span> <span class="n">date1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">time</span> <span class="o">=</span> <span class="n">DateUtil</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">date</span><span class="o">,</span> <span class="n">DatePattern</span><span class="o">.</span><span class="na">NORM_TIME_PATTERN</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">time1</span> <span class="o">=</span> <span class="n">DateUtil</span><span class="o">.</span><span class="na">format</span><span class="o">(</span><span class="n">date1</span><span class="o">,</span> <span class="n">DatePattern</span><span class="o">.</span><span class="na">NORM_TIME_PATTERN</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">time2</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">DatePattern</span><span class="o">.</span><span class="na">NORM_TIME_PATTERN</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">assertEquals</span><span class="o">(</span><span class="n">time</span><span class="o">,</span> <span class="n">time1</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">assertEquals</span><span class="o">(</span><span class="n">time1</span><span class="o">,</span> <span class="n">time2</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="fri-mar-31-190939-cst-2023">Fri Mar 31 19:09:39 CST 2023</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">DateTime</span> <span class="n">date</span> <span class="o">=</span> <span class="n">DateUtil</span><span class="o">.</span><span class="na">date</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">Date</span> <span class="n">date1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Date</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Fri Mar 31 19:22:42 CST 2023
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">String</span> <span class="n">now5</span> <span class="o">=</span> <span class="n">date1</span><span class="o">.</span><span class="na">toString</span><span class="o">();</span>
+</span></span><span class="line"><span class="cl"><span class="n">String</span> <span class="n">now6</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">DatePattern</span><span class="o">.</span><span class="na">JDK_DATETIME_FORMAT</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">assertEquals</span><span class="o">(</span><span class="n">now5</span><span class="o">,</span> <span class="n">now6</span><span class="o">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 星期五 三月 31 19:22:42 CST 2023
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">String</span> <span class="n">now7</span> <span class="o">=</span> <span class="n">date</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">DatePattern</span><span class="o">.</span><span class="na">JDK_DATETIME_PATTERN</span><span class="o">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-03-24</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/framework/hutool-notes/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xue.woyao.net/posts/framework/hutool-notes/" data-title="hutool 框架使用笔记" data-hashtags="framework,hutool"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xue.woyao.net/posts/framework/hutool-notes/" data-hashtag="framework"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://xue.woyao.net/posts/framework/hutool-notes/" data-title="hutool 框架使用笔记"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xue.woyao.net/posts/framework/hutool-notes/" data-title="hutool 框架使用笔记"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xue.woyao.net/posts/framework/hutool-notes/" data-title="hutool 框架使用笔记" data-ralateuid="xxxx"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/framework/">framework</a>,&nbsp;<a href="/tags/hutool/">hutool</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/tools/idea%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%B9%B1%E7%A0%81/" class="prev" rel="prev" title="idea 控制台中文乱码"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>idea 控制台中文乱码</a>
+            <a href="/posts/java%E5%9F%BA%E7%A1%80/list%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" class="next" rel="next" title="List常见问题">List常见问题<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.114.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">1998 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">沙里</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

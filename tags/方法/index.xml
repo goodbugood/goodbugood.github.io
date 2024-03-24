@@ -5,10 +5,10 @@
         <description>方法 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 30 Dec 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E6%96%B9%E6%B3%95/" rel="self" type="application/rss+xml" /><item>
     <title>方法</title>
-    <link>https://xue.woyao.net/posts/javascript/jsfunction/</link>
+    <link>https://xue.woyao.net/posts/javascript/javascript-function/</link>
     <pubDate>Sat, 30 Dec 2017 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/javascript/jsfunction/</guid>
+    <guid>https://xue.woyao.net/posts/javascript/javascript-function/</guid>
     <description><![CDATA[判断某个方法是否存在 1). 方法一 1 2 3 if (typeof myMethod !== &#39;undefined&#39; &amp;&amp; myMethod instanceof Function) { console.log(myMethod, &#39;是方法&#39;) } 2). 方法二 1 2 3 if (对象名.方法名) { } 3). 方法三 1 2 3 4]]></description>
 </item>
 </channel>

@@ -3,7 +3,23 @@
         <title>所有文章 - 新手笔记</title>
         <link>https://xue.woyao.net/posts/</link>
         <description>所有文章 | 新手笔记</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 01 Mar 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 24 Mar 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>重载重写覆写覆盖隐藏</title>
+    <link>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/override/</link>
+    <pubDate>Sun, 24 Mar 2024 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/override/</guid>
+    <description><![CDATA[重载重写覆写覆盖隐藏]]></description>
+</item>
+<item>
+    <title>状态模式建模与实现</title>
+    <link>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/design-pattern-state/</link>
+    <pubDate>Sat, 02 Mar 2024 00:00:00 &#43;0000</pubDate>
+    <author>沙里</author>
+    <guid>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/23%E7%A7%8D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/design-pattern-state/</guid>
+    <description><![CDATA[简述 名称：状态模式 关键字：State 状态模式是一种行为型设计模式，它允许一个对象在其内部状态改变时改变其行为，看起来就像是改变了对象的类。 一]]></description>
+</item>
+<item>
     <title>Spring 的钩子</title>
     <link>https://xue.woyao.net/posts/framework/spring/spring%E7%9A%84%E9%92%A9%E5%AD%90/</link>
     <pubDate>Fri, 01 Mar 2024 00:00:00 &#43;0000</pubDate>
@@ -21,10 +37,10 @@
 </item>
 <item>
     <title>ArduinoIDE搭建ESP8266开发环境</title>
-    <link>https://xue.woyao.net/posts/%E5%B5%8C%E5%85%A5%E5%BC%8F/esp8266/arduinoide%E6%90%AD%E5%BB%BAesp8266%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
+    <link>https://xue.woyao.net/posts/%E5%B5%8C%E5%85%A5%E5%BC%8F/esp8266/esp8266-arduino-start/</link>
     <pubDate>Sat, 26 Aug 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/%E5%B5%8C%E5%85%A5%E5%BC%8F/esp8266/arduinoide%E6%90%AD%E5%BB%BAesp8266%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</guid>
+    <guid>https://xue.woyao.net/posts/%E5%B5%8C%E5%85%A5%E5%BC%8F/esp8266/esp8266-arduino-start/</guid>
     <description><![CDATA[配置开发板库 添加 esp8266 库：https://arduino.esp8266.com/stable/package_esp8266com_index]]></description>
 </item>
 <item>
@@ -66,22 +82,6 @@
     <author>沙里</author>
     <guid>https://xue.woyao.net/posts/framework/%E6%95%B0%E6%8D%AE%E5%BA%93/redistemplate%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</guid>
     <description><![CDATA[历史 RedisTemplate 是 spring-data-redis 对 redis 的封装。 Jedis 是 Redis 官方开发的客户端 spring-data-redis 对 Jedis 进行了高度封装，对外提供 RedisTemplate 类。 SpringBoot 整合 RedisTemplate 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt; &lt;version&gt;2.5.9&lt;/version&gt; &lt;/dependency&gt; RedisTemplate 整合 lettuce 1 2 3 4 5 6 7 8 9 10 11 12]]></description>
-</item>
-<item>
-    <title>Spring常见的3种自动注入方式</title>
-    <link>https://xue.woyao.net/posts/framework/spring/spring%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%B3%A8%E5%85%A5%E6%96%B9%E5%BC%8F/</link>
-    <pubDate>Tue, 11 Jul 2023 00:00:00 &#43;0000</pubDate>
-    <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/framework/spring/spring%E5%B8%B8%E8%A7%81%E7%9A%84%E5%87%A0%E7%A7%8D%E6%B3%A8%E5%85%A5%E6%96%B9%E5%BC%8F/</guid>
-    <description><![CDATA[注解 @Autowired/@Resource 注入 @Autowired 默认按类型查找，当一个类型多个实现时，按名字找。按名字查找时，配合 @Qualifier 注解。 @Resource 默认按名字找，找不到时，按类型找。 1 2 3 4 public class IndexController { @Autowired]]></description>
-</item>
-<item>
-    <title>教训规约</title>
-    <link>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E6%95%99%E8%AE%AD%E8%A7%84%E7%BA%A6/</link>
-    <pubDate>Mon, 10 Jul 2023 00:00:00 &#43;0000</pubDate>
-    <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/java%E8%80%81%E5%8F%B8%E6%9C%BA/%E6%95%99%E8%AE%AD%E8%A7%84%E7%BA%A6/</guid>
-    <description><![CDATA[数据库 枚举字段 枚举字段尽量使用能够描述业务，短小精悍的词语，不要为了那点性能使用 tinyint ，否则后面你就要识记那些 1，2，3，4，5 各代表什么业务含]]></description>
 </item>
 </channel>
 </rss>

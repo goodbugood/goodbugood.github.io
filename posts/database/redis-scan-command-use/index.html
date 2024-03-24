@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Redis Scan 命令使用讨论 - 新手笔记</title><meta name="Description" content="免费的在线新手笔记"><meta property="og:title" content="Redis Scan 命令使用讨论" />
+<meta property="og:description" content="keys 命令与 scan 命令的区别 相同点和不同点： 操作 相同点 不同点 scan 时间复杂度O(n) 迭代扫描，消耗内存少 keys 时间复杂度O(n) 消耗内存大 Q&amp;A keys性能低，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xue.woyao.net/posts/database/redis-scan-command-use/" /><meta property="og:image" content="https://xue.woyao.net/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-26T00:00:00+00:00" /><meta property="og:site_name" content="新手笔记" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://xue.woyao.net/logo.png"/>
+
+<meta name="twitter:title" content="Redis Scan 命令使用讨论"/>
+<meta name="twitter:description" content="keys 命令与 scan 命令的区别 相同点和不同点： 操作 相同点 不同点 scan 时间复杂度O(n) 迭代扫描，消耗内存少 keys 时间复杂度O(n) 消耗内存大 Q&amp;A keys性能低，"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xue.woyao.net/posts/database/redis-scan-command-use/" /><link rel="prev" href="https://xue.woyao.net/posts/database/mysqlyouhua/" /><link rel="next" href="https://xue.woyao.net/posts/opensource/wordpress/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Redis Scan 命令使用讨论",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xue.woyao.net\/posts\/database\/redis-scan-command-use\/"
+        },"image": ["https:\/\/xue.woyao.net\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "Redis, Keys, Scan","wordcount":  865 ,
+        "url": "https:\/\/xue.woyao.net\/posts\/database\/redis-scan-command-use\/","datePublished": "2022-09-26T00:00:00+00:00","dateModified": "2022-09-26T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/xue.woyao.net\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "沙里"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="新手笔记"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>新手笔记</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/database/redis-scan-command-use/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="新手笔记"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>新手笔记</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/database/redis-scan-command-use/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Redis Scan 命令使用讨论</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>沙里</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>数据库</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-26">2022-09-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 865 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#keys-命令与-scan-命令的区别">keys 命令与 scan 命令的区别</a></li>
+    <li><a href="#qa">Q&amp;A</a>
+      <ul>
+        <li><a href="#keys性能低keys操作会锁整个库">keys性能低，keys操作会锁整个库</a></li>
+        <li><a href="#项目使用了-key-做队列使用-scan-获取队列如何优化">项目使用了 key 做队列，使用 scan 获取队列，如何优化</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="keys-命令与-scan-命令的区别">keys 命令与 scan 命令的区别</h2>
+<p>相同点和不同点：</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>相同点</th>
+<th>不同点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>scan</td>
+<td>时间复杂度O(n)</td>
+<td>迭代扫描，消耗内存少</td>
+</tr>
+<tr>
+<td>keys</td>
+<td>时间复杂度O(n)</td>
+<td>消耗内存大</td>
+</tr>
+</tbody>
+</table>
+<h2 id="qa">Q&amp;A</h2>
+<h3 id="keys性能低keys操作会锁整个库">keys性能低，keys操作会锁整个库</h3>
+<p>还多少人看了网上的博客或者笔记，得出 keys 性能低，会锁整个库。那一定是你对底层不了解，或者网络文章的作者对底层一知半解。</p>
+<p>我先把结论抛给你，然后再慢慢给你解释。</p>
+<blockquote>
+<p>执行 Redis 的任何操作命令都会锁库，准确的说是锁整个服务器上的所有的 DB。</p>
+</blockquote>
+<p>原因很简单，Redis 的 IO 操作是单线程的，执行任何一个操作命令都会其他操作命令无法得到执行。想要执行也要等前一个命令执行完成。</p>
+<blockquote>
+<p>Redis 数据操作之所以 IO 单线程，是因为他认为多线程不过是为了提高效率，但是由于 Redis 操作的是内存，速度很快，反而引入了多线程，多线程的上下文切换，环境变量的保存与恢复反而降低了其效率。</p>
+<p>其实现实应用中使用单线程的应用还是有很多的，例如 Nginx，NodeJS。</p>
+</blockquote>
+<ul>
+<li>那为何大家实际使用中，没有感受到其他操作命令锁库，而是感觉到了 keys 锁库呢？</li>
+</ul>
+<p>Redis 底层使用的哈希表结构，其查找时间复杂度是 O(1)。然而 keys 是使用正则遍历整个库中的所有 keys ，其时间复杂度是 O(n)。随着库里 key 的增多，keys 的执行时间变长，所以让大家明显感觉到其锁库。其实大家都锁库。</p>
+<h3 id="项目使用了-key-做队列使用-scan-获取队列如何优化">项目使用了 key 做队列，使用 scan 获取队列，如何优化</h3>
+<p>首先说下你使用 key 做队列的缺点，队列中的元素位置是随机的，scan 获取出来的元素也是随机的，所以在消费任务的时候，不符合队列的 FIFO 准则。</p>
+<p>其次如果你每次 scan 获取的元素数量有限，而 DB 中的 key 过多，就大大地增加了网络 IO 的次数。==我们知道 Redis 的性能瓶颈在网络 IO==，如果这样倒不如使用 keys 来的痛快。</p>
+<p>如果这样说大家可能糊涂了，明明为了解决 keys 的低性能，引入的 scan，你这里又说 keys 比 scan 来的痛快，那么二者该如何取舍呢？</p>
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>使用场景</th>
+<th>使用原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>keys</td>
+<td>DB 中 key 多，但是目标 key 少的情况</td>
+<td>避免 scan 过多的网络 IO 请求，却命中率不高</td>
+</tr>
+<tr>
+<td>scan</td>
+<td>DB 中目标 key 多，非目标 key 少的情况</td>
+<td>避免 keys 返回的目标数据量过大，造成内存溢出。</td>
+</tr>
+</tbody>
+</table>
+<p>二者的使用是为了达到一个均衡的效率。以上讨论仅限于在 keys 和 scan 二者中间的取舍。毕竟其他数据结构优于他们。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-09-26</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/database/redis-scan-command-use/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xue.woyao.net/posts/database/redis-scan-command-use/" data-title="Redis Scan 命令使用讨论" data-hashtags="Redis,Keys,Scan"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xue.woyao.net/posts/database/redis-scan-command-use/" data-hashtag="Redis"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://xue.woyao.net/posts/database/redis-scan-command-use/" data-title="Redis Scan 命令使用讨论"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xue.woyao.net/posts/database/redis-scan-command-use/" data-title="Redis Scan 命令使用讨论"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xue.woyao.net/posts/database/redis-scan-command-use/" data-title="Redis Scan 命令使用讨论" data-ralateuid="xxxx"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/redis/">Redis</a>,&nbsp;<a href="/tags/keys/">Keys</a>,&nbsp;<a href="/tags/scan/">Scan</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/database/mysqlyouhua/" class="prev" rel="prev" title="MySQL优化"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>MySQL优化</a>
+            <a href="/posts/opensource/wordpress/" class="next" rel="next" title="开源应用Word Press">开源应用Word Press<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.114.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">1998 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">沙里</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -13,18 +13,18 @@
 </item>
 <item>
     <title>100条 sql</title>
-    <link>https://xue.woyao.net/posts/database/100tiaosql/</link>
+    <link>https://xue.woyao.net/posts/database/100sql/</link>
     <pubDate>Thu, 13 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/100tiaosql/</guid>
+    <guid>https://xue.woyao.net/posts/database/100sql/</guid>
     <description><![CDATA[数据背景： 大家都在本地创建此背景 sql： 一对一携带一对多数据合并 背景： 查询出班级里的所有学生，多个学生的身份信息用逗号分割 学号 姓名 身份 1 张三]]></description>
 </item>
 <item>
     <title>SQL一百问</title>
-    <link>https://xue.woyao.net/posts/database/sqlde100wen/</link>
+    <link>https://xue.woyao.net/posts/database/sqlwenti100/</link>
     <pubDate>Sat, 01 Oct 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/sqlde100wen/</guid>
+    <guid>https://xue.woyao.net/posts/database/sqlwenti100/</guid>
     <description><![CDATA[语句 BETWEEN字句有顺序区别吗 1 2 3 4 5 # 语句 1 select id form t1 between &#39;2022-10-01&#39; and &#39;2022-10-07&#39;; # 语句 2 select id form t1 between &#39;2022-10-07&#39; and &#39;2022-10-01&#39;; 语句 1 与语句 2 有区别吗？ 有，语句 2 只会返回 nul]]></description>
 </item>
 <item>
@@ -37,10 +37,10 @@
 </item>
 <item>
     <title>ThinkPHP3.2的疑惑</title>
-    <link>https://xue.woyao.net/posts/2022/tp3.2deyihuo/</link>
+    <link>https://xue.woyao.net/posts/2022/tp3.2%E7%9A%84%E7%96%91%E6%83%91/</link>
     <pubDate>Fri, 19 Aug 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/2022/tp3.2deyihuo/</guid>
+    <guid>https://xue.woyao.net/posts/2022/tp3.2%E7%9A%84%E7%96%91%E6%83%91/</guid>
     <description><![CDATA[没看到关闭 MySQL 连接 在使用 TP3.2 的过程中，一直看到使用 M 方法，查询数据，那 M 方法肯定帮我们连接上了 MySQL，但是没看到他关闭啊。既然没有连接池，那]]></description>
 </item>
 </channel>

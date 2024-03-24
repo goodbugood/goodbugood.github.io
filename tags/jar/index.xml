@@ -5,10 +5,10 @@
         <description>jar - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 13 Jun 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/jar/" rel="self" type="application/rss+xml" /><item>
     <title>php工程归档文件phar的打包和运行</title>
-    <link>https://xue.woyao.net/posts/php/phpdephar/</link>
+    <link>https://xue.woyao.net/posts/php/phar/</link>
     <pubDate>Tue, 13 Jun 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/php/phpdephar/</guid>
+    <guid>https://xue.woyao.net/posts/php/phar/</guid>
     <description><![CDATA[目录结构 phar归档文件构建脚本 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 &lt;?php // build.php // 打包的文件名 $pharFileName = &#39;hellophar.phar&#39;; // 打包是追加模式，为了保证打包里内容最新，先删]]></description>
 </item>
 </channel>

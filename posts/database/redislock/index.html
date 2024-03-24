@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Redis的分布式锁 - 新手笔记</title><meta name="Description" content="免费的在线新手笔记"><meta property="og:title" content="Redis的分布式锁" />
+<meta property="og:description" content="1 setnx key value setnx命令的全称是set if not exists，即当指定的 key 不存在时，设置值并返回 1，如果存在什么都不做，并返回 0。 setnx实现分布" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://xue.woyao.net/posts/database/redislock/" /><meta property="og:image" content="https://xue.woyao.net/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-08-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-08-24T00:00:00+00:00" /><meta property="og:site_name" content="新手笔记" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://xue.woyao.net/logo.png"/>
+
+<meta name="twitter:title" content="Redis的分布式锁"/>
+<meta name="twitter:description" content="1 setnx key value setnx命令的全称是set if not exists，即当指定的 key 不存在时，设置值并返回 1，如果存在什么都不做，并返回 0。 setnx实现分布"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://xue.woyao.net/posts/database/redislock/" /><link rel="prev" href="https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/tdl/" /><link rel="next" href="https://xue.woyao.net/posts/java%E5%9F%BA%E7%A1%80/java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Redis的分布式锁",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/xue.woyao.net\/posts\/database\/redislock\/"
+        },"image": ["https:\/\/xue.woyao.net\/images\/Apple-Devices-Preview.png"],"genre": "posts","keywords": "redis, 分布式锁, 锁","wordcount":  2086 ,
+        "url": "https:\/\/xue.woyao.net\/posts\/database\/redislock\/","datePublished": "2022-08-24T00:00:00+00:00","dateModified": "2022-08-24T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "https:\/\/xue.woyao.net\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "沙里"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="新手笔记"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>新手笔记</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><a class="menu-item" href="/categories/"> 文档 </a><a class="menu-item" href="/about/"> 关于 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="选择语言">
+                    <i class="fa fa-globe" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/database/redislock/" selected>简体中文</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="新手笔记"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>新手笔记</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a class="menu-item" href="/categories/" title="">文档</a><a class="menu-item" href="/about/" title="">关于</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/database/redislock/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Redis的分布式锁</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>沙里</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/redis/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Redis</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-08-24">2022-08-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 2086 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 5 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#方式一">方式一</a></li>
+    <li><a href="#方式二">方式二</a></li>
+    <li><a href="#方式三">方式三</a></li>
+    <li><a href="#改进方式四">改进方式四</a></li>
+    <li><a href="#方式五">方式五</a></li>
+    <li><a href="#方式六">方式六</a></li>
+    <li><a href="#推荐方式">推荐方式</a></li>
+    <li><a href="#举一反三">举一反三</a>
+      <ul>
+        <li><a href="#线程锁">线程锁</a></li>
+        <li><a href="#同一操作系统内的进程锁">同一操作系统内的进程锁</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">setnx key value
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>setnx</code>命令的全称是<code>set if not exists</code>，即当指定的 key 不存在时，设置值并返回 1，如果存在什么都不做，并返回 0。</p>
+<p>setnx实现分布式锁</p>
+<h2 id="方式一">方式一</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// 锁名词
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$key</span> <span class="o">=</span> <span class="s1">&#39;buy_order_lock&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 加锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="k">false</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">setnx</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nx">time</span><span class="p">()))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;锁被其他进程拿到，且未超时&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 获得锁
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 执行业务 ...
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 释放锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">del</span><span class="p">(</span><span class="nv">$key</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;任务完成，释放锁失败&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>==存在问题==：</p>
+<p>一旦释放锁失败，就会造成死锁。</p>
+<h2 id="方式二">方式二</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// 加锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="k">false</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">setnx</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nx">time</span><span class="p">()))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;锁被其他进程拿到，且未超时&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 获得锁
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 执行业务 ...
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 释放锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">del</span><span class="p">(</span><span class="nv">$key</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;任务完成，释放锁失败&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="k">false</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">expire</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;任务完成，设置锁过期时间失败&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>==存在问题==：</p>
+<p>释放锁失败，再给锁加个过期时间，这种做法跟释放锁失败，再次执行释放锁没啥区别。还是没有解决死锁的问题。</p>
+<p>这种释放锁失败的问题没法避免，不如给锁加个超时时间。</p>
+<h2 id="方式三">方式三</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// 锁名词
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$key</span> <span class="o">=</span> <span class="s1">&#39;buy_order_lock&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 锁超时时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$timeout</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 加锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="k">false</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">setnx</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nx">time</span><span class="p">()</span> <span class="o">+</span> <span class="nv">$timeout</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$t</span> <span class="o">=</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="nv">$key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$t</span> <span class="o">&gt;</span> <span class="nx">time</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;锁被其他进程拿到，且未超时&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 释放超时锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">delete</span><span class="p">(</span><span class="nv">$key</span><span class="p">))</span> <span class="p">{</span><span class="c1">// 临界区
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;释放超时锁失败&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 再次加锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="k">false</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">setnx</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nx">time</span><span class="p">()</span> <span class="o">+</span> <span class="nv">$timeout</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;再次加锁失败&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 获得锁
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 执行业务 ...
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 释放锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">del</span><span class="p">(</span><span class="nv">$key</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;任务完成，释放锁失败&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>解决了死锁的问题，但是又引入了新的问题。</p>
+<p>==存在问题==：</p>
+<p>如果进程 P2 和 P3 同时进入临界区，进程 P2 删除了锁，并获得了锁，但是 P3 仅接着又删除了锁，再次获得了锁。</p>
+<p>这种并发问题又出现了，因为又有多个进程获得了锁。</p>
+<p>但是需要注意另一个问题，超时时间一定要合理，例如超时时间设置过短，任务还没执行完，锁已经被超时释放了。其他进程会获得锁。</p>
+<p>超时时间又不能太长，因为一旦出现释放锁失败，锁又未超时，会导致锁一直无法获取。</p>
+<h2 id="改进方式四">改进方式四</h2>
+<p>使用<code>getset</code>命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// 加锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="k">false</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">setnx</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nx">time</span><span class="p">()</span> <span class="o">+</span> <span class="nv">$timeout</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$t1</span> <span class="o">=</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="nv">$key</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="p">(</span><span class="nv">$t1</span> <span class="o">&gt;</span> <span class="nx">time</span><span class="p">())</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;锁被其他进程拿到，且未超时&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 这个命令其实是两步操作：1，返回锁旧的超时时间；2，设置锁新的超时时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nv">$t2</span> <span class="o">=</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">getSet</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nx">time</span><span class="p">()</span> <span class="o">+</span> <span class="nv">$timeout</span><span class="p">);</span><span class="c1">// 临界区
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="nv">$t2</span> <span class="o">!=</span> <span class="nv">$t1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;锁虽然超时，但是刚被别人获取了&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 获得锁
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 执行业务 ...
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 释放锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">del</span><span class="p">(</span><span class="nv">$key</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;任务完成，释放锁失败&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>==存在问题==：</p>
+<p>例如 P1 进程释放锁失败，最后锁超时。</p>
+<p>P2 和 P3 进程同时进入临界区，P3 进程先执行了<code>getset</code>命令，P2 进程后执行了<code>getset</code>命令，P2 进程此时获得时间是 P3 设置的超时时间，且大于当前时间，所以 P2 进程获得锁失败。</p>
+<p>可是有没有发现一个问题，==P3 进程锁超时的时间被 P2 进程给修改了==。不过没有关系。</p>
+<p>如果能将上面的<code>getset</code>命令和<code>expire</code>命令合成一个原子命令。那么就能解决设置过期时间失败，释放锁失败造成的死锁问题。</p>
+<h2 id="方式五">方式五</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// 加锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="k">false</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;nx&#39;</span><span class="p">,</span> <span class="s1">&#39;ex&#39;</span> <span class="o">=&gt;</span> <span class="nv">$timeout</span><span class="p">,]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;锁被其他进程拿到，且未超时&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 获得锁
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 执行业务 ...
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 释放锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">del</span><span class="p">(</span><span class="nv">$key</span><span class="p">))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;任务完成，释放锁失败&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这种方式简单，还好用，当然是是这个命令帮我们封装了一些操作。</p>
+<p>==存在问题==：</p>
+<p>释放锁这里是一直存在的问题，P1 进程设置的锁如果超时了，P2 进程获得了锁，这时候 P1 进程去释放锁，就会将 P2 进程的锁给释放了，误删了。</p>
+<p>那我们能不能在加锁的同时，每个进程放置 1 个 token，释放锁之前检查锁的 token 是不是自己之前设置的，以免释放了别人的锁。</p>
+<h2 id="方式六">方式六</h2>
+<p>避免 del 释放其他进程的锁，del 之前应该先检查锁的密码是否是当前进程设置的。</p>
+<p>执行<code>get</code>和<code>del</code>又会出现临界区，可能<code>get</code>的时候密码正确，<code>del</code>的时候，锁已经因为超时其他进程抢占了，造成释放其他进程的锁。</p>
+<p>那么如果让<code>get</code>和<code>del</code>能够原子操作就可以了。</p>
+<p>Eedis 执行命令是单线程的，毕竟 IO 不是他的瓶颈。而且 Redis 服务器会单线程原子性执行 Lua 脚本，保证 Lua 脚本在处理的过程中不会被任意其它请求打断。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-php" data-lang="php"><span class="line"><span class="cl"><span class="c1">// 锁名词
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$key</span> <span class="o">=</span> <span class="s1">&#39;buy_order_lock&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 锁超时时间
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$timeout</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$password</span> <span class="o">=</span> <span class="s1">&#39;abc123&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 加锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="p">(</span><span class="k">false</span> <span class="o">===</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">set</span><span class="p">(</span><span class="nv">$key</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;nx&#39;</span><span class="p">,</span> <span class="s1">&#39;ex&#39;</span> <span class="o">=&gt;</span> <span class="nv">$timeout</span><span class="p">,]))</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;锁被其他进程拿到，且未超时&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 获得锁
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 执行业务 ...
+</span></span></span><span class="line"><span class="cl"><span class="c1">// 释放锁
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$delScript</span> <span class="o">=</span> <span class="s">&lt;&lt;&lt;&#39;</span><span class="dl">LUA</span><span class="s">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">if ARGV[1] == redis.call(&#34;get&#34;, KEYS[1])
+</span></span></span><span class="line"><span class="cl"><span class="s">then
+</span></span></span><span class="line"><span class="cl"><span class="s">    return redis.call(&#34;del&#34;, KEYS[1])
+</span></span></span><span class="line"><span class="cl"><span class="s">else
+</span></span></span><span class="line"><span class="cl"><span class="s">    return -1;
+</span></span></span><span class="line"><span class="cl"><span class="s">end
+</span></span></span><span class="line"><span class="cl"><span class="s"></span><span class="dl">LUA</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 脚本错误返回字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nv">$res</span> <span class="o">=</span> <span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">eval</span><span class="p">(</span><span class="nv">$delScript</span><span class="p">,</span> <span class="p">[</span><span class="nv">$key</span><span class="p">,</span> <span class="nv">$password</span><span class="p">],</span> <span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="k">false</span> <span class="o">===</span> <span class="nv">$res</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;lua 脚本有问题&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="nv">$redis</span><span class="o">-&gt;</span><span class="na">getLastError</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">===</span> <span class="nv">$res</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;任务完成，释放锁失败，锁超时，被其他进程获得，无需释放&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span><span class="mi">1</span> <span class="o">!==</span> <span class="nv">$res</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">var_dump</span><span class="p">(</span><span class="s1">&#39;释放锁失败&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="推荐方式">推荐方式</h2>
+<p>方式六</p>
+<h2 id="举一反三">举一反三</h2>
+<h3 id="线程锁">线程锁</h3>
+<p>todo</p>
+<h3 id="同一操作系统内的进程锁">同一操作系统内的进程锁</h3>
+<p>todo</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-08-24</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/posts/database/redislock/index.md" target="_blank">阅读原始文档</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="https://xue.woyao.net/posts/database/redislock/" data-title="Redis的分布式锁" data-hashtags="redis,分布式锁,锁"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="https://xue.woyao.net/posts/database/redislock/" data-hashtag="redis"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Hacker News" data-sharer="hackernews" data-url="https://xue.woyao.net/posts/database/redislock/" data-title="Redis的分布式锁"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 Line" data-sharer="line" data-url="https://xue.woyao.net/posts/database/redislock/" data-title="Redis的分布式锁"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://xue.woyao.net/posts/database/redislock/" data-title="Redis的分布式锁" data-ralateuid="xxxx"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/redis/">Redis</a>,&nbsp;<a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">分布式锁</a>,&nbsp;<a href="/tags/%E9%94%81/">锁</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/tdl/" class="prev" rel="prev" title="测试驱动学习"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>测试驱动学习</a>
+            <a href="/posts/java%E5%9F%BA%E7%A1%80/java%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80/" class="next" rel="next" title="Java语言基础">Java语言基础<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.114.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">1998 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">沙里</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":50},"comment":{},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

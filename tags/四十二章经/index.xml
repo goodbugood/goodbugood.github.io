@@ -5,10 +5,10 @@
         <description>四十二章经 - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 07 Feb 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/%E5%9B%9B%E5%8D%81%E4%BA%8C%E7%AB%A0%E7%BB%8F/" rel="self" type="application/rss+xml" /><item>
     <title>四十二章经</title>
-    <link>https://xue.woyao.net/posts/designpatterns/sishierzhangjing/</link>
+    <link>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/sishierzhangjing/</link>
     <pubDate>Tue, 07 Feb 2023 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/designpatterns/sishierzhangjing/</guid>
+    <guid>https://xue.woyao.net/posts/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/sishierzhangjing/</guid>
     <description><![CDATA[编码 数据库 建表 类型字段表，推荐使用名字枚举，而不是使用整型，虽然整型效率高，但是真的不适合观看和记忆 接口对接 日志 跟三方或二方接口交互时，一定]]></description>
 </item>
 </channel>

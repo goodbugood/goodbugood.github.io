@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>nosql - 标签 - 新手笔记</title>
+        <title>NoSQL - 标签 - 新手笔记</title>
         <link>https://xue.woyao.net/tags/nosql/</link>
-        <description>nosql - 标签 - 新手笔记</description>
+        <description>NoSQL - 标签 - 新手笔记</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://xue.woyao.net/tags/nosql/" rel="self" type="application/rss+xml" /><item>
     <title>MySQL优化</title>
-    <link>https://xue.woyao.net/posts/database/youhua/</link>
+    <link>https://xue.woyao.net/posts/database/mysqlyouhua/</link>
     <pubDate>Sun, 25 Sep 2022 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
-    <guid>https://xue.woyao.net/posts/database/youhua/</guid>
+    <guid>https://xue.woyao.net/posts/database/mysqlyouhua/</guid>
     <description><![CDATA[SQL优化 Using index condition 与 Using index 的区别 using index 代表使用覆盖索引，不用回表。 而 using index condition 表示仅靠索引返回的数据还不够，还需要回表，不过回表前会过滤 where 条件。 索引 指]]></description>
 </item>
 <item>
@@ -30,7 +30,7 @@
 <item>
     <title>Redis复习笔记</title>
     <link>https://xue.woyao.net/posts/database/redisfuxibiji/</link>
-    <pubDate>Mon, 01 Aug 2022 00:00:00 &#43;0000</pubDate>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
     <author>沙里</author>
     <guid>https://xue.woyao.net/posts/database/redisfuxibiji/</guid>
     <description><![CDATA[[TOC] Redis复习笔记 数据类型 数据类型 特点 添加 删除 修改 查询 string（字符串） 二进制安全，可存图片 一个字符串最大能存512MB的内容 set del set get]]></description>
